@@ -76,7 +76,7 @@ public class RequestLoggingFilter implements Filter {
         // Log request details - only for webpage and API requests
         if (isApiRequest(uri)) {
             // API request logging
-            logger.info("API Request: {} {} | Query: {}",
+            logger.info("API Request: {} {} | Query: {} ",
                     httpRequest.getMethod(),
                     uri,
                     httpRequest.getQueryString() != null ? httpRequest.getQueryString() : "");
