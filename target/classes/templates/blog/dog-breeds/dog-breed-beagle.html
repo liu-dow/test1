@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: common-header('Beagle - Dog Breed Information')">
+    <meta name="description" content="Learn about the Beagle: temperament, care requirements, training tips, and health considerations. Comprehensive guide for potential owners and dog lovers.">
+    <meta name="keywords" content="Beagle, Beagle dog breed, Beagle care, Beagle training, Beagle health, dog breeds, hunting dogs">
+</head>
+<body>
+    <header th:replace="fragments/header :: navbar"></header>
+
+    <main class="container py-5">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <!-- Page Title -->
+                <div class="mb-5">
+                    <h1 class="display-5 fw-bold mb-3">Beagle</h1>
+                    <p class="lead">The merry little hound with a keen nose and adventurous spirit</p>
+                </div>
+
+                <!-- Featured Image -->
+                <div class="featured-image mb-5">
+                    <img src="https://images.unsplash.com/photo-1505628346881-b72b27e84530" class="img-fluid rounded shadow-sm" alt="Beagle">
+                    <div class="image-caption text-center text-muted mt-2">The Beagle is known for its expressive eyes and compact, sturdy build</div>
+                </div>
+
+                <!-- Breed Overview -->
+                <div class="breed-overview mb-5">
+                    <h2 class="h3 mb-4">Breed Overview</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <h3 class="h5 mb-3">Quick Facts</h3>
+                                    <ul class="list-unstyled">
+                                        <li><strong>Height:</strong> 13-15 inches</li>
+                                        <li><strong>Weight:</strong> 20-30 pounds</li>
+                                        <li><strong>Life Span:</strong> 12-15 years</li>
+                                        <li><strong>Colors:</strong> Tri-color, Red and White</li>
+                                        <li><strong>Temperament:</strong> Merry, Friendly, Curious</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <h3 class="h5 mb-3">Ideal For</h3>
+                                    <ul class="list-unstyled">
+                                        <li>✓ Active families</li>
+                                        <li>✓ Hunting enthusiasts</li>
+                                        <li>✓ Multi-pet households</li>
+                                        <li>✓ First-time dog owners</li>
+                                        <li>✓ Apartment living (with exercise)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breed History -->
+                <div class="breed-history mb-5">
+                    <h2 class="h3 mb-4">Breed History</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <p>The Beagle's origins can be traced back to England, where they were developed as scent hounds for hunting rabbits and hares. The modern Beagle was refined in the 1830s from several breeds including the Talbot Hound and other Southern Hounds.</p>
+                            <p>The breed's name may come from the French word "begueule," meaning open throat, referring to their melodious bay. Beagles became popular in England and America for their excellent hunting abilities and companionable nature.</p>
+                            <p>Today, while still used for hunting, Beagles are more commonly found as family pets. They also serve in detection roles at airports and other facilities, using their exceptional sense of smell to detect prohibited items.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Temperament -->
+                <div class="breed-temperament mb-5">
+                    <h2 class="h3 mb-4">Temperament</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <p>Beagles are known for their merry, friendly, and curious nature. They are pack animals by nature, making them excellent family dogs who generally get along well with other pets. Their gentle disposition and moderate size make them good companions for children.</p>
+                            <p>These dogs are driven by their nose and will follow interesting scents with single-minded determination. This trait, combined with their independent nature, can sometimes make them challenging to train. They're known for their distinctive voice, using different barks and howls to communicate.</p>
+                            <p>While generally even-tempered and good-natured, Beagles require plenty of exercise and mental stimulation to prevent boredom-induced behavior problems. They thrive on companionship and don't do well when left alone for long periods.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Care Requirements -->
+                <div class="breed-care mb-5">
+                    <h2 class="h3 mb-4">Care Requirements</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5 mb-3">Exercise Needs</h3>
+                            <p>Beagles need regular exercise to stay healthy and happy:</p>
+                            <ul>
+                                <li>At least 1 hour of exercise daily</li>
+                                <li>Secure, fenced area for play</li>
+                                <li>Leashed walks (due to their strong hunting instincts)</li>
+                                <li>Scent-based games and activities</li>
+                            </ul>
+
+                            <h3 class="h5 mb-3 mt-4">Grooming</h3>
+                            <p>Their short coat is relatively easy to maintain:</p>
+                            <ul>
+                                <li>Weekly brushing to remove loose hair</li>
+                                <li>Regular nail trimming</li>
+                                <li>Occasional baths as needed</li>
+                                <li>Regular ear cleaning to prevent infections</li>
+                            </ul>
+
+                            <h3 class="h5 mb-3 mt-4">Health Considerations</h3>
+                            <p>Common health issues in Beagles include:</p>
+                            <ul>
+                                <li>Hip dysplasia</li>
+                                <li>Eye problems</li>
+                                <li>Epilepsy</li>
+                                <li>Hypothyroidism</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Tips -->
+                <div class="breed-training mb-5">
+                    <h2 class="h3 mb-4">Training Tips</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <p>Training a Beagle requires patience and consistency:</p>
+                            <ul>
+                                <li><strong>Early Socialization:</strong> Expose to various people, pets, and environments</li>
+                                <li><strong>Positive Reinforcement:</strong> Use food rewards and praise</li>
+                                <li><strong>Scent Training:</strong> Incorporate their natural tracking abilities</li>
+                                <li><strong>Recall Training:</strong> Focus on reliable recall commands</li>
+                                <li><strong>Short Sessions:</strong> Keep training periods brief and engaging</li>
+                            </ul>
+                            <p>Beagles can excel in various activities:</p>
+                            <ul>
+                                <li>Tracking and nose work</li>
+                                <li>Agility</li>
+                                <li>Rally obedience</li>
+                                <li>Therapy work</li>
+                                <li>Detection work</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nutrition -->
+                <div class="breed-nutrition mb-5">
+                    <h2 class="h3 mb-4">Nutrition</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <p>Beagles have healthy appetites and can become overweight if overfed:</p>
+                            <ul>
+                                <li>Feed measured portions twice daily</li>
+                                <li>Choose high-quality dog food appropriate for age and activity level</li>
+                                <li>Monitor weight carefully</li>
+                                <li>Avoid free-feeding</li>
+                                <li>Use food rewards carefully during training</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>

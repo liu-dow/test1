@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <footer class="footer" th:fragment="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About Us Section -->
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-uppercase mb-4">About PetGear Reviews</h5>
+                    <p>We help pet owners make informed decisions about pet products through detailed reviews, comparisons, and expert advice.</p>
+<!--                    <div class="social-links mt-3">-->
+<!--                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>-->
+<!--                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>-->
+<!--                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>-->
+<!--                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>-->
+<!--                    </div>-->
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-uppercase mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="/about" class="text-light text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="/contact" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2"><a href="/privacy-policy" class="text-light text-decoration-none">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="/terms" class="text-light text-decoration-none">Terms of Service</a></li>
+                        <li class="mb-2"><a href="/affiliate-disclosure" class="text-light text-decoration-none">Affiliate Disclosure</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Section -->
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-uppercase mb-4">Newsletter</h5>
+                    <p>Subscribe to our newsletter for the latest pet product reviews and tips.</p>
+                    <form class="mt-3" id="subscribeForm">
+                        <div class="input-group mb-3">
+                            <input id="emailInput" type="email" class="form-control" placeholder="Your email address" aria-label="Your email address" required>
+                            <button class="btn btn-primary" type="submit" id="subscribeButton">Subscribe</button>
+                        </div>
+                        <div class="invalid-feedback" id="emailFeedback">Please enter a valid email address.</div>
+                        <div class="alert alert-success mt-2 d-none" id="successMessage">
+                            <i class="bi bi-check-circle-fill me-2"></i>
+                            Thank you for subscribing! We'll keep you updated.
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <hr class="bg-light">
+                    <p class="text-center mb-0">© 2024 PetGear Reviews. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- JavaScript for Newsletter Subscription -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const subscribeForm = document.getElementById('subscribeForm');
+                const emailInput = document.getElementById('emailInput');
+                const emailFeedback = document.getElementById('emailFeedback');
+                const successMessage = document.getElementById('successMessage');
+                
+                if (subscribeForm) {
+                    subscribeForm.addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        
+                        // Validate email
+                        const email = emailInput.value.trim();
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        
+                        if (!email || !emailRegex.test(email)) {
+                            emailInput.classList.add('is-invalid');
+                            emailFeedback.textContent = 'Please enter a valid email address.';
+                            return;
+                        }
+                        
+                        emailInput.classList.remove('is-invalid');
+                        
+                        // Send AJAX request to the API
+                        fetch('/api/subscribe', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ email: email })
+                        })
+                        .then(response => {
+                            // Clear the form
+                            emailInput.value = '';
+                            // Show success message
+                            successMessage.classList.remove('d-none');
+                            // Hide success message after 3 seconds
+                            setTimeout(() => {
+                                successMessage.classList.add('d-none');
+                            }, 3000);
+                        });
+                    });
+                }
+            });
+        </script>
+    </footer>
+</body>
+</html>

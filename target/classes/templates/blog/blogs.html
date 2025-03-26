@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: common-header('Pet Gear Reviews - Blog')">
+</head>
+<body>
+    <header th:replace="fragments/header :: navbar"></header>
+
+    <main class="container py-5">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <!-- Page Title -->
+                <div class="mb-5">
+                    <h1 class="display-5 fw-bold mb-3">Pet Gear Blog</h1>
+                    <p class="lead">Discover the latest insights, tips, and reviews for pet owners.</p>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="search-container mb-4">
+                    <form action="#" class="d-flex">
+                        <input type="text" name="query" class="form-control me-2" placeholder="Search articles..." aria-label="Search">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </form>
+                </div>
+
+                <!-- Featured Post -->
+                <div class="featured-post mb-5">
+                    <div class="card border-0 shadow-sm">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" class="card-img-top" alt="Dog wearing GPS tracker">
+                            <span class="badge bg-primary position-absolute top-0 end-0 m-3">Featured</span>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="small text-muted mb-2">March 20, 2024</div>
+                            <h2 class="card-title h3 mb-3">
+                                <a href="/reviews/best-gps-pet-trackers-2024" class="text-decoration-none">Best GPS Pet Trackers 2024: Complete Comparison Guide</a>
+                            </h2>
+                            <p class="card-text">With the increasing number of GPS pet trackers on the market, choosing the right one for your furry friend can be overwhelming. In this comprehensive guide, we'll compare the top GPS trackers of 2024, helping you make an informed decision.</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="small">
+                                    <span class="fw-bold">Sarah Johnson</span>
+                                    <span class="mx-1">in</span>
+                                    <a href="/blog?category=tech" class="text-decoration-none">Pet Tech</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Posts -->
+                <div class="blog-posts mb-5">
+                    <div class="row">
+                        <!-- PitPat GPS Tracker Review -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1583512603806-077998240c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="PitPat GPS tracker on dog">
+                                <div class="card-body p-4">
+                                    <div class="small text-muted mb-2">February 5, 2024</div>
+                                    <h3 class="card-title h5 mb-3">
+                                        <a href="/reviews/pitpat-gps-tracker-review" class="text-decoration-none">PitPat GPS Tracker Review: Activity Monitor & Location Tracker</a>
+                                    </h3>
+                                    <p class="card-text small">We test the PitPat GPS tracker to see how it compares to competitors and if its activity monitoring features are worth the investment.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="small">
+                                            <span class="fw-bold">James Rodriguez</span>
+                                        </div>
+                                        <a href="/reviews/pitpat-gps-tracker-review" class="btn btn-sm btn-outline-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Smart Pet Cameras Guide -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1541599468348-e96984315921?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Smart pet camera">
+                                <div class="card-body p-4">
+                                    <div class="small text-muted mb-2">December 12, 2023</div>
+                                    <h3 class="card-title h5 mb-3">
+                                        <a href="/reviews/smart-pet-cameras-guide" class="text-decoration-none">Smart Pet Cameras: The Complete Buyer's Guide</a>
+                                    </h3>
+                                    <p class="card-text small">Everything you need to know about choosing the right smart pet camera, from treat dispensers to two-way audio and motion alerts.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="small">
+                                            <span class="fw-bold">Emma Wilson</span>
+                                        </div>
+                                        <a href="/reviews/smart-pet-cameras-guide" class="btn btn-sm btn-outline-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pawfit GPS Tracker Review -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Pawfit GPS tracker on dog collar">
+                                <div class="card-body p-4">
+                                    <div class="small text-muted mb-2">November 10, 2023</div>
+                                    <h3 class="card-title h5 mb-3">
+                                        <a href="/reviews/pawfit-3-gps-tracker-review" class="text-decoration-none">Pawfit 3 GPS Tracker: The Ultimate Review</a>
+                                    </h3>
+                                    <p class="card-text small">Discover why the Pawfit 3 GPS tracker is a game-changer for pet owners with its reliable tracking and innovative safety features.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="small">
+                                            <span class="fw-bold">Sarah Johnson</span>
+                                        </div>
+                                        <a href="/reviews/pawfit-3-gps-tracker-review" class="btn btn-sm btn-outline-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- PitPat GPS Tracker Review -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1583512603806-077998240c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="PitPat GPS tracker on dog">
+                                <div class="card-body p-4">
+                                    <div class="small text-muted mb-2">February 5, 2024</div>
+                                    <h3 class="card-title h5 mb-3">
+                                        <a href="/reviews/pitpat-gps-tracker-review" class="text-decoration-none">PitPat GPS Tracker Review: Activity Monitor & Location Tracker</a>
+                                    </h3>
+                                    <p class="card-text small">We test the PitPat GPS tracker to see how it compares to competitors and if its activity monitoring features are worth the investment.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="small">
+                                            <span class="fw-bold">James Rodriguez</span>
+                                        </div>
+                                        <a href="/reviews/pitpat-gps-tracker-review" class="btn btn-sm btn-outline-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Smart Pet Cameras Guide -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1541599468348-e96984315921?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Smart pet camera">
+                                <div class="card-body p-4">
+                                    <div class="small text-muted mb-2">December 12, 2023</div>
+                                    <h3 class="card-title h5 mb-3">
+                                        <a href="/reviews/smart-pet-cameras-guide" class="text-decoration-none">Smart Pet Cameras: The Complete Buyer's Guide</a>
+                                    </h3>
+                                    <p class="card-text small">Everything you need to know about choosing the right smart pet camera, from treat dispensers to two-way audio and motion alerts.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="small">
+                                            <span class="fw-bold">Emma Wilson</span>
+                                        </div>
+                                        <a href="/reviews/smart-pet-cameras-guide" class="btn btn-sm btn-outline-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pawfit Lite GPS Tracker Review -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Small GPS tracker on pet collar">
+                                <div class="card-body p-4">
+                                    <div class="small text-muted mb-2">January 15, 2024</div>
+                                    <h3 class="card-title h5 mb-3">
+                                        <a href="/reviews/pawfit-lite-gps-tracker-review" class="text-decoration-none">Pawfit Lite GPS Tracker: Compact Solution for Small Pets</a>
+                                    </h3>
+                                    <p class="card-text small">Our in-depth review of the Pawfit Lite GPS tracker, designed specifically for smaller pets with its lightweight design.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="small">
+                                            <span class="fw-bold">Michael Chen</span>
+                                        </div>
+                                        <a href="/reviews/pawfit-lite-gps-tracker-review" class="btn btn-sm btn-outline-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- PitPat GPS Tracker Review -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1583512603806-077998240c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="PitPat GPS tracker on dog">
+                                <div class="card-body p-4">
+                                    <div class="small text-muted mb-2">February 5, 2024</div>
+                                    <h3 class="card-title h5 mb-3">
+                                        <a href="/reviews/pitpat-gps-tracker-review" class="text-decoration-none">PitPat GPS Tracker Review: Activity Monitor & Location Tracker</a>
+                                    </h3>
+                                    <p class="card-text small">We test the PitPat GPS tracker to see how it compares to competitors and if its activity monitoring features are worth the investment.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="small">
+                                            <span class="fw-bold">James Rodriguez</span>
+                                        </div>
+                                        <a href="/reviews/pitpat-gps-tracker-review" class="btn btn-sm btn-outline-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Smart Pet Cameras Guide -->
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <img src="https://images.unsplash.com/photo-1541599468348-e96984315921?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Smart pet camera">
+                                <div class="card-body p-4">
+                                    <div class="small text-muted mb-2">December 12, 2023</div>
+                                    <h3 class="card-title h5 mb-3">
+                                        <a href="/reviews/smart-pet-cameras-guide" class="text-decoration-none">Smart Pet Cameras: The Complete Buyer's Guide</a>
+                                    </h3>
+                                    <p class="card-text small">Everything you need to know about choosing the right smart pet camera, from treat dispensers to two-way audio and motion alerts.</p>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 pt-0 pb-4 px-4">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="small">
+                                            <span class="fw-bold">Emma Wilson</span>
+                                        </div>
+                                        <a href="/reviews/smart-pet-cameras-guide" class="btn btn-sm btn-outline-primary">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+
+                <!-- Pagination -->
+                <nav aria-label="Blog pagination">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Categories -->
+                <div class="card mb-4 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="h5 mb-0">Categories</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-2">
+                                <a href="/blog?category=tech" class="text-decoration-none d-flex justify-content-between align-items-center">
+                                    <span>Pet Tech</span>
+                                    <span class="badge bg-light text-dark rounded-pill">12</span>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="/blog?category=accessories" class="text-decoration-none d-flex justify-content-between align-items-center">
+                                    <span>Accessories</span>
+                                    <span class="badge bg-light text-dark rounded-pill">8</span>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="/blog?category=health" class="text-decoration-none d-flex justify-content-between align-items-center">
+                                    <span>Health & Wellness</span>
+                                    <span class="badge bg-light text-dark rounded-pill">15</span>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="/blog?category=nutrition" class="text-decoration-none d-flex justify-content-between align-items-center">
+                                    <span>Nutrition</span>
+                                    <span class="badge bg-light text-dark rounded-pill">7</span>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="/blog?category=training" class="text-decoration-none d-flex justify-content-between align-items-center">
+                                    <span>Training & Behavior</span>
+                                    <span class="badge bg-light text-dark rounded-pill">9</span>
+                                </a>
+                            </li>
+                            <li class="mb-0">
+                                <a href="/blog?category=travel" class="text-decoration-none d-flex justify-content-between align-items-center">
+                                    <span>Travel & Adventure</span>
+                                    <span class="badge bg-light text-dark rounded-pill">6</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Popular Posts -->
+                <div class="card mb-4 border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="h5 mb-0">Popular Posts</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex mb-3">
+                            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" class="flex-shrink-0 me-3" width="60" height="60" style="object-fit: cover;" alt="Dog wearing GPS tracker">
+                            <div>
+                                <h5 class="h6 mb-1">
+                                    <a href="/reviews/pawfit-3-gps-tracker-review" class="text-decoration-none">Pawfit 3 GPS Tracker: The Ultimate Review</a>
+                                </h5>
+                                <div class="small text-muted">November 10, 2023</div>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <img src="https://images.unsplash.com/photo-1541599468348-e96984315921?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" class="flex-shrink-0 me-3" width="60" height="60" style="object-fit: cover;" alt="Pet camera">
+                            <div>
+                                <h5 class="h6 mb-1">
+                                    <a href="/reviews/best-pet-cameras" class="text-decoration-none">Best Pet Cameras of 2023</a>
+                                </h5>
+                                <div class="small text-muted">October 25, 2023</div>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <img src="https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" class="flex-shrink-0 me-3" width="60" height="60" style="object-fit: cover;" alt="Dog with smart collar">
+                            <div>
+                                <h5 class="h6 mb-1">
+                                    <a href="/reviews/pet-tech-essentials" class="text-decoration-none">Essential Pet Tech for Modern Pet Parents</a>
+                                </h5>
+                                <div class="small text-muted">October 10, 2023</div>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-0">
+                            <img src="https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" class="flex-shrink-0 me-3" width="60" height="60" style="object-fit: cover;" alt="Dog bed">
+                            <div>
+                                <h5 class="h6 mb-1">
+                                    <a href="/reviews/best-dog-beds" class="text-decoration-none">Choosing the Perfect Dog Bed</a>
+                                </h5>
+                                <div class="small text-muted">September 20, 2023</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="h5 mb-0">Subscribe to Our Newsletter</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="small mb-3">Stay updated with our latest reviews, tips, and special offers.</p>
+                        <form id="newsletter-form" action="#" method="POST">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your email address" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                        </form>
+                        <div id="newsletter-success" class="alert alert-success mt-3 d-none">
+                            Thank you for subscribing!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer th:replace="fragments/footer :: footer"></footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsletterForm = document.getElementById('newsletter-form');
+            const newsletterSuccess = document.getElementById('newsletter-success');
+            
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Simulate successful subscription
+                    newsletterForm.reset();
+                    newsletterSuccess.classList.remove('d-none');
+                    setTimeout(() => {
+                        newsletterSuccess.classList.add('d-none');
+                    }, 5000);
+                });
+            }
+        });
+    </script>
+
+    <style>
+        /* Blog-specific styles */
+        .card {
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .featured-post .card-img-top {
+            height: 300px;
+        }
+        
+        .search-container .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(255, 126, 95, 0.25);
+        }
+        
+        @media (max-width: 767.98px) {
+            .card-img-top {
+                height: 180px;
+            }
+            
+            .featured-post .card-img-top {
+                height: 220px;
+            }
+        }
+    </style>
+</body>
+</html>

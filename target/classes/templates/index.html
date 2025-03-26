@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<!-- Include common header -->
+<head th:replace="fragments/header :: common-header('Home')">
+    <!-- Add homepage specific CSS -->
+    <link th:href="@{/css/homepage.css}" rel="stylesheet">
+</head>
+<body>
+<!-- Include navigation bar -->
+<div th:replace="fragments/header :: navbar"></div>
+
+<!-- Main page content -->
+<div class="container py-5">
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <h1 class="hero-title">Find the Perfect Products for Your Pets</h1>
+            <p class="hero-subtitle">Expert reviews, detailed comparisons, and comprehensive buying guides</p>
+
+            <div class="hero-badges">
+                <span class="hero-badge"><i class="fas fa-check-circle"></i> Trusted Reviews</span>
+                <span class="hero-badge"><i class="fas fa-star"></i> Expert Testing</span>
+                <span class="hero-badge"><i class="fas fa-shield-alt"></i> Unbiased Analysis</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="trust-badges">
+        <div class="container">
+            <div class="badge-container">
+                <div class="trust-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Independent Reviews</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-flask"></i>
+                    <span>Rigorous Testing</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Unbiased Analysis</span>
+                </div>
+                <div class="trust-badge">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Regular Updates</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Featured Reviews Section -->
+        <section class="featured-reviews">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> Latest Reviews</h2>
+                <p class="section-subtitle">Discover our most recent in-depth product evaluations</p>
+            </div>
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <div class="card-image-container">
+                        <img src="/img/home/pawfit 3.png" alt="Pawfit 3 GPS Tracker Review" class="review-image">
+                        <div class="image-overlay">
+                            <a href="/reviews/pawfit-3-gps-tracker-review" class="overlay-button">Read Review</a>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <span class="review-category"><i class="fas fa-map-marker-alt"></i> GPS Tracker</span>
+                        <h3 class="review-title">Pawfit 3 GPS Tracker: The Ultimate Review</h3>
+                        <p class="review-excerpt">A comprehensive review of this feature-rich GPS tracker designed specifically for your four-legged friend.</p>
+                        <div class="review-meta">
+                            <span class="rating">★★★★★</span>
+                            <span class="review-date"><i class="far fa-calendar-alt"></i> March 15, 2024</span>
+                        </div>
+                        <a href="/reviews/pawfit-3-gps-tracker-review" class="read-more">Read Full Review <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div class="card-image-container">
+                        <img src="/img/home/tractive-dog.avif" alt="Tractive GPS Tracker" class="review-image">
+                        <div class="image-overlay">
+                            <a href="/reviews/tractive-gps-review" class="overlay-button">Read Review</a>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <span class="review-category"><i class="fas fa-map-marker-alt"></i> GPS Tracker</span>
+                        <h3 class="review-title">Best Value: Tractive GPS</h3>
+                        <p class="review-excerpt">A balanced GPS tracker offering competitive pricing, virtual fence features, and global coverage.</p>
+                        <div class="review-meta">
+                            <span class="rating">★★★★★</span>
+                            <span class="review-date"><i class="far fa-calendar-alt"></i> March 20, 2024</span>
+                        </div>
+                        <a href="/reviews/tractive-gps-review" class="read-more">Read Full Review <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div class="card-image-container">
+                        <img src="/img/home/pitpat.webp" alt="PitPat GPS Tracker" class="review-image">
+                        <div class="image-overlay">
+                            <a href="/reviews/pitpat-gps-tracker-review" class="overlay-button">Read Review</a>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <span class="review-category"><i class="fas fa-map-marker-alt"></i> GPS Tracker</span>
+                        <h3 class="review-title">Best for Dogs: PitPat GPS</h3>
+                        <p class="review-excerpt">A subscription-free GPS tracker with excellent battery life and built-in activity monitoring features.</p>
+                        <div class="review-meta">
+                            <span class="rating">★★★★½</span>
+                            <span class="review-date"><i class="far fa-calendar-alt"></i> March 15, 2024</span>
+                        </div>
+                        <a href="/reviews/pitpat-gps-tracker-review" class="read-more">Read Full Review <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div class="card-image-container">
+                        <img src="/img/home/pawfit lite.png" alt="Pawfit Lite GPS Tracker" class="review-image">
+                        <div class="image-overlay">
+                            <a href="/reviews/pawfit-lite-gps-tracker-review" class="overlay-button">Read Review</a>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <span class="review-category"><i class="fas fa-map-marker-alt"></i> GPS Tracker</span>
+                        <h3 class="review-title">Pawfit Lite: The Ultra-Lightweight Pet Tracker</h3>
+                        <p class="review-excerpt">A compact and lightweight GPS tracker perfect for both cats and dogs, featuring reliable 4G connectivity and essential safety features.</p>
+                        <div class="review-meta">
+                            <span class="rating">★★★★½</span>
+                            <span class="review-date"><i class="far fa-calendar-alt"></i> March 01, 2025</span>
+                        </div>
+                        <a href="/reviews/pawfit-lite-gps-tracker-review" class="read-more">Read Full Review <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            <div class="view-all-link">
+                <a href="/reviews" class="view-all-button">View All Reviews <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- Testing Methodology Section -->
+        <section class="testing-methodology">
+            <div class="section-header">
+                <h2><i class="fas fa-flask"></i> Our Testing Process</h2>
+                <p class="section-subtitle">How we ensure accurate, reliable, and thorough evaluations</p>
+            </div>
+            <div class="methodology-container">
+                <div class="methodology-card">
+                    <div class="methodology-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Research</h3>
+                    <p>We start with extensive market research to identify the most relevant products worth testing.</p>
+                </div>
+                <div class="methodology-card">
+                    <div class="methodology-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Testing</h3>
+                    <p>Our experts conduct rigorous hands-on testing using standardized methodologies for consistent
+                        results.</p>
+                </div>
+                <div class="methodology-card">
+                    <div class="methodology-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Analysis</h3>
+                    <p>We analyze performance data and user experience to provide comprehensive evaluations.</p>
+                </div>
+                <div class="methodology-card">
+                    <div class="methodology-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Review</h3>
+                    <p>Our detailed reviews highlight strengths, weaknesses, and ideal use cases for each product.</p>
+                </div>
+            </div>
+            <div class="methodology-cta">
+                <a href="/about" class="btn btn-outline-primary">Learn More About Our Process</a>
+            </div>
+        </section>
+
+
+    </main>
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+<!-- Custom CSS for the redesigned homepage -->
+<!-- Custom CSS for the redesigned homepage -->
+<style>
+    /* Hero Section Styling */
+    .hero {
+        position: relative;
+        background: url('/images/hero-bg.jpg') no-repeat center center;
+        background-size: cover;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    }
+
+    .hero-container {
+        position: relative;
+        padding: 5rem 2rem;
+        text-align: center;
+        color: white;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-cta {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero-badges {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .hero-badge {
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 0.5rem 1rem;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        backdrop-filter: blur(5px);
+    }
+
+    .hero-badge i {
+        color: #ffc107;
+    }
+
+    /* Trust Badges Section */
+    .trust-badges {
+        background-color: #f8f9fa;
+        padding: 2rem 0;
+        margin: 2rem 0 3rem;
+        border-radius: 10px;
+    }
+
+    .badge-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .trust-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-weight: 500;
+        color: #495057;
+    }
+
+    .trust-badge i {
+        font-size: 1.5rem;
+        color: #4361ee;
+    }
+
+    /* Featured Reviews Section */
+    .featured-reviews {
+        padding: 3rem 0;
+    }
+
+    .section-header {
+        text-align: center;
+        /*margin-bottom: 3rem;*/
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #212529;
+        margin-bottom: 0.5rem;
+    }
+
+    .section-header h2 i {
+        color: #ffc107;
+        margin-right: 0.5rem;
+    }
+
+    .section-subtitle {
+        color: #6c757d;
+        font-size: 1.1rem;
+    }
+
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .review-card {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #fff;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .review-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-image-container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .review-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .review-card:hover .review-image {
+        transform: scale(1.05);
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .review-card:hover .image-overlay {
+        opacity: 1;
+    }
+
+    .overlay-button {
+        background-color: white;
+        color: #212529;
+        padding: 0.6rem 1.2rem;
+        border-radius: 30px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .overlay-button:hover {
+        background-color: #4361ee;
+        color: white;
+        transform: translateY(-3px);
+    }
+
+    .review-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .review-category {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .review-category i {
+        color: #4361ee;
+    }
+
+    .review-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #212529;
+    }
+
+    .review-excerpt {
+        color: #6c757d;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+    }
+
+    .review-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .rating {
+        color: #ffc107;
+        font-size: 1.1rem;
+    }
+
+    .review-date {
+        color: #6c757d;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .read-more {
+        color: #4361ee;
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .read-more:hover {
+        color: #3a56d4;
+        gap: 0.8rem;
+    }
+
+    .view-all-link {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .view-all-button {
+        background-color: #4361ee;
+        color: white;
+        padding: 0.8rem 2rem;
+        border-radius: 30px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        transition: all 0.3s ease;
+    }
+
+    .view-all-button:hover {
+        background-color: #3a56d4;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+    }
+
+    /* Testing Methodology Section */
+    .testing-methodology {
+        padding: 4rem 0;
+        background-color: #f8f9fa;
+        border-radius: 15px;
+        margin: 3rem 0;
+    }
+
+    .methodology-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .methodology-card {
+        text-align: center;
+        padding: 2rem 1.5rem;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+    }
+
+    .methodology-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .methodology-icon {
+        width: 70px;
+        height: 70px;
+        background-color: rgba(67, 97, 238, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+    }
+
+    .methodology-icon i {
+        font-size: 1.8rem;
+        color: #4361ee;
+    }
+
+    .methodology-card h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #212529;
+    }
+
+    .methodology-card p {
+        color: #6c757d;
+    }
+
+    .methodology-cta {
+        text-align: center;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .hero-container {
+            padding: 3rem 1.5rem;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+        }
+
+        .reviews-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .methodology-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</body>
+</html>

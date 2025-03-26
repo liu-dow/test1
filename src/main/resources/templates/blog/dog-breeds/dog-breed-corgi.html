@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: common-header('Pembroke Welsh Corgi - Dog Breed Information')">
+    <meta name="description" content="Learn about the Pembroke Welsh Corgi: temperament, care requirements, training tips, and health considerations. Comprehensive guide for potential owners and dog lovers.">
+    <meta name="keywords" content="Pembroke Welsh Corgi, Corgi, Welsh Corgi, Corgi dog breed, Corgi care, Corgi training, Corgi health, dog breeds">
+</head>
+<body>
+    <header th:replace="fragments/header :: navbar"></header>
+
+    <main class="container py-5">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <!-- Page Title -->
+                <div class="mb-5">
+                    <h1 class="display-5 fw-bold mb-3">Pembroke Welsh Corgi</h1>
+                    <p class="lead">The royal favorite with a big personality in a small package</p>
+                </div>
+
+                <!-- Featured Image -->
+                <div class="featured-image mb-5">
+                    <img src="https://images.unsplash.com/photo-1612536057832-2ff7ead58194" class="img-fluid rounded shadow-sm" alt="Pembroke Welsh Corgi">
+                    <div class="image-caption text-center text-muted mt-2">The Pembroke Welsh Corgi is known for its distinctive appearance and cheerful expression</div>
+                </div>
+
+                <!-- Breed Overview -->
+                <div class="breed-overview mb-5">
+                    <h2 class="h3 mb-4">Breed Overview</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <h3 class="h5 mb-3">Quick Facts</h3>
+                                    <ul class="list-unstyled">
+                                        <li><strong>Height:</strong> 10-12 inches</li>
+                                        <li><strong>Weight:</strong> 25-30 pounds</li>
+                                        <li><strong>Life Span:</strong> 12-14 years</li>
+                                        <li><strong>Colors:</strong> Red, Sable, Fawn, Black and Tan</li>
+                                        <li><strong>Temperament:</strong> Affectionate, Smart, Alert</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <h3 class="h5 mb-3">Ideal For</h3>
+                                    <ul class="list-unstyled">
+                                        <li>✓ Family companionship</li>
+                                        <li>✓ Apartment living</li>
+                                        <li>✓ Active seniors</li>
+                                        <li>✓ First-time dog owners</li>
+                                        <li>✓ Herding activities</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breed History -->
+                <div class="breed-history mb-5">
+                    <h2 class="h3 mb-4">Breed History</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <p>The Pembroke Welsh Corgi originated in Pembrokeshire, Wales, where they were used as herding dogs. Their low-set build was perfect for nipping at the heels of cattle while avoiding kicks. The breed's history dates back to at least the 10th century.</p>
+                            <p>Corgis gained worldwide recognition when they became favorites of the British Royal Family, particularly Queen Elizabeth II, who owned more than 30 Pembroke Welsh Corgis throughout her lifetime. This royal connection helped popularize the breed globally.</p>
+                            <p>Despite their small size, Corgis maintain their herding instincts and working dog mentality, combining intelligence with a strong desire to please their owners.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Temperament -->
+                <div class="breed-temperament mb-5">
+                    <h2 class="h3 mb-4">Temperament</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <p>Pembroke Welsh Corgis are known for their outgoing, friendly personalities. They are intelligent, alert, and make excellent watchdogs despite their small size. Their herding heritage gives them a bold, confident nature.</p>
+                            <p>These dogs are typically good with children and other pets, though they may try to herd them by nipping at their heels. They are affectionate with family members and generally friendly with strangers, though they remain protective of their home.</p>
+                            <p>Corgis are active and energetic dogs that need regular exercise to stay happy and healthy. They are also known for their vocal nature and may bark to alert their family to any unusual activity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Care Requirements -->
+                <div class="breed-care mb-5">
+                    <h2 class="h3 mb-4">Care Requirements</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5 mb-3">Exercise Needs</h3>
+                            <p>Despite their small size, Corgis need regular exercise:</p>
+                            <ul>
+                                <li>Daily walks totaling 45-60 minutes</li>
+                                <li>Mental stimulation through games and training</li>
+                                <li>Supervised play sessions</li>
+                                <li>Herding activities or agility training</li>
+                            </ul>
+
+                            <h3 class="h5 mb-3 mt-4">Grooming</h3>
+                            <p>Their double coat requires regular maintenance:</p>
+                            <ul>
+                                <li>Brush 2-3 times per week</li>
+                                <li>More frequent brushing during shedding seasons</li>
+                                <li>Regular nail trimming</li>
+                                <li>Routine dental care</li>
+                            </ul>
+
+                            <h3 class="h5 mb-3 mt-4">Health Considerations</h3>
+                            <p>Common health issues include:</p>
+                            <ul>
+                                <li>Hip dysplasia</li>
+                                <li>Intervertebral disk disease</li>
+                                <li>Progressive retinal atrophy</li>
+                                <li>Von Willebrand's disease</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Tips -->
+                <div class="breed-training mb-5">
+                    <h2 class="h3 mb-4">Training Tips</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <p>Training a Corgi requires consistency and patience:</p>
+                            <ul>
+                                <li><strong>Early Socialization:</strong> Expose to various people, pets, and situations</li>
+                                <li><strong>Positive Reinforcement:</strong> Use treats and praise effectively</li>
+                                <li><strong>Herding Control:</strong> Channel herding instincts appropriately</li>
+                                <li><strong>Mental Stimulation:</strong> Provide puzzle toys and training games</li>
+                                <li><strong>Bark Control:</strong> Train to control excessive barking</li>
+                            </ul>
+                            <p>Corgis excel in various activities:</p>
+                            <ul>
+                                <li>Agility</li>
+                                <li>Obedience training</li>
+                                <li>Herding trials</li>
+                                <li>Rally</li>
+                                <li>Therapy work</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nutrition -->
+                <div class="breed-nutrition mb-5">
+                    <h2 class="h3 mb-4">Nutrition</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <p>Proper nutrition is crucial as Corgis can be prone to obesity:</p>
+                            <ul>
+                                <li>Feed high-quality dog food appropriate for age and activity level</li>
+                                <li>Monitor portion sizes carefully</li>
+                                <li>Account for treats in daily calorie intake</li>
+                                <li>Consider a weight management formula if needed</li>
+                                <li>Divide daily food into two meals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: common-header('Affiliate Disclosure - PetGear Reviews')">
+</head>
+<body>
+    <header th:replace="fragments/header :: navbar"></header>
+
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="page-content">
+                    <h1 class="display-5 fw-bold mb-4">Affiliate Disclosure</h1>
+                    
+                    <div class="alert alert-info mb-4">
+                        <p class="mb-0">Last Updated: March 20, 2024</p>
+                    </div>
+                    
+                    <p class="lead mb-4">This page explains how PetGear Reviews earns income through affiliate partnerships and what this means for you as a reader.</p>
+                    
+                    <h2 class="h3 mt-5 mb-3">What Are Affiliate Links?</h2>
+                    <p>Throughout our website, you'll find links to products and services that we recommend. Many of these links are "affiliate links," which means if you click on the link and make a purchase, we may receive a small commission at no additional cost to you.</p>
+                    
+                    <p>These affiliate relationships help support the operation of our website and allow us to continue providing high-quality, independent reviews and content about pet products and services.</p>
+                    
+                    <h2 class="h3 mt-5 mb-3">Our Commitment to You</h2>
+                    <p>We want to be completely transparent about how we make money, but more importantly, we want you to know that:</p>
+                    
+                    <ul class="mb-4">
+                        <li>We <strong>never</strong> recommend products solely to earn commissions</li>
+                        <li>Our reviews and recommendations are based on thorough research, hands-on testing, and genuine evaluation</li>
+                        <li>The presence or absence of an affiliate program never influences our product ratings or recommendations</li>
+                        <li>We often recommend products that don't offer us any commission if we believe they're the best option for our readers</li>
+                    </ul>
+                    
+                    <p>Our primary goal is to help you make informed decisions about products for your pets. Your trust is our most valuable asset, and we take that responsibility seriously.</p>
+                    
+                    <p>These relationships may change over time as we continue to evaluate products and services in the pet industry.</p>
+                    
+                    <h2 class="h3 mt-5 mb-3">How to Identify Affiliate Links</h2>
+                    <p>We include a disclosure statement at the top of any content that contains affiliate links. Additionally, you can often identify affiliate links by looking at the URL. If the URL contains tracking parameters or redirects through a third-party site, it's likely an affiliate link.</p>
+                    
+                    <p>If you prefer not to use affiliate links, you can always search for the product directly on the manufacturer's website or through a search engine.</p>
+                    
+                    <h2 class="h3 mt-5 mb-3">Our Review Process</h2>
+                    <p>Every product we review goes through a thorough evaluation process:</p>
+                    
+                    <ol class="mb-4">
+                        <li>We research the product specifications, manufacturer claims, and user reviews</li>
+                        <li>Whenever possible, we personally test products with our own pets</li>
+                        <li>We compare the product to alternatives in the same category</li>
+                        <li>We consider factors like quality, durability, value for money, and user experience</li>
+                        <li>We update our reviews as products evolve or new information becomes available</li>
+                    </ol>
+                    
+                    <p>This process ensures that our recommendations are based on genuine evaluation rather than commercial relationships.</p>
+                    
+                    <h2 class="h3 mt-5 mb-3">Questions About Our Affiliate Relationships</h2>
+                    <p>If you have any questions about our affiliate relationships or how we make money, please don't hesitate to <a href="/contact">contact us</a>. We're committed to transparency and are happy to provide additional information about our business practices.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer th:replace="fragments/footer :: footer"></footer>
+
+    <style>
+        .page-content h2 {
+            color: var(--primary-dark);
+        }
+        
+        .page-content p, .page-content li {
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        @media (max-width: 767.98px) {
+            .page-content p, .page-content li {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</body>
+</html> 

@@ -1,0 +1,71 @@
+<div th:fragment="social-share(title, description, url)" class="social-share">
+    <div class="d-flex gap-2 align-items-center">
+        <span class="text-muted">Share:</span>
+        <!-- Facebook -->
+        <a th:href="@{'https://www.facebook.com/sharer/sharer.php?u=' + ${#uris.escapePathSegment(url)}}"
+           class="btn btn-outline-primary btn-sm social-share-btn"
+           target="_blank"
+           rel="noopener noreferrer"
+           onclick="window.open(this.href, 'facebook-share', 'width=580,height=296'); return false;">
+            <i class="bi bi-facebook"></i>
+        </a>
+
+        <!-- X (Twitter) -->
+        <a th:href="@{'https://twitter.com/intent/tweet?text=' + ${#uris.escapePathSegment(title)} + '&url=' + ${#uris.escapePathSegment(url)}}"
+           class="btn btn-outline-dark btn-sm social-share-btn"
+           target="_blank"
+           rel="noopener noreferrer"
+           onclick="window.open(this.href, 'twitter-share', 'width=580,height=296'); return false;">
+            <i class="bi bi-twitter-x"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a th:href="@{'https://www.linkedin.com/sharing/share-offsite/?url=' + ${#uris.escapePathSegment(url)}}"
+           class="btn btn-outline-primary btn-sm social-share-btn"
+           target="_blank"
+           rel="noopener noreferrer"
+           onclick="window.open(this.href, 'linkedin-share', 'width=580,height=296'); return false;">
+            <i class="bi bi-linkedin"></i>
+        </a>
+
+        <!-- Copy Link -->
+        <button class="btn btn-outline-secondary btn-sm social-share-btn copy-link"
+                th:data-url="${url}"
+                onclick="copyToClipboard(this)">
+            <i class="bi bi-link-45deg"></i>
+        </button>
+    </div>
+
+    <style>
+        .social-share-btn {
+            padding: 0.25rem 0.5rem;
+            transition: all 0.2s ease;
+        }
+        
+        .social-share-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .social-share-btn i {
+            font-size: 1.1rem;
+        }
+    </style>
+
+    <script th:inline="javascript">
+        function copyToClipboard(button) {
+            const url = button.getAttribute('data-url');
+            navigator.clipboard.writeText(url).then(() => {
+                const originalContent = button.innerHTML;
+                button.innerHTML = '<i class="bi bi-check2"></i>';
+                button.classList.add('btn-success');
+                button.classList.remove('btn-outline-secondary');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalContent;
+                    button.classList.remove('btn-success');
+                    button.classList.add('btn-outline-secondary');
+                }, 2000);
+            });
+        }
+    </script>
+</div>

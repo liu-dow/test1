@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<!-- Include common header -->
+<head th:replace="fragments/header :: common-header('Contact Us')">
+</head>
+<body>
+<!-- Include navigation bar -->
+<div th:replace="fragments/header :: navbar"></div>
+
+<!-- Main page content -->
+<div class="container py-5">
+    <style>
+        /* Enhanced form styling */
+        .contact-form-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form-container:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-title {
+            color: #3a3a3a;
+            margin-bottom: 25px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .form-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 50px;
+            background-color: #4CAF50;
+        }
+
+        /* Form field styling */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-control {
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+            font-size: 16px;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .form-control:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .checkbox-group input {
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        .checkbox-group label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .submit-button:hover {
+            background-color: #3e8e41;
+            transform: translateY(-2px);
+        }
+
+        .submit-button i {
+            margin-left: 8px;
+        }
+
+        .invalid-feedback {
+            display: none;
+            color: #dc3545;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .is-invalid {
+            border-color: #dc3545;
+        }
+
+        .is-valid {
+            border-color: #28a745;
+        }
+
+        .invalid-feedback.show {
+            display: block;
+        }
+
+        /* Success message */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        .success-icon {
+            font-size: 60px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .contact-form-container {
+                padding: 20px;
+            }
+
+            .form-control {
+                height: 45px;
+            }
+
+            .submit-button {
+                padding: 10px 20px;
+            }
+        }
+
+        /* New CSS Banner Design */
+        .banner-container {
+            position: relative;
+            margin-bottom: 50px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner-background {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-background::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            right: -50px;
+            bottom: -50px;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.343 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            animation: backgroundMove 30s linear infinite;
+        }
+
+        @keyframes backgroundMove {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-100px) rotate(5deg);
+            }
+        }
+
+        .banner-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: #fff;
+            clip-path: polygon(0 60%, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .banner-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        .banner-title {
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .banner-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            max-width: 800px;
+            text-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 1s ease-out 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .banner-badges {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeInUp 1.2s ease-out 0.4s;
+            animation-fill-mode: both;
+        }
+
+        .banner-badge {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            padding: 8px 15px;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .banner-badge:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .banner-badge i {
+            margin-right: 8px;
+            font-size: 1rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-background {
+                height: 250px;
+            }
+
+            .banner-title {
+                font-size: 1.8rem;
+            }
+
+            .banner-subtitle {
+                font-size: 1rem;
+            }
+
+            .banner-badges {
+                gap: 10px;
+            }
+
+            .banner-badge {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+
+    <!-- Banner Section -->
+    <div class="banner-container">
+        <div class="banner-background">
+            <div class="banner-content">
+                <h1 class="banner-title">Expert Reviews & Honest Feedback</h1>
+                <p class="banner-subtitle">We're dedicated to providing thorough, unbiased assessments to help you make
+                    informed decisions for your pets.</p>
+                <div class="banner-badges">
+                    <span class="banner-badge"><i class="fas fa-check-circle"></i> Trusted Reviews</span>
+                    <span class="banner-badge"><i class="fas fa-star"></i> Expert Testing</span>
+                    <span class="banner-badge"><i class="fas fa-shield-alt"></i> Unbiased Analysis</span>
+                </div>
+            </div>
+            <div class="banner-shape"></div>
+        </div>
+    </div>
+
+    <section class="contact-intro">
+        <div class="contact-content">
+            <h2>Get in Touch</h2>
+            <p class="lead">We'd love to hear from you! Whether you have questions, feedback, or suggestions, our team
+                is here to help.</p>
+            <p>At PetGear Reviews, we value your input and are committed to providing the best possible information
+                about pet products. Use the form below to reach out, and we'll get back to you as soon as possible.</p>
+
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="method-details">
+                        <h3>Email Us</h3>
+                        <p>For general inquiries: <a href="mailto:info@petgearreviews.com">info@petgearreviews.com</a>
+                        </p>
+                        <p>For review requests: <a
+                                href="mailto:reviews@petgearreviews.com">reviews@petgearreviews.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form-container">
+            <form class="contact-form" action="/submit-contact" method="POST" id="contactForm">
+                <h3 class="form-title text-center mb-4">Send Us a Message</h3>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                        <div class="invalid-feedback">Please enter your name</div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                        <div class="invalid-feedback">Please enter a valid email address</div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <select id="subject" name="subject" class="form-control" required>
+                        <option value="" disabled selected>Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="review">Product Review Request</option>
+                        <option value="feedback">Website Feedback</option>
+                        <option value="partnership">Partnership Opportunity</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a subject</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                    <div class="invalid-feedback">Please enter your message</div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">I agree to the <a href="/privacy">Privacy Policy</a></label>
+                            <div class="invalid-feedback">You must agree to the privacy policy</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="submit-button" style="max-width: 200px;">
+                        Send Message <i class="fas fa-paper-plane ms-2"></i>
+                    </button>
+                </div>
+
+                <!-- Success Message -->
+                <div class="success-message">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Thank You!</h3>
+                    <p>Your message has been sent successfully. We'll get back to you soon.</p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Add new styles -->
+        <style>
+            .contact-form-container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 40px;
+            }
+            
+            .form-label {
+                font-weight: 500;
+                margin-bottom: 8px;
+                color: #333;
+            }
+            
+            .form-control {
+                height: 48px;
+                border-radius: 6px;
+                border: 1px solid #ddd;
+                padding: 8px 16px;
+            }
+            
+            textarea.form-control {
+                height: auto;
+            }
+            
+            .checkbox-group {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                margin-bottom: 0;
+            }
+            
+            .checkbox-group input[type="checkbox"] {
+                margin-top: 4px;
+            }
+            
+            .submit-button {
+                margin: 0 auto;
+            }
+            
+            @media (max-width: 768px) {
+                .contact-form-container {
+                    padding: 20px;
+                }
+            }
+        </style>
+    </section>
+
+    <section class="faq-section">
+        <h2 class="section-title"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>How can I suggest a product for review?</h3>
+                <p>You can suggest products for review by filling out our contact form and selecting "Product Review
+                    Request" as the subject. Please include as much information about the product as possible, including
+                    why you think we should review it.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you accept products for testing?</h3>
+                <p>Yes, we do accept products for testing. However, sending us a product does not guarantee a positive
+                    review. We maintain complete editorial independence and evaluate all products based on the same
+                    criteria.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How long does it take to get a response?</h3>
+                <p>We aim to respond to all inquiries within 1-2 business days. For more complex requests or during busy
+                    periods, it may take a little longer, but we'll do our best to get back to you as soon as
+                    possible.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can I write for PetGear Reviews?</h3>
+                <p>We're always looking for passionate pet owners and industry experts to join our team. If you're
+                    interested in contributing, please send us your resume and writing samples through our contact
+                    form.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location section removed as requested -->
+</div>
+
+<!-- Include common footer -->
+<div th:replace="fragments/footer :: footer"></div>
+
+<!-- Replace original Form Validation JavaScript -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contactForm');
+        const successMessage = document.querySelector('.success-message');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            if (validateForm()) {
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value,
+                    newsletter: document.getElementById('newsletter').checked
+                };
+
+                // Show success message directly after sending request
+                fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                // Hide form, show success message
+                form.style.display = 'none';
+                successMessage.classList.add('show');
+                
+                // Reset form after 5 seconds
+                setTimeout(() => {
+                    form.reset();
+                    form.style.display = 'block';
+                    successMessage.classList.remove('show');
+                }, 5000);
+            }
+        });
+
+        const inputs = form.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function () {
+                validateInput(this);
+            });
+
+            if (input.tagName === 'SELECT') {
+                input.addEventListener('change', function () {
+                    validateInput(this);
+                });
+            }
+        });
+
+        function validateForm() {
+            let isValid = true;
+            inputs.forEach(input => {
+                if (!validateInput(input)) {
+                    isValid = false;
+                }
+            });
+            return isValid;
+        }
+
+        function validateInput(input) {
+            if (!input.hasAttribute('required') && input.value.trim() === '') {
+                return true;
+            }
+
+            let isValid = true;
+            const errorElement = input.nextElementSibling;
+
+            input.classList.remove('is-invalid', 'is-valid');
+            if (errorElement && errorElement.classList.contains('invalid-feedback')) {
+                errorElement.classList.remove('show');
+            }
+
+            if (input.type === 'email') {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                isValid = emailRegex.test(input.value);
+            } else if (input.type === 'checkbox' && input.hasAttribute('required')) {
+                isValid = input.checked;
+            } else if (input.value.trim() === '' && input.hasAttribute('required')) {
+                isValid = false;
+            }
+
+            if (!isValid) {
+                input.classList.add('is-invalid');
+                if (errorElement && errorElement.classList.contains('invalid-feedback')) {
+                    errorElement.classList.add('show');
+                }
+            } else {
+                input.classList.add('is-valid');
+            }
+
+            return isValid;
+        }
+    });
+</script>
+</body>
+</html>

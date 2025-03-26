@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallowed Directories
+Disallow: /api/
+Disallow: /admin/
+Disallow: /error/
+
+# Sitemap Location
+Sitemap: https://example.com/sitemap.xml

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="common-header(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title} + ' | PetGear Reviews'">PetGear Reviews</title>
+    <meta name="description"
+          content="Find the best pet gear and accessories with detailed reviews and comparisons at PetGear Reviews.">
+    <meta name="keywords" content="pet gear, pet accessories, pet reviews, dog accessories, cat accessories">
+    <meta name="author" content="PetGear Reviews">
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <link rel="icon" href="/img/favicon.ico">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/images/favicon-32x32.png}">
+    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/images/favicon-16x16.png}">
+    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/images/apple-touch-icon.png}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PetGear Reviews",
+      "url": "https://www.petgearreviews.com",
+      "logo": "https://www.petgearreviews.com/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/petgearreviews",
+        "https://www.twitter.com/petgearreviews",
+        "https://www.instagram.com/petgearreviews"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-800-123-4567",
+        "contactType": "customer service",
+        "email": "info@petgearreviews.com"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header th:fragment="navbar" class="header">
+        <!-- Main Navigation -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="/" aria-label="PetGear Reviews Home">
+
+<!--                    <h1 class="logo-title">-->
+
+                        <img src="/img/favicon.ico" style="width: auto;height: 120px" alt="logo">
+<!--                        PetGear<span>Reviews</span>-->
+
+<!--                    </h1>-->
+                </a>
+                
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav ms-auto">
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" href="/" th:classappend="${#httpServletRequest.requestURI == '/' ? 'active' : ''}">-->
+<!--                                Home-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item dropdown">-->
+<!--                            <a class="nav-link dropdown-toggle" href="#" id="accessoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                                GPS Tracker-->
+<!--                            </a>-->
+<!--                            <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown">-->
+<!--                                <li><a class="dropdown-item" href="/accessories/trackers">Dog Trackers</a></li>-->
+<!--                                <li><a class="dropdown-item" href="/accessories/trackers">Cat Trackers</a></li>-->
+
+<!--                            </ul>-->
+<!--                        </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/accessories/trackers" th:classappend="${#strings.startsWith(#httpServletRequest.requestURI, '/accessories/trackers') ? 'active' : ''}">
+                                <i class="fas fa-map-marker-alt me-1"></i> GPS Trackers
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/reviews" th:classappend="${#strings.startsWith(#httpServletRequest.requestURI, '/reviews') ? 'active' : ''}">
+                                <i class="fas fa-star me-1"></i> Reviews
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog" th:classappend="${#strings.startsWith(#httpServletRequest.requestURI, '/blog') ? 'active' : ''}">
+                                <i class="fas fa-pen-fancy me-1"></i> Blog
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about" th:classappend="${#httpServletRequest.requestURI == '/about' ? 'active' : ''}">
+                                <i class="fas fa-info-circle me-1"></i> About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact" th:classappend="${#httpServletRequest.requestURI == '/contact' ? 'active' : ''}">
+                                <i class="fas fa-envelope me-1"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <style>
+        /* Variables - Cute Theme */
+        :root {
+            --primary: #FF85A2; /* Pink primary color */
+            --primary-light: #FFC2D1;
+            --primary-dark: #FF5C7F;
+            --dark: #7D6B7D;
+            --light: #FFF5F8;
+            --gray: #BFB1C0;
+            --border-radius: 20px; /* More rounded corners */
+            --box-shadow: 0 4px 12px rgba(255, 133, 162, 0.2);
+            --transition: all 0.3s ease;
+        }
+        
+        /* Global Styles */
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--dark);
+            padding-top: 60px;
+            background-color: var(--light);
+        }
+        
+        /* Navbar - Cute Style */
+        .navbar {
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            padding: 0.5rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030;
+            height: 70px;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid var(--primary-light);
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        
+        .navbar:hover {
+            box-shadow: 0 6px 15px rgba(255, 133, 162, 0.25);
+            transform: translateY(2px);
+        }
+        
+        /* Logo */
+        .logo-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--primary);
+        }
+        
+        .logo-title span {
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        /* Navigation - Cute Style */
+        .navbar-nav {
+            gap: 0.8rem;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-link {
+            color: var(--dark);
+            font-weight: 600;
+            padding: 0.6rem 1.2rem;
+            transition: var(--transition);
+            font-size: 1.05rem;
+            border-radius: var(--border-radius);
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(255, 133, 162, 0.1);
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-link i {
+            transition: transform 0.4s ease;
+            display: inline-block;
+        }
+        
+        .nav-link:hover i {
+            transform: scale(1.2) rotate(5deg);
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary);
+            background-color: rgba(255, 133, 162, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(255, 133, 162, 0.2);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 3px;
+            background-color: var(--primary);
+            transition: all 0.4s ease;
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+        
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 70%;
+        }
+        
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            opacity: 0;
+            transform: translateX(-50%);
+            transition: all 0.4s ease;
+        }
+        
+        .nav-link:hover::before {
+            opacity: 0.6;
+            top: 5px;
+            animation: bounce 1s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-5px); }
+        }
+        
+        /* Dropdown Menu - Cute Style */
+        .dropdown-menu {
+            border: 2px solid var(--primary-light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 0.7rem 0.3rem;
+            margin-top: 0.5rem;
+            min-width: 11rem;
+            background-color: rgba(255, 255, 255, 0.98);
+            animation: dropdownFade 0.3s ease;
+        }
+        
+        @keyframes dropdownFade {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .dropdown-item {
+            padding: 0.6rem 1.2rem;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            margin: 0.2rem 0.4rem;
+            border-radius: 15px;
+            position: relative;
+        }
+        
+        .dropdown-item::before {
+            content: '♥';
+            position: absolute;
+            left: 0.5rem;
+            color: var(--primary-light);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-item:hover {
+            background-color: rgba(255, 133, 162, 0.1);
+            color: var(--primary);
+            padding-left: 1.8rem;
+        }
+        
+        .dropdown-item:hover::before {
+            opacity: 1;
+        }
+        
+        /* Mobile Styles - Cute Version */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background: white;
+                border-radius: var(--border-radius);
+                box-shadow: var(--box-shadow);
+                padding: 1.5rem;
+                margin-top: 0.5rem;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+                animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+                border: 2px dashed var(--primary-light);
+            }
+            
+            @keyframes popIn {
+                0% {
+                    opacity: 0;
+                    transform: scale(0.8) translateY(-10px);
+                }
+                70% {
+                    transform: scale(1.05) translateY(0);
+                }
+                100% {
+                    opacity: 1;
+                    transform: scale(1) translateY(0);
+                }
+            }
+            
+            .navbar-toggler {
+                padding: 0.3rem 0.6rem;
+                font-size: 1rem;
+                border: 2px solid var(--primary-light);
+                border-radius: 15px;
+                transition: all 0.3s ease;
+                background-color: white;
+            }
+            
+            .navbar-toggler:hover {
+                background-color: var(--primary-light);
+                transform: rotate(5deg);
+            }
+            
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 133, 162, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            }
+            
+            .nav-link {
+                padding: 0.75rem 1rem;
+                margin-bottom: 0.5rem;
+                border-radius: var(--border-radius);
+                text-align: center;
+                background-color: rgba(255, 194, 209, 0.1);
+                transition: all 0.4s ease;
+            }
+            
+            .nav-link:hover, .nav-link.active {
+                background-color: rgba(255, 133, 162, 0.15);
+                transform: scale(1.05);
+            }
+            
+            .navbar-nav {
+                gap: 0.7rem;
+            }
+            
+            .dropdown-menu {
+                border: none;
+                box-shadow: none;
+                padding-left: 1rem;
+                margin-top: 0;
+                background-color: rgba(255, 194, 209, 0.1);
+                border-radius: 15px;
+            }
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Bootstrap dropdown hover effect for desktop
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            if (window.innerWidth >= 992) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.addEventListener('mouseenter', function() {
+                        const dropdownMenu = this.querySelector('.dropdown-menu');
+                        const dropdownToggle = this.querySelector('.dropdown-toggle');
+                        
+                        if (dropdownMenu && dropdownToggle) {
+                            dropdownMenu.classList.add('show');
+                            dropdownToggle.setAttribute('aria-expanded', 'true');
+                        }
+                    });
+                    
+                    dropdown.addEventListener('mouseleave', function() {
+                        const dropdownMenu = this.querySelector('.dropdown-menu');
+                        const dropdownToggle = this.querySelector('.dropdown-toggle');
+                        
+                        if (dropdownMenu && dropdownToggle) {
+                            dropdownMenu.classList.remove('show');
+                            dropdownToggle.setAttribute('aria-expanded', 'false');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

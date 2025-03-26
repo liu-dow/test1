@@ -1,0 +1,451 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Customer Reviews - Trusted Feedback from Real Users</title>-->
+<!--    <link rel="stylesheet" href="/css/style.css">-->
+<!--    <link rel="stylesheet" href="/css/reviews.css">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--    &lt;!&ndash; Header Fragment &ndash;&gt;-->
+<!--    <div th:replace="fragments/header :: header"></div>-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<!-- Include common header -->
+<head th:replace="fragments/header :: common-header('Contact Us')">
+
+
+</head>
+<body>
+<!-- Include navigation bar -->
+<div th:replace="fragments/header :: navbar"></div>
+
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/reviews.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- Hero Section -->
+<section class="hero reviews-hero">
+    <div class="hero-overlay">
+        <div class="trust-pattern"></div>
+    </div>
+    <div class="container hero-container">
+        <h1 class="hero-title">Real Customer Experiences</h1>
+        <p class="hero-subtitle">Authentic reviews from verified pet owners who trust our products</p>
+        <div class="hero-badges">
+            <div class="hero-badge">
+                <i class="fas fa-check-circle"></i>
+                <span>100% Verified Reviews</span>
+            </div>
+            <div class="hero-badge">
+                <i class="fas fa-star"></i>
+                <span>4.8/5 Average Rating</span>
+            </div>
+            <div class="hero-badge">
+                <i class="fas fa-users"></i>
+                <span>10,000+ Happy Customers</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Indicators -->
+<section class="trust-indicators">
+    <div class="container">
+        <div class="trust-grid">
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Verified Purchases</h3>
+                <p>Every review comes from a confirmed customer who has purchased and used our products</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3>Recent & Relevant</h3>
+                <p>Reviews are regularly updated to reflect our current product quality and service</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <i class="fas fa-comment-alt"></i>
+                </div>
+                <h3>Unfiltered Feedback</h3>
+                <p>We publish all reviews - positive and critical - to give you the complete picture</p>
+            </div>
+            <div class="trust-card">
+                <div class="trust-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Expert Validated</h3>
+                <p>Our products are tested and endorsed by veterinarians and pet care professionals</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Review Statistics -->
+<section class="review-stats">
+    <div class="container">
+        <div class="stats-wrapper">
+            <div class="overall-rating">
+                <div class="rating-circle">
+                    <span class="rating-number">4.8</span>
+                    <span class="rating-max">/5</span>
+                </div>
+                <div class="star-display">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="rating-count">Based on 843 reviews</p>
+            </div>
+            <div class="rating-breakdown">
+                <div class="breakdown-bar">
+                    <span class="star-label">5 <i class="fas fa-star"></i></span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                    <span class="percentage">75%</span>
+                </div>
+                <div class="breakdown-bar">
+                    <span class="star-label">4 <i class="fas fa-star"></i></span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 18%"></div>
+                    </div>
+                    <span class="percentage">18%</span>
+                </div>
+                <div class="breakdown-bar">
+                    <span class="star-label">3 <i class="fas fa-star"></i></span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 5%"></div>
+                    </div>
+                    <span class="percentage">5%</span>
+                </div>
+                <div class="breakdown-bar">
+                    <span class="star-label">2 <i class="fas fa-star"></i></span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 1%"></div>
+                    </div>
+                    <span class="percentage">1%</span>
+                </div>
+                <div class="breakdown-bar">
+                    <span class="star-label">1 <i class="fas fa-star"></i></span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 1%"></div>
+                    </div>
+                    <span class="percentage">1%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Reviews -->
+<section class="featured-reviews">
+    <div class="container">
+        <h2 class="section-title">Featured Customer Stories</h2>
+        <p class="section-subtitle">Hear from pet owners who have experienced remarkable results</p>
+
+        <div class="reviews-grid">
+            <!-- Featured Review 1 -->
+            <div class="review-card featured">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <img src="https://randomuser.me/api/portraits/women/54.jpg" alt="Sarah J."
+                             class="reviewer-image">
+                        <div>
+                            <h4 class="reviewer-name">Sarah J. <span class="verified-badge"><i
+                                    class="fas fa-check-circle"></i> Verified Purchase</span></h4>
+                            <p class="review-date">October 15, 2023</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <h3 class="review-title">"Transformed my anxious rescue dog's life"</h3>
+                <div class="review-content">
+                    <p>After adopting my rescue terrier who suffered from severe separation anxiety, I tried everything
+                        with limited success. A friend recommended your calming treats, and I was skeptical at first.
+                        Within a week, I noticed a remarkable difference in his behavior. He's now able to stay home
+                        alone without destructive behavior, and his overall demeanor is much more relaxed.</p>
+                    <p>What impressed me most was the natural ingredient list - no hidden chemicals or sedatives. The
+                        customer service team was also incredibly helpful when I called with questions about dosage for
+                        my dog's specific size and needs.</p>
+                </div>
+            </div>
+
+            <!-- Featured Review 2 -->
+            <div class="review-card featured">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T."
+                             class="reviewer-image">
+                        <div>
+                            <h4 class="reviewer-name">Michael T. <span class="verified-badge"><i
+                                    class="fas fa-check-circle"></i> Verified Purchase</span></h4>
+                            <p class="review-date">September 3, 2023</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <h3 class="review-title">"Finally found a harness that actually fits my bulldog"</h3>
+                <div class="review-content">
+                    <p>As a bulldog owner, finding properly fitting gear is always a challenge. I've wasted hundreds of
+                        dollars on harnesses that either chafed his skin or he could easily slip out of during walks.
+                        The adjustable comfort harness is the first one that actually works with his unique body
+                        shape.</p>
+                    <p>The padding is substantial without being bulky, and the multiple adjustment points allow for a
+                        perfect custom fit. We've been using it daily for 3 months now with no signs of wear or tear.
+                        Worth every penny for the quality and durability.</p>
+                </div>
+            </div>
+
+            <!-- Expert Review -->
+            <div class="review-card expert">
+                <div class="expert-badge">
+                    <i class="fas fa-award"></i> Expert Review
+                </div>
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Dr. Lisa Chen"
+                             class="reviewer-image">
+                        <div>
+                            <h4 class="reviewer-name">Dr. Lisa Chen, DVM</h4>
+                            <p class="reviewer-credentials">Veterinarian, Pet Nutrition Specialist</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <h3 class="review-title">"A scientifically sound approach to pet nutrition"</h3>
+                <div class="review-content">
+                    <p>As a veterinarian specializing in pet nutrition, I'm often skeptical of new pet food brands
+                        making bold claims. After thoroughly analyzing the ingredient list and nutritional profile of
+                        this formula, I can confidently say it meets the highest standards for balanced canine
+                        nutrition.</p>
+                    <p>The protein sources are high-quality and bioavailable, while the inclusion of specific omega
+                        fatty acids in appropriate ratios supports coat health and inflammation reduction. I've
+                        recommended this food to several of my patients with food sensitivities, and the results have
+                        been consistently positive.</p>
+                    <p>What particularly impresses me is the transparency in sourcing and the comprehensive nutritional
+                        testing that exceeds industry requirements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Customer Review Gallery -->
+<section class="review-gallery">
+    <div class="container">
+        <h2 class="section-title">Real Customer Reviews</h2>
+
+        <div class="review-list">
+            <!-- Regular Review 1 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Emily R."
+                             class="reviewer-image">
+                        <div>
+                            <h4 class="reviewer-name">Emily R. <span class="verified-badge"><i
+                                    class="fas fa-check-circle"></i> Verified</span></h4>
+                            <p class="review-date">November 2, 2023</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <h3 class="review-title">"Perfect for my senior cat"</h3>
+                <div class="review-content">
+                    <p>My 12-year-old cat has been struggling with joint pain, and these supplements have made a
+                        noticeable difference in her mobility. She's jumping up on furniture again!</p>
+                </div>
+            </div>
+
+            <!-- Regular Review 2 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="David K." class="reviewer-image">
+                        <div>
+                            <h4 class="reviewer-name">David K. <span class="verified-badge"><i
+                                    class="fas fa-check-circle"></i> Verified</span></h4>
+                            <p class="review-date">October 28, 2023</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <h3 class="review-title">"Great toy, but not very durable"</h3>
+                <div class="review-content">
+                    <p>My puppy absolutely loves this toy and it keeps him entertained for hours. The squeaker is still
+                        working after weeks of play. Only giving 4 stars because the stitching started to come apart
+                        after about a month.</p>
+                </div>
+            </div>
+
+            <!-- Regular Review 3 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Jessica M."
+                             class="reviewer-image">
+                        <div>
+                            <h4 class="reviewer-name">Jessica M. <span class="verified-badge"><i
+                                    class="fas fa-check-circle"></i> Verified</span></h4>
+                            <p class="review-date">October 15, 2023</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <h3 class="review-title">"Best cat food we've tried"</h3>
+                <div class="review-content">
+                    <p>After trying numerous premium brands, this is the only one my picky cat will eat consistently.
+                        Her coat is shinier and she seems to have more energy since switching.</p>
+                </div>
+            </div>
+
+            <!-- Regular Review 4 -->
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="reviewer-info">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Robert T."
+                             class="reviewer-image">
+                        <div>
+                            <h4 class="reviewer-name">Robert T. <span class="verified-badge"><i
+                                    class="fas fa-check-circle"></i> Verified</span></h4>
+                            <p class="review-date">October 10, 2023</p>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <h3 class="review-title">"Decent leash but could be better"</h3>
+                <div class="review-content">
+                    <p>The retractable mechanism works smoothly and the handle is comfortable. However, the locking
+                        button is a bit stiff and the cord is thinner than I expected for a large dog leash.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Trust Comparison Section -->
+<section class="trust-comparison">
+    <div class="container">
+        <h2 class="section-title">Why Our Reviews Are Different</h2>
+        <p class="section-subtitle">See how our review system compares to others in the industry</p>
+
+        <table class="comparison-table">
+            <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Our Reviews</th>
+                <th>Industry Standard</th>
+                <th>Competitor Reviews</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Verified Purchases Only</td>
+                <td><i class="fas fa-check check-icon"></i></td>
+                <td><i class="fas fa-times times-icon"></i></td>
+                <td><i class="fas fa-check check-icon"></i></td>
+            </tr>
+            <tr>
+                <td>Expert Validation</td>
+                <td><i class="fas fa-check check-icon"></i></td>
+                <td><i class="fas fa-times times-icon"></i></td>
+                <td><i class="fas fa-times times-icon"></i></td>
+            </tr>
+            <tr>
+                <td>Unfiltered Negative Reviews</td>
+                <td><i class="fas fa-check check-icon"></i></td>
+                <td><i class="fas fa-times times-icon"></i></td>
+                <td><i class="fas fa-times times-icon"></i></td>
+            </tr>
+            <tr>
+                <td>Long-term Usage Feedback</td>
+                <td><i class="fas fa-check check-icon"></i></td>
+                <td><i class="fas fa-check check-icon"></i></td>
+                <td><i class="fas fa-times times-icon"></i></td>
+            </tr>
+            <tr>
+                <td>Detailed Product Testing</td>
+                <td><i class="fas fa-check check-icon"></i></td>
+                <td><i class="fas fa-times times-icon"></i></td>
+                <td><i class="fas fa-check check-icon"></i></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Video Testimonials Section -->
+
+
+<!-- Call to Action -->
+<!--<section class="review-cta">-->
+<!--    <div class="cta-pattern"></div>-->
+<!--    <div class="container">-->
+<!--        <div class="cta-content">-->
+<!--            <h2 class="cta-title">Share Your Experience</h2>-->
+<!--            <p class="cta-text">Your honest feedback helps other pet owners make informed decisions. Tell us about your-->
+<!--                experience with our products.</p>-->
+<!--            <a href="#" class="cta-button">-->
+<!--                <i class="fas fa-pen"></i> Write a Review-->
+<!--            </a>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!-- Footer Fragment -->
+<div th:replace="fragments/footer :: footer"></div>
+<script src="/js/main.js"></script>
+</body>
+</html>
