@@ -46,8 +46,8 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "target/demo-0.0.1-SNAPSHOT.jar, start.sh"
-          target: "/home/project/test1"
+          source: "*.jar"
+          target: "/home/ubuntu/app/ci/"
 
 #      - name: Restart Spring Boot Service
 #        uses: appleboy/ssh-action@master
@@ -59,14 +59,3 @@ jobs:
 #            sudo systemctl stop spring-app || true
 #            mv /home/ubuntu/app/*.jar /home/ubuntu/app/app.jar
 #            sudo systemctl start spring-app
-      - name: Restart Application
-          uses: appleboy/ssh-action@master
-          with:
-            host: ${{ secrets.SERVER_HOST }}
-            username: ${{ secrets.SERVER_USER }}
-            key: ${{ secrets.SERVER_SSH_KEY }}
-            script: |
-              cd /home/project/test1
-              chmod +x start.sh  # 确保脚本可执行
-              sudo pkill -f "demo-0.0.1-SNAPSHOT.jar" || true
-              nohup ./start.sh &
