@@ -46,7 +46,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
-          source: "target/demo-0.0.1-SNAPSHOT.jar"
+          source: "demo-0.0.1-SNAPSHOT.jar"
           target: "/home/project/test1"
 
       - name: Restart Spring Boot Service
