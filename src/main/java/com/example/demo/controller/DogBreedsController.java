@@ -11,7 +11,7 @@ public class DogBreedsController {
     public String getDogBreedsHomePage() {
         return "/blog/dog-breeds/dog-breeds";
     }
-
+    //test
     @GetMapping("/dog-breeds/{slug}")
     public String getDogBreedPage(@PathVariable String slug) {
         switch (slug) {
