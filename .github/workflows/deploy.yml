@@ -76,6 +76,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             cd /home/project/test1
+            echo "Stopping old application..."
 
             echo "Starting new application..."
             nohup java -jar demo-0.0.1-SNAPSHOT.jar --server.port=8080 > app.log 2>&1 &
