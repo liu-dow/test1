@@ -4,5 +4,3 @@
 # 忽略 Maven 的 target/ 目录
 target/
 
-# 忽略 Gradle 的 build/ 目录
-build/
