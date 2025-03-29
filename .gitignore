@@ -1,0 +1,14 @@
+# 忽略所有 .class 文件
+*.class
+
+# 忽略 Maven 的 target/ 目录
+target/
+
+# 忽略 Gradle 的 build/ 目录
+build/
+
+# 忽略 Eclipse 的 bin/ 目录
+bin/
+
+# 其他构建工具目录（按需添加）
+out/
