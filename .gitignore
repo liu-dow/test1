@@ -6,9 +6,3 @@ target/
 
 # 忽略 Gradle 的 build/ 目录
 build/
-
-# 忽略 Eclipse 的 bin/ 目录
-bin/
-
-# 其他构建工具目录（按需添加）
-out/
