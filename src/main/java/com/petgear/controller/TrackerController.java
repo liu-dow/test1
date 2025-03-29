@@ -180,4 +180,4 @@ public class TrackerController {
         model.addAttribute("trackers", getComparisonData().getBody());
         return "accessories/trackers/comparison";
     }
-} 
+}

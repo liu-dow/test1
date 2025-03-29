@@ -2,162 +2,162 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://pettrackerreview.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- Static Pages -->
   <url>
-    <loc>https://example.com/about</loc>
+    <loc>https://pettrackerreview.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/contact</loc>
+    <loc>https://pettrackerreview.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/privacy</loc>
+    <loc>https://pettrackerreview.com/privacy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.com/terms</loc>
+    <loc>https://pettrackerreview.com/terms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.com/affiliate-disclosure</loc>
+    <loc>https://pettrackerreview.com/affiliate-disclosure</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <!-- Review Pages -->
   <url>
-    <loc>https://example.com/reviews</loc>
+    <loc>https://pettrackerreview.com/reviews</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://example.com/reviews/pawfit-3-gps-tracker-review</loc>
+    <loc>https://pettrackerreview.com/reviews/pawfit-3-gps-tracker-review</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/reviews/pitpat-gps-tracker-review</loc>
+    <loc>https://pettrackerreview.com/reviews/pitpat-gps-tracker-review</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/reviews/pawfit-lite-gps-tracker-review</loc>
+    <loc>https://pettrackerreview.com/reviews/pawfit-lite-gps-tracker-review</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/reviews/tractive-gps-review</loc>
+    <loc>https://pettrackerreview.com/reviews/tractive-gps-review</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <!-- Blog Pages -->
   <url>
-    <loc>https://example.com/blog</loc>
+    <loc>https://pettrackerreview.com/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <!-- Tracker Pages -->
   <url>
-    <loc>https://example.com/accessories/trackers</loc>
+    <loc>https://pettrackerreview.com/accessories/trackers</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/accessories/trackers/comparison</loc>
+    <loc>https://pettrackerreview.com/accessories/trackers/comparison</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/accessories/trackers/pawfit-3</loc>
+    <loc>https://pettrackerreview.com/accessories/trackers/pawfit-3</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/accessories/trackers/tractive</loc>
+    <loc>https://pettrackerreview.com/accessories/trackers/tractive</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/accessories/trackers/pitpat</loc>
+    <loc>https://pettrackerreview.com/accessories/trackers/pitpat</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <!-- Dog Breeds Pages -->
   <url>
-    <loc>https://example.com/dog-breeds</loc>
+    <loc>https://pettrackerreview.com/dog-breeds</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/dog-breeds/golden-retriever-guide</loc>
+    <loc>https://pettrackerreview.com/dog-breeds/golden-retriever-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/dog-breeds/labrador-guide</loc>
+    <loc>https://pettrackerreview.com/dog-breeds/labrador-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/dog-breeds/german-shepherd-guide</loc>
+    <loc>https://pettrackerreview.com/dog-breeds/german-shepherd-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/dog-breeds/husky-guide</loc>
+    <loc>https://pettrackerreview.com/dog-breeds/husky-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/dog-breeds/poodle-guide</loc>
+    <loc>https://pettrackerreview.com/dog-breeds/poodle-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/dog-breeds/bulldog-guide</loc>
+    <loc>https://pettrackerreview.com/dog-breeds/bulldog-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/dog-breeds/chihuahua-guide</loc>
+    <loc>https://pettrackerreview.com/dog-breeds/chihuahua-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/dog-breeds/corgi-guide</loc>
+    <loc>https://pettrackerreview.com/dog-breeds/corgi-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/dog-breeds/beagle-guide</loc>
+    <loc>https://pettrackerreview.com/dog-breeds/beagle-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/dog-breeds/samoyed-guide</loc>
+    <loc>https://pettrackerreview.com/dog-breeds/samoyed-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/dog-breeds/shiba-inu-guide</loc>
+    <loc>https://pettrackerreview.com/dog-breeds/shiba-inu-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/dog-breeds/border-collie-guide</loc>
+    <loc>https://pettrackerreview.com/dog-breeds/border-collie-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
