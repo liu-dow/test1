@@ -70,13 +70,8 @@
 
                 <!-- Logo -->
                 <a class="navbar-brand" href="/" aria-label="Pet Tracker Review Home">
-
-<!--                    <h1 class="logo-title">-->
-
-                        <img src="/img/favicon.ico" style="width: auto;height: 120px" alt="logo">
-<!--                        PetGear<span>Reviews</span>-->
-
-<!--                    </h1>-->
+                    <img src="/img/favicon.ico" style="width: auto;height: 50px" alt="logo">
+                    <span class="logo-text">PetTracker<span>Review</span></span>
                 </a>
                 
                 <!-- Mobile Toggle Button -->
@@ -104,29 +99,29 @@
 <!--                        </li>-->
                         <li class="nav-item">
                             <a class="nav-link" href="/accessories/trackers" th:classappend="${#strings.startsWith(#httpServletRequest.requestURI, '/accessories/trackers') ? 'active' : ''}">
-                                <i class="fas fa-map-marker-alt me-1"></i> GPS Trackers
+                                GPS Trackers
                             </a>
                         </li>
 
 
                         <li class="nav-item">
                             <a class="nav-link" href="/reviews" th:classappend="${#strings.startsWith(#httpServletRequest.requestURI, '/reviews') ? 'active' : ''}">
-                                <i class="fas fa-star me-1"></i> Reviews
+                                Reviews
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/blog" th:classappend="${#strings.startsWith(#httpServletRequest.requestURI, '/blog') ? 'active' : ''}">
-                                <i class="fas fa-pen-fancy me-1"></i> Blog
+                                Blog
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/about" th:classappend="${#httpServletRequest.requestURI == '/about' ? 'active' : ''}">
-                                <i class="fas fa-info-circle me-1"></i> About
+                                About
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contact" th:classappend="${#httpServletRequest.requestURI == '/contact' ? 'active' : ''}">
-                                <i class="fas fa-envelope me-1"></i> Contact
+                                Contact
                             </a>
                         </li>
                     </ul>
@@ -136,16 +131,16 @@
     </header>
     
     <style>
-        /* Variables - Cute Theme */
+        /* Variables - Modern Professional Theme */
         :root {
-            --primary: #FF85A2; /* Pink primary color */
-            --primary-light: #FFC2D1;
-            --primary-dark: #FF5C7F;
-            --dark: #7D6B7D;
-            --light: #FFF5F8;
-            --gray: #BFB1C0;
-            --border-radius: 20px; /* More rounded corners */
-            --box-shadow: 0 4px 12px rgba(255, 133, 162, 0.2);
+            --primary: #3498db; /* Modern blue primary color */
+            --primary-light: #a0cfff;
+            --primary-dark: #2980b9;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+            --gray: #95a5a6;
+            --border-radius: 8px; /* More subtle rounded corners */
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
         
@@ -153,48 +148,51 @@
         body {
             font-family: 'Nunito', sans-serif;
             color: var(--dark);
-            padding-top: 60px;
+            padding-top: 70px;
             background-color: var(--light);
         }
         
-        /* Navbar - Cute Style */
+        /* Navbar - Modern Professional Style */
         .navbar {
             background-color: white;
             box-shadow: var(--box-shadow);
-            padding: 0.5rem 0;
+            padding: 0.8rem 0;
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1030;
             height: 70px;
-            transition: all 0.3s ease;
-            border-bottom: 3px solid var(--primary-light);
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
         }
         
         .navbar:hover {
-            box-shadow: 0 6px 15px rgba(255, 133, 162, 0.25);
-            transform: translateY(2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
         
         /* Logo */
-        .logo-title {
-            font-size: 1.3rem;
+        .logo-text {
+            font-size: 1.2rem;
             font-weight: 700;
-            margin: 0;
+            margin-left: 10px;
             color: var(--primary);
+            vertical-align: middle;
         }
         
-        .logo-title span {
+        .logo-text span {
             font-weight: 500;
             color: var(--dark);
         }
         
-        /* Navigation - Cute Style */
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Navigation - Modern Professional Style */
         .navbar-nav {
-            gap: 0.8rem;
+            gap: 1rem;
         }
         
         .nav-item {
@@ -203,188 +201,116 @@
         
         .nav-link {
             color: var(--dark);
-            font-weight: 600;
-            padding: 0.6rem 1.2rem;
+            font-weight: 500;
+            padding: 0.6rem 1rem;
             transition: var(--transition);
-            font-size: 1.05rem;
-            border-radius: var(--border-radius);
+            font-size: 0.95rem;
             position: relative;
-            overflow: hidden;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(255, 133, 162, 0.1);
-            letter-spacing: 0.5px;
-        }
-        
-        .nav-link i {
-            transition: transform 0.4s ease;
-            display: inline-block;
-        }
-        
-        .nav-link:hover i {
-            transform: scale(1.2) rotate(5deg);
+            letter-spacing: 0.3px;
         }
         
         .nav-link:hover, .nav-link.active {
             color: var(--primary);
-            background-color: rgba(255, 133, 162, 0.1);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 10px rgba(255, 133, 162, 0.2);
         }
         
         .nav-link::after {
             content: '';
             position: absolute;
             bottom: 0;
-            left: 50%;
+            left: 0;
             width: 0;
-            height: 3px;
+            height: 2px;
             background-color: var(--primary);
-            transition: all 0.4s ease;
-            transform: translateX(-50%);
-            border-radius: 10px;
+            transition: width 0.3s ease;
         }
         
         .nav-link:hover::after, .nav-link.active::after {
-            width: 70%;
+            width: 100%;
         }
         
-        .nav-link::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            width: 10px;
-            height: 10px;
-            background-color: var(--primary-light);
-            border-radius: 50%;
-            opacity: 0;
-            transform: translateX(-50%);
-            transition: all 0.4s ease;
-        }
-        
-        .nav-link:hover::before {
-            opacity: 0.6;
-            top: 5px;
-            animation: bounce 1s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(-5px); }
-        }
-        
-        /* Dropdown Menu - Cute Style */
+        /* Dropdown Menu - Modern Professional Style */
         .dropdown-menu {
-            border: 2px solid var(--primary-light);
+            border: 1px solid rgba(0, 0, 0, 0.08);
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
-            padding: 0.7rem 0.3rem;
+            padding: 0.5rem 0;
             margin-top: 0.5rem;
             min-width: 11rem;
-            background-color: rgba(255, 255, 255, 0.98);
-            animation: dropdownFade 0.3s ease;
+            background-color: white;
+            animation: dropdownFade 0.2s ease;
         }
         
         @keyframes dropdownFade {
-            from { opacity: 0; transform: translateY(-10px); }
+            from { opacity: 0; transform: translateY(-5px); }
             to { opacity: 1; transform: translateY(0); }
         }
         
         .dropdown-item {
             padding: 0.6rem 1.2rem;
             color: var(--dark);
-            font-weight: 500;
+            font-weight: 400;
             transition: var(--transition);
-            font-size: 0.95rem;
-            margin: 0.2rem 0.4rem;
-            border-radius: 15px;
+            font-size: 0.9rem;
             position: relative;
         }
         
-        .dropdown-item::before {
-            content: '♥';
-            position: absolute;
-            left: 0.5rem;
-            color: var(--primary-light);
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-        
         .dropdown-item:hover {
-            background-color: rgba(255, 133, 162, 0.1);
+            background-color: rgba(52, 152, 219, 0.08);
             color: var(--primary);
-            padding-left: 1.8rem;
         }
         
-        .dropdown-item:hover::before {
-            opacity: 1;
-        }
-        
-        /* Mobile Styles - Cute Version */
+        /* Mobile Styles - Modern Professional Version */
         @media (max-width: 991.98px) {
             .navbar-collapse {
                 background: white;
                 border-radius: var(--border-radius);
                 box-shadow: var(--box-shadow);
-                padding: 1.5rem;
+                padding: 1rem;
                 margin-top: 0.5rem;
                 position: absolute;
                 top: 100%;
                 left: 0;
                 right: 0;
                 z-index: 1000;
-                animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-                border: 2px dashed var(--primary-light);
+                animation: fadeIn 0.3s ease forwards;
+                border: 1px solid rgba(0, 0, 0, 0.08);
             }
             
-            @keyframes popIn {
-                0% {
-                    opacity: 0;
-                    transform: scale(0.8) translateY(-10px);
-                }
-                70% {
-                    transform: scale(1.05) translateY(0);
-                }
-                100% {
-                    opacity: 1;
-                    transform: scale(1) translateY(0);
-                }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
             }
             
             .navbar-toggler {
                 padding: 0.3rem 0.6rem;
                 font-size: 1rem;
-                border: 2px solid var(--primary-light);
-                border-radius: 15px;
-                transition: all 0.3s ease;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                border-radius: var(--border-radius);
+                transition: var(--transition);
                 background-color: white;
             }
             
             .navbar-toggler:hover {
-                background-color: var(--primary-light);
-                transform: rotate(5deg);
+                background-color: var(--light);
             }
             
             .navbar-toggler-icon {
-                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 133, 162, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2844, 62, 80, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
             }
             
             .nav-link {
                 padding: 0.75rem 1rem;
-                margin-bottom: 0.5rem;
-                border-radius: var(--border-radius);
-                text-align: center;
-                background-color: rgba(255, 194, 209, 0.1);
-                transition: all 0.4s ease;
+                margin-bottom: 0.3rem;
+                text-align: left;
+                transition: var(--transition);
             }
             
             .nav-link:hover, .nav-link.active {
-                background-color: rgba(255, 133, 162, 0.15);
-                transform: scale(1.05);
+                background-color: rgba(52, 152, 219, 0.08);
             }
             
             .navbar-nav {
-                gap: 0.7rem;
+                gap: 0.3rem;
             }
             
             .dropdown-menu {
@@ -392,8 +318,7 @@
                 box-shadow: none;
                 padding-left: 1rem;
                 margin-top: 0;
-                background-color: rgba(255, 194, 209, 0.1);
-                border-radius: 15px;
+                background-color: transparent;
             }
         }
     </style>
@@ -426,6 +351,17 @@
                     });
                 });
             }
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
         });
     </script>
 </body>

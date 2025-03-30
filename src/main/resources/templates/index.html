@@ -14,13 +14,18 @@
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-container">
-            <h1 class="hero-title">Find the Perfect Products for Your Pets</h1>
-            <p class="hero-subtitle">Expert reviews, detailed comparisons, and comprehensive buying guides</p>
+            <h1 class="hero-title">Find the Perfect Tracker for Your Furry Friend</h1>
+            <p class="hero-subtitle">Expert reviews, detailed comparisons, and comprehensive buying guides to keep your pets safe and happy</p>
 
             <div class="hero-badges">
                 <span class="hero-badge"><i class="fas fa-check-circle"></i> Trusted Reviews</span>
-                <span class="hero-badge"><i class="fas fa-star"></i> Expert Testing</span>
                 <span class="hero-badge"><i class="fas fa-shield-alt"></i> Unbiased Analysis</span>
+            </div>
+            
+            <div class="hero-cta mt-4">
+                <a href="/reviews" class="hero-button primary-btn">Browse Reviews <i class="fas fa-arrow-right"></i></a>
+                <a href="/accessories/trackers/dog" class="hero-button dog-btn"><i class="fas fa-dog"></i> Dog Trackers</a>
+                <a href="/accessories/trackers/cat" class="hero-button cat-btn"><i class="fas fa-cat"></i> Cat Trackers</a>
             </div>
         </div>
     </section>
@@ -33,16 +38,12 @@
                     <span>Independent Reviews</span>
                 </div>
                 <div class="trust-badge">
-                    <i class="fas fa-flask"></i>
-                    <span>Rigorous Testing</span>
-                </div>
-                <div class="trust-badge">
                     <i class="fas fa-shield-alt"></i>
                     <span>Unbiased Analysis</span>
                 </div>
                 <div class="trust-badge">
-                    <i class="fas fa-sync-alt"></i>
-                    <span>Regular Updates</span>
+                    <i class="fas fa-heart"></i>
+                    <span>Pet-Friendly Advice</span>
                 </div>
             </div>
         </div>
@@ -54,9 +55,23 @@
             <div class="section-header">
                 <h2><i class="fas fa-star"></i> Latest Reviews</h2>
                 <p class="section-subtitle">Discover our most recent in-depth product evaluations</p>
+                <div class="section-decoration">
+                    <span class="decoration-dot"></span>
+                    <span class="decoration-line"></span>
+                    <span class="decoration-dot"></span>
+                </div>
+            </div>
+            
+            <!-- Category Filter Tabs -->
+            <div class="category-filter">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Trackers</button>
+                    <button class="filter-tab" data-filter="dog"><i class="fas fa-dog"></i> Dog Trackers</button>
+                    <button class="filter-tab" data-filter="cat"><i class="fas fa-cat"></i> Cat Trackers</button>
+                </div>
             </div>
             <div class="reviews-grid">
-                <article class="review-card">
+                <article class="review-card" data-category="dog">
                     <div class="card-image-container">
                         <img src="/img/home/pawfit 3.png" alt="Pawfit 3 GPS Tracker Review" class="review-image">
                         <div class="image-overlay">
@@ -64,7 +79,7 @@
                         </div>
                     </div>
                     <div class="review-content">
-                        <span class="review-category"><i class="fas fa-map-marker-alt"></i> GPS Tracker</span>
+                        <span class="review-category"><i class="fas fa-dog"></i> Dog GPS Tracker</span>
                         <h3 class="review-title">Pawfit 3 GPS Tracker: The Ultimate Review</h3>
                         <p class="review-excerpt">A comprehensive review of this feature-rich GPS tracker designed specifically for your four-legged friend.</p>
                         <div class="review-meta">
@@ -75,7 +90,7 @@
                     </div>
                 </article>
 
-                <article class="review-card">
+                <article class="review-card" data-category="dog">
                     <div class="card-image-container">
                         <img src="/img/home/tractive-dog.avif" alt="Tractive GPS Tracker" class="review-image">
                         <div class="image-overlay">
@@ -83,7 +98,7 @@
                         </div>
                     </div>
                     <div class="review-content">
-                        <span class="review-category"><i class="fas fa-map-marker-alt"></i> GPS Tracker</span>
+                        <span class="review-category"><i class="fas fa-dog"></i> Dog GPS Tracker</span>
                         <h3 class="review-title">Best Value: Tractive GPS</h3>
                         <p class="review-excerpt">A balanced GPS tracker offering competitive pricing, virtual fence features, and global coverage.</p>
                         <div class="review-meta">
@@ -94,7 +109,7 @@
                     </div>
                 </article>
 
-                <article class="review-card">
+                <article class="review-card" data-category="dog">
                     <div class="card-image-container">
                         <img src="/img/home/pitpat.webp" alt="PitPat GPS Tracker" class="review-image">
                         <div class="image-overlay">
@@ -102,7 +117,7 @@
                         </div>
                     </div>
                     <div class="review-content">
-                        <span class="review-category"><i class="fas fa-map-marker-alt"></i> GPS Tracker</span>
+                        <span class="review-category"><i class="fas fa-dog"></i> Dog GPS Tracker</span>
                         <h3 class="review-title">Best for Dogs: PitPat GPS</h3>
                         <p class="review-excerpt">A subscription-free GPS tracker with excellent battery life and built-in activity monitoring features.</p>
                         <div class="review-meta">
@@ -113,7 +128,7 @@
                     </div>
                 </article>
 
-                <article class="review-card">
+                <article class="review-card" data-category="cat">
                     <div class="card-image-container">
                         <img src="/img/home/pawfit lite.png" alt="Pawfit Lite GPS Tracker" class="review-image">
                         <div class="image-overlay">
@@ -121,7 +136,7 @@
                         </div>
                     </div>
                     <div class="review-content">
-                        <span class="review-category"><i class="fas fa-map-marker-alt"></i> GPS Tracker</span>
+                        <span class="review-category"><i class="fas fa-cat"></i> Cat GPS Tracker</span>
                         <h3 class="review-title">Pawfit Lite: The Ultra-Lightweight Pet Tracker</h3>
                         <p class="review-excerpt">A compact and lightweight GPS tracker perfect for both cats and dogs, featuring reliable 4G connectivity and essential safety features.</p>
                         <div class="review-meta">
@@ -142,6 +157,11 @@
             <div class="section-header">
                 <h2><i class="fas fa-flask"></i> Our Testing Process</h2>
                 <p class="section-subtitle">How we ensure accurate, reliable, and thorough evaluations</p>
+                <div class="section-decoration">
+                    <span class="decoration-dot"></span>
+                    <span class="decoration-line"></span>
+                    <span class="decoration-dot"></span>
+                </div>
             </div>
             <div class="methodology-container">
                 <div class="methodology-card">
@@ -178,7 +198,57 @@
                 <a href="/about" class="btn btn-outline-primary">Learn More About Our Process</a>
             </div>
         </section>
-
+        
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us">
+            <div class="section-header">
+                <h2><i class="fas fa-heart"></i> Why Pet Owners Trust Us</h2>
+                <p class="section-subtitle">We're dedicated to helping you find the best products for your furry friends</p>
+                <div class="section-decoration">
+                    <span class="decoration-dot"></span>
+                    <span class="decoration-line"></span>
+                    <span class="decoration-dot"></span>
+                </div>
+            </div>
+            
+            <div class="trust-reasons">
+                <div class="trust-reason">
+                    <div class="reason-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>Pet Owners First</h3>
+                    <p>Our recommendations are based on what's truly best for your pets, not what's best for our bottom line.</p>
+                </div>
+                
+                <div class="trust-reason">
+                    <div class="reason-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Thorough Research</h3>
+                    <p>We spend countless hours researching, testing, and comparing products so you don't have to.</p>
+                </div>
+                
+                <div class="trust-reason">
+                    <div class="reason-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Real Experience</h3>
+                    <p>Our team consists of actual pet owners who use these products with their own pets.</p>
+                </div>
+                
+                <div class="trust-reason">
+                    <div class="reason-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Community Feedback</h3>
+                    <p>We incorporate feedback from our community of pet owners to continuously improve our recommendations.</p>
+                </div>
+            </div>
+            
+            <div class="cta-container">
+                <a href="/about" class="cta-button">Learn More About Us <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
 
     </main>
 </div>
@@ -186,16 +256,16 @@
 <div th:replace="fragments/footer :: footer"></div>
 
 <!-- Custom CSS for the redesigned homepage -->
-<!-- Custom CSS for the redesigned homepage -->
 <style>
-    /* Hero Section Styling */
+    /* Hero Section Styling - Simplified */
     .hero {
         position: relative;
-        background: url('/images/hero-bg.jpg') no-repeat center center;
+        background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3)), url('/img/about/dog-and-cat.png') no-repeat center center;
         background-size: cover;
-        border-radius: 15px;
+        border-radius: 8px;
         overflow: hidden;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
     .hero-overlay {
@@ -204,65 +274,201 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+        background: linear-gradient(135deg, rgba(74, 144, 226, 0.4), rgba(46, 204, 113, 0.4));
+        opacity: 0.6;
     }
 
     .hero-container {
         position: relative;
-        padding: 5rem 2rem;
+        padding: 4rem 1.5rem;
         text-align: center;
         color: white;
+        z-index: 2;
     }
 
     .hero-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
     }
 
     .hero-subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-        max-width: 700px;
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+        max-width: 650px;
         margin-left: auto;
         margin-right: auto;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+        opacity: 0.9;
     }
-
+    
     .hero-cta {
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+        margin-top: 1.2rem;
+    }
+    
+    .hero-button {
+        padding: 0.6rem 1.2rem;
+        border-radius: 24px;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        transition: all 0.2s ease;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        font-size: 0.95rem;
+    }
+    
+    .hero-button.primary-btn {
+        background-color: var(--primary);
+        color: white;
+    }
+    
+    .hero-button.dog-btn {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    .hero-button.cat-btn {
+        background-color: #FF9800;
+        color: white;
+    }
+    
+    .hero-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    /* Category Filter Styles */
+    .category-filter {
+        margin: 2rem 0;
+        text-align: center;
+    }
+    
+    .filter-tabs {
+        display: inline-flex;
+        background-color: #f8f9fa;
+        border-radius: 50px;
+        padding: 0.5rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+    }
+    
+    .filter-tab {
+        border: none;
+        background: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 30px;
+        font-weight: 600;
+        color: var(--dark);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .filter-tab i {
+        font-size: 1.1rem;
+    }
+    
+    .filter-tab.active {
+        background-color: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .filter-tab[data-filter="dog"].active {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    .filter-tab[data-filter="cat"].active {
+        background-color: #FF9800;
+        color: white;
+    }
+    
+    /* 移动设备响应式样式 */
+    @media (max-width: 768px) {
+        .hero-container {
+            padding: 3rem 1rem;
+        }
+        
+        .hero-title {
+            font-size: 1.8rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1rem;
+        }
+        
+        .hero-button {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .hero-badges {
+            gap: 0.6rem;
+        }
+        
+        .hero-badge {
+            padding: 0.3rem 0.8rem;
+            font-size: 0.8rem;
+        }
     }
 
     .hero-badges {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 1rem;
-        margin-top: 2rem;
+        gap: 0.8rem;
+        margin-top: 1.2rem;
     }
 
     .hero-badge {
-        background-color: rgba(255, 255, 255, 0.15);
-        padding: 0.5rem 1rem;
-        border-radius: 30px;
-        font-size: 0.9rem;
+        background-color: rgba(255, 255, 255, 0.12);
+        padding: 0.4rem 1rem;
+        border-radius: 16px;
+        font-size: 0.85rem;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        backdrop-filter: blur(5px);
+        gap: 0.4rem;
+        transition: all 0.2s ease;
+    }
+
+    .hero-badge:hover {
+        background-color: rgba(255, 255, 255, 0.2);
     }
 
     .hero-badge i {
-        color: #ffc107;
+        color: white;
+        font-size: 0.9rem;
+        opacity: 0.9;
     }
 
-    /* Trust Badges Section */
+    /* Trust Badges Section - Simplified */
     .trust-badges {
-        background-color: #f8f9fa;
-        padding: 2rem 0;
-        margin: 2rem 0 3rem;
-        border-radius: 10px;
+        background-color: white;
+        padding: 1.5rem 0;
+        margin: 1.5rem 0 3rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .trust-badges::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to right, var(--primary-light), var(--primary), var(--primary-light));
     }
 
     .badge-container {
@@ -270,85 +476,129 @@
         justify-content: space-around;
         flex-wrap: wrap;
         gap: 1.5rem;
+        padding: 0 1rem;
     }
 
     .trust-badge {
         display: flex;
         align-items: center;
-        gap: 0.8rem;
+        gap: 0.7rem;
         font-weight: 500;
-        color: #495057;
+        color: var(--dark);
+        padding: 0.7rem;
+        border-radius: 10px;
+        transition: all 0.2s ease;
+        background-color: rgba(255, 194, 209, 0.03);
+    }
+    
+    .trust-badge:hover {
+        background-color: rgba(255, 194, 209, 0.1);
+        transform: translateY(-2px);
     }
 
     .trust-badge i {
         font-size: 1.5rem;
-        color: #4361ee;
+        color: var(--primary);
+        transition: transform 0.2s ease;
+    }
+    
+    .trust-badge:hover i {
+        transform: scale(1.1);
     }
 
     /* Featured Reviews Section */
     .featured-reviews {
-        padding: 3rem 0;
+        padding: 4rem 0;
+        position: relative;
     }
 
     .section-header {
         text-align: center;
-        /*margin-bottom: 3rem;*/
+        margin-bottom: 3.5rem;
+        position: relative;
+    }
+    
+    .section-decoration {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+    
+    .decoration-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--primary);
+        border-radius: 50%;
+    }
+    
+    .decoration-line {
+        width: 80px;
+        height: 2px;
+        background: linear-gradient(to right, var(--primary-light), var(--primary), var(--primary-light));
+        margin: 0 10px;
     }
 
     .section-header h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #212529;
-        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--dark);
+        margin-bottom: 1rem;
+        position: relative;
+        display: inline-block;
     }
 
     .section-header h2 i {
-        color: #ffc107;
-        margin-right: 0.5rem;
+        color: var(--primary);
+        margin-right: 0.7rem;
     }
 
     .section-subtitle {
-        color: #6c757d;
-        font-size: 1.1rem;
+        color: var(--gray);
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
     }
 
     .reviews-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-bottom: 3rem;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2.5rem;
+        margin-bottom: 3.5rem;
     }
 
     .review-card {
-        border-radius: 12px;
+        border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
         background-color: #fff;
         height: 100%;
         display: flex;
         flex-direction: column;
+        border: 1px solid rgba(255, 194, 209, 0.2);
     }
 
     .review-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
 
     .card-image-container {
         position: relative;
         overflow: hidden;
+        height: 220px;
     }
 
     .review-image {
         width: 100%;
-        height: 200px;
+        height: 100%;
         object-fit: cover;
-        transition: transform 0.5s ease;
+        transition: transform 0.6s ease;
     }
 
     .review-card:hover .review-image {
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
 
     .image-overlay {
@@ -357,12 +607,12 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.5);
         display: flex;
         align-items: center;
         justify-content: center;
         opacity: 0;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.4s ease;
     }
 
     .review-card:hover .image-overlay {
@@ -371,67 +621,89 @@
 
     .overlay-button {
         background-color: white;
-        color: #212529;
-        padding: 0.6rem 1.2rem;
+        color: var(--dark);
+        padding: 0.8rem 1.5rem;
         border-radius: 30px;
-        font-weight: 600;
+        font-weight: 700;
         text-decoration: none;
         transition: all 0.3s ease;
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    
+    .review-card:hover .overlay-button {
+        transform: translateY(0);
+        opacity: 1;
     }
 
     .overlay-button:hover {
-        background-color: #4361ee;
+        background-color: var(--primary);
         color: white;
         transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(255, 133, 162, 0.4);
     }
 
     .review-content {
-        padding: 1.5rem;
+        padding: 2rem;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
     }
 
     .review-category {
-        color: #6c757d;
-        font-size: 0.9rem;
-        margin-bottom: 0.8rem;
+        color: var(--gray);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
         display: inline-flex;
         align-items: center;
+        background-color: rgba(255, 194, 209, 0.1);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        width: fit-content;
         gap: 0.5rem;
     }
 
     .review-category i {
-        color: #4361ee;
+        color: var(--primary);
     }
 
     .review-title {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         font-weight: 700;
-        margin-bottom: 1rem;
-        color: #212529;
+        margin-bottom: 1.2rem;
+        color: var(--dark);
+        line-height: 1.4;
+        transition: color 0.3s ease;
+    }
+    
+    .review-card:hover .review-title {
+        color: var(--primary);
     }
 
     .review-excerpt {
-        color: #6c757d;
-        margin-bottom: 1.5rem;
+        color: var(--gray);
+        margin-bottom: 1.8rem;
         flex-grow: 1;
+        line-height: 1.7;
     }
 
     .review-meta {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px dashed rgba(255, 194, 209, 0.3);
     }
 
     .rating {
         color: #ffc107;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
     }
 
     .review-date {
-        color: #6c757d;
+        color: var(--gray);
         font-size: 0.9rem;
         display: flex;
         align-items: center;
@@ -439,18 +711,15 @@
     }
 
     .read-more {
-        color: #4361ee;
+        color: var(--primary);
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 700;
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
         transition: all 0.3s ease;
-    }
-
-    .read-more:hover {
-        color: #3a56d4;
-        gap: 0.8rem;
+        padding: 0.5rem 0;
+        position: relative;
     }
 
     .view-all-link {
@@ -555,5 +824,37 @@
         }
     }
 </style>
+
+<!-- JavaScript for category filtering -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all filter tabs and review cards
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const reviewCards = document.querySelectorAll('.review-card');
+        
+        // Add click event to each filter tab
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                filterTabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Get filter value
+                const filterValue = this.getAttribute('data-filter');
+                
+                // Show/hide cards based on filter
+                reviewCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
 </body>
 </html>

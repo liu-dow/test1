@@ -9,27 +9,41 @@
 
 <!-- Main page content -->
 <div class="container py-5">
-    <div class="policy-sidebar">
+    <div class="page-header">
+        <div class="container">
+            <h1>Terms of Service</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Terms of Service</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container policy-page">
+        <div class="policy-sidebar">
         <div class="sticky-sidebar">
             <h3>Table of Contents</h3>
             <ul class="toc-links">
-                <li><a href="#agreement">Agreement to Terms</a></li>
-                <li><a href="#intellectual-property">Intellectual Property</a></li>
-                <li><a href="#user-accounts">User Accounts</a></li>
-                <li><a href="#user-responsibilities">User Responsibilities</a></li>
-                <li><a href="#purchases">Purchases and Payment</a></li>
-                <li><a href="#reviews">Product Reviews</a></li>
-                <li><a href="#third-party">Third-Party Links</a></li>
-                <li><a href="#disclaimer">Disclaimer of Warranties</a></li>
-                <li><a href="#limitation">Limitation of Liability</a></li>
-                <li><a href="#indemnification">Indemnification</a></li>
-                <li><a href="#termination">Termination</a></li>
-                <li><a href="#governing-law">Governing Law</a></li>
-                <li><a href="#changes">Changes to Terms</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#agreement" class="toc-link">1. Agreement to Terms</a></li>
+                <li><a href="#intellectual-property" class="toc-link">2. Intellectual Property</a></li>
+                <li><a href="#user-accounts" class="toc-link">3. User Accounts</a></li>
+                <li><a href="#user-responsibilities" class="toc-link">4. User Responsibilities</a></li>
+                <li><a href="#purchases" class="toc-link">5. Purchases and Payment</a></li>
+                <li><a href="#reviews" class="toc-link">6. Product Reviews</a></li>
+                <li><a href="#third-party" class="toc-link">7. Third-Party Links</a></li>
+                <li><a href="#disclaimer" class="toc-link">8. Disclaimer of Warranties</a></li>
+                <li><a href="#limitation" class="toc-link">9. Limitation of Liability</a></li>
+                <li><a href="#indemnification" class="toc-link">10. Indemnification</a></li>
+                <li><a href="#termination" class="toc-link">11. Termination</a></li>
+                <li><a href="#governing-law" class="toc-link">12. Governing Law</a></li>
+                <li><a href="#changes" class="toc-link">13. Changes to Terms</a></li>
+                <li><a href="#contact" class="toc-link">14. Contact Us</a></li>
             </ul>
             <div class="last-updated">
                 <p><strong>Last Updated:</strong> March 15, 2024</p>
+                <a href="#" id="print-terms" class="print-button"><i class="fas fa-print"></i> Print Terms</a>
             </div>
         </div>
     </div>
@@ -138,30 +152,84 @@
             </ul>
         </section>
     </div>
+</main>
 </div>
 
 <!-- Include common footer -->
 <div th:replace="fragments/footer :: footer"></div>
 
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms of Service | Pet Tracker Review",
+  "description": "Terms of Service for Pet Tracker Review website. Learn about the rules and guidelines for using our pet tracker review services.",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pettrackerreview.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Terms of Service",
+        "item": "https://pettrackerreview.com/terms"
+      }
+    ]
+  }
+}
+</script>
+
 <script>
     // Mobile menu toggle
-    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-        document.querySelector('.nav-links').classList.toggle('active');
+    document.querySelector('.mobile-menu-btn')?.addEventListener('click', function() {
+        document.querySelector('.nav-links')?.classList.toggle('active');
     });
 
-    // Smooth scrolling for table of contents
+    // Smooth scrolling for table of contents with improved performance
     document.querySelectorAll('.toc-links a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
             
-            window.scrollTo({
-                top: targetElement.offsetTop - 100,
-                behavior: 'smooth'
-            });
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+                
+                // Update URL hash without scrolling
+                history.pushState(null, null, targetId);
+                
+                // Add active class to current TOC item
+                document.querySelectorAll('.toc-links a').forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
+            }
         });
     });
+    
+    // Highlight current section in TOC when scrolling
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('.policy-section');
+        const scrollPosition = window.scrollY + 150;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                document.querySelectorAll('.toc-links a').forEach(a => a.classList.remove('active'));
+                document.querySelector(`.toc-links a[href="#${sectionId}"]`)?.classList.add('active');
+            }
+        });
+    }, { passive: true });
 </script>
 </body>
 </html>
