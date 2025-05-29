@@ -8,27 +8,18 @@
           content="Find the best pet GPS trackers with detailed reviews and comparisons at Pet Tracker Review.">
     <meta name="keywords" content="pet tracker, GPS pet tracker, dog tracker, cat tracker, pet GPS, pet location tracker, pet activity monitor">
     <meta name="author" content="Pet Tracker Review">
-
-    <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
-    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <meta name="msapplication-TileImage" content="https://www.pettrackerreview.com/img/pet-tracker-review-logo.png">
+    <link th:href="@{/css/navbar.css}" rel="stylesheet">
+    <link th:href="@{/css/footer.css}" rel="stylesheet">
     <link rel="icon" href="/img/favicon.ico">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" th:href="@{/images/favicon-32x32.png}">
-    <link rel="icon" type="image/png" sizes="16x16" th:href="@{/images/favicon-16x16.png}">
-    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/images/apple-touch-icon.png}">
 
-    <!-- Google Fonts -->
+
+    <!-- Google Fonts - Keeping Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script th:src="@{/js/navbar.js}" defer></script>
     
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -37,15 +28,12 @@
       "@type": "Organization",
       "name": "Pet Tracker Review",
       "url": "https://www.pettrackerreview.com",
-      "logo": "https://www.pettrackerreview.com/images/logo.png",
+      "logo": "https://www.pettrackerreview.com/img/pet-tracker-review-logo.png",
       "sameAs": [
-        "https://www.facebook.com/pettrackerreview",
-        "https://www.twitter.com/pettrackerreview",
-        "https://www.instagram.com/pettrackerreview"
+        "https://www.twitter.com/pettrackerreview"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-800-123-4567",
         "contactType": "customer service",
         "email": "info@pettrackerreview.com"
       }
@@ -57,312 +45,36 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-0YXVVTJYBR');
     </script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header th:fragment="navbar" class="header">
-        <!-- Main Navigation -->
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
 
-                <!-- Logo -->
-                <a class="navbar-brand" href="/" aria-label="Pet Tracker Review Home">
-                    <img src="/img/favicon.ico" style="width: auto;height: 50px" alt="logo">
-                    <span class="logo-text">PetTracker<span>Review</span></span>
-                </a>
-                
-                <!-- Mobile Toggle Button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <!-- Navigation Links -->
-                <div class="collapse navbar-collapse" id="navbarMain">
-                    <ul class="navbar-nav ms-auto">
-<!--                        <li class="nav-item">-->
-<!--                            <a class="nav-link" href="/" th:classappend="${#httpServletRequest.requestURI == '/' ? 'active' : ''}">-->
-<!--                                Home-->
-<!--                            </a>-->
-<!--                        </li>-->
-<!--                        <li class="nav-item dropdown">-->
-<!--                            <a class="nav-link dropdown-toggle" href="#" id="accessoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
-<!--                                GPS Tracker-->
-<!--                            </a>-->
-<!--                            <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown">-->
-<!--                                <li><a class="dropdown-item" href="/accessories/trackers">Dog Trackers</a></li>-->
-<!--                                <li><a class="dropdown-item" href="/accessories/trackers">Cat Trackers</a></li>-->
-
-<!--                            </ul>-->
-<!--                        </li>-->
-                        <li class="nav-item">
-                            <a class="nav-link" href="/accessories/trackers" th:classappend="${#strings.startsWith(#httpServletRequest.requestURI, '/accessories/trackers') ? 'active' : ''}">
-                                GPS Trackers
-                            </a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/reviews" th:classappend="${#strings.startsWith(#httpServletRequest.requestURI, '/reviews') ? 'active' : ''}">
-                                Reviews
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/blog" th:classappend="${#strings.startsWith(#httpServletRequest.requestURI, '/blog') ? 'active' : ''}">
-                                Blog
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/about" th:classappend="${#httpServletRequest.requestURI == '/about' ? 'active' : ''}">
-                                About
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/contact" th:classappend="${#httpServletRequest.requestURI == '/contact' ? 'active' : ''}">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+<header class="site-header-wrapper" th:fragment="navbar" >
+    <div class="site-header-container">
+        <div class="site-logo-section">
+            <a href="/" class="site-logo-link">
+                <img src="/img/pet-tracker-review-logo.png" alt="Pet Tracker Reviews Logo" class="site-logo-image">
+            </a>
+        </div>
+        <nav class="site-navigation-menu">
+            <ul class="site-nav-list">
+                <li class="site-nav-item"><a href="/" class="site-nav-link site-nav-active">Home</a></li>
+                <li class="site-nav-item"><a href="/blog/blogs" class="site-nav-link">Blog</a></li>
+                <li class="site-nav-item"><a href="/brands" class="site-nav-link">Brands</a></li>
+                <li class="site-nav-item"><a href="/about" class="site-nav-link">About Us</a></li>
+                <li class="site-nav-item"><a href="/contact" class="site-nav-link">Contact</a></li>
+            </ul>
         </nav>
-    </header>
-    
-    <style>
-        /* Variables - Modern Professional Theme */
-        :root {
-            --primary: #3498db; /* Modern blue primary color */
-            --primary-light: #a0cfff;
-            --primary-dark: #2980b9;
-            --dark: #2c3e50;
-            --light: #f8f9fa;
-            --gray: #95a5a6;
-            --border-radius: 8px; /* More subtle rounded corners */
-            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-        }
-        
-        /* Global Styles */
-        body {
-            font-family: 'Nunito', sans-serif;
-            color: var(--dark);
-            padding-top: 70px;
-            background-color: var(--light);
-        }
-        
-        /* Navbar - Modern Professional Style */
-        .navbar {
-            background-color: white;
-            box-shadow: var(--box-shadow);
-            padding: 0.8rem 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1030;
-            height: 70px;
-            transition: var(--transition);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        }
-        
-        .navbar:hover {
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Logo */
-        .logo-text {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-left: 10px;
-            color: var(--primary);
-            vertical-align: middle;
-        }
-        
-        .logo-text span {
-            font-weight: 500;
-            color: var(--dark);
-        }
-        
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-        }
-        
-        /* Navigation - Modern Professional Style */
-        .navbar-nav {
-            gap: 1rem;
-        }
-        
-        .nav-item {
-            position: relative;
-        }
-        
-        .nav-link {
-            color: var(--dark);
-            font-weight: 500;
-            padding: 0.6rem 1rem;
-            transition: var(--transition);
-            font-size: 0.95rem;
-            position: relative;
-            letter-spacing: 0.3px;
-        }
-        
-        .nav-link:hover, .nav-link.active {
-            color: var(--primary);
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after, .nav-link.active::after {
-            width: 100%;
-        }
-        
-        /* Dropdown Menu - Modern Professional Style */
-        .dropdown-menu {
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 0.5rem 0;
-            margin-top: 0.5rem;
-            min-width: 11rem;
-            background-color: white;
-            animation: dropdownFade 0.2s ease;
-        }
-        
-        @keyframes dropdownFade {
-            from { opacity: 0; transform: translateY(-5px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .dropdown-item {
-            padding: 0.6rem 1.2rem;
-            color: var(--dark);
-            font-weight: 400;
-            transition: var(--transition);
-            font-size: 0.9rem;
-            position: relative;
-        }
-        
-        .dropdown-item:hover {
-            background-color: rgba(52, 152, 219, 0.08);
-            color: var(--primary);
-        }
-        
-        /* Mobile Styles - Modern Professional Version */
-        @media (max-width: 991.98px) {
-            .navbar-collapse {
-                background: white;
-                border-radius: var(--border-radius);
-                box-shadow: var(--box-shadow);
-                padding: 1rem;
-                margin-top: 0.5rem;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                z-index: 1000;
-                animation: fadeIn 0.3s ease forwards;
-                border: 1px solid rgba(0, 0, 0, 0.08);
-            }
-            
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(-10px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-            
-            .navbar-toggler {
-                padding: 0.3rem 0.6rem;
-                font-size: 1rem;
-                border: 1px solid rgba(0, 0, 0, 0.1);
-                border-radius: var(--border-radius);
-                transition: var(--transition);
-                background-color: white;
-            }
-            
-            .navbar-toggler:hover {
-                background-color: var(--light);
-            }
-            
-            .navbar-toggler-icon {
-                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2844, 62, 80, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-            }
-            
-            .nav-link {
-                padding: 0.75rem 1rem;
-                margin-bottom: 0.3rem;
-                text-align: left;
-                transition: var(--transition);
-            }
-            
-            .nav-link:hover, .nav-link.active {
-                background-color: rgba(52, 152, 219, 0.08);
-            }
-            
-            .navbar-nav {
-                gap: 0.3rem;
-            }
-            
-            .dropdown-menu {
-                border: none;
-                box-shadow: none;
-                padding-left: 1rem;
-                margin-top: 0;
-                background-color: transparent;
-            }
-        }
-    </style>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Bootstrap dropdown hover effect for desktop
-            const dropdowns = document.querySelectorAll('.dropdown');
-            
-            if (window.innerWidth >= 992) {
-                dropdowns.forEach(dropdown => {
-                    dropdown.addEventListener('mouseenter', function() {
-                        const dropdownMenu = this.querySelector('.dropdown-menu');
-                        const dropdownToggle = this.querySelector('.dropdown-toggle');
-                        
-                        if (dropdownMenu && dropdownToggle) {
-                            dropdownMenu.classList.add('show');
-                            dropdownToggle.setAttribute('aria-expanded', 'true');
-                        }
-                    });
-                    
-                    dropdown.addEventListener('mouseleave', function() {
-                        const dropdownMenu = this.querySelector('.dropdown-menu');
-                        const dropdownToggle = this.querySelector('.dropdown-toggle');
-                        
-                        if (dropdownMenu && dropdownToggle) {
-                            dropdownMenu.classList.remove('show');
-                            dropdownToggle.setAttribute('aria-expanded', 'false');
-                        }
-                    });
-                });
-            }
-            
-            // Add smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        e.preventDefault();
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
-        });
-    </script>
+
+        <div class="site-header-actions">
+            <button class="site-mobile-toggle" aria-label="Toggle menu">
+                <span class="site-hamburger-line"></span>
+                <span class="site-hamburger-line"></span>
+                <span class="site-hamburger-line"></span>
+            </button>
+        </div>
+    </div>
+</header>
 </body>
 </html>

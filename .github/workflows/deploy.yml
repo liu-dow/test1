@@ -3,7 +3,7 @@ name: CI/CD - Build and Deploy JAR
 on:
   push:
     branches:
-      - main  # 监听 main 分支的推送
+      - main  # Listen for pushes to main branch
 
 jobs:
   build:

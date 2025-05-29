@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: common-header('Tractive Brand History | Global Leader in Pet Tracking Technology')">
+</head>
+<body>
+<header th:replace="fragments/header :: navbar"></header>
+<link th:href="@{/css/brands.css}" rel="stylesheet">
+<link th:href="@{/js/brands.js}" rel="stylesheet">
+
+<section class="brand-header" style="background-color: #4ECDC4;">
+    <div class="container">
+        <h2>Tractive</h2>
+        <p>The global leader in pet GPS and health tracking with over 1.3 million customers worldwide</p>
+    </div>
+</section>
+
+<section class="brand-content">
+    <div class="container">
+        <div class="brand-section">
+            <h3>Brand Overview</h3>
+            <p>Tractive is an Austrian technology company that has revolutionized the way pet owners monitor and care for their pets. Specializing in GPS and health trackers for dogs and cats, Tractive enables pet owners to view their pet's real-time location, receive health alerts, and monitor activity and sleep patterns via a smartphone app.</p>
+            <p>With a global presence spanning over 175 countries and tracking around 1 million pets worldwide, Tractive has established itself as a leader in the pet technology industry. The company's commitment to innovation and pet safety has made it the go-to solution for pet owners concerned about their pets' wellbeing and location.</p>
+        </div>
+
+        <div class="brand-section">
+            <h3>The Tractive Journey</h3>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>October 2012</h4>
+                        <p>Tractive was founded in Austria by Michael Hurnaus, together with Michael Lettner, Michael Tschernuth, and the founders of adidas Runtastic, including Florian Gschwandtner.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>January 2013</h4>
+                        <p>The company released its first GPS dog tracker prototype at the Consumer Electronics Show (CES) in Las Vegas, marking its entry into the pet technology market.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>2014-2016</h4>
+                        <p>Tractive expanded its market presence beyond Europe, establishing itself as a global player in the pet tracking industry and continuously improving its technology.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>2017</h4>
+                        <p>Tractive introduced activity monitoring features to its GPS trackers, enabling pet owners to track their pets' daily activity levels and ensure they were getting enough exercise.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>2020-2022</h4>
+                        <p>The company continued to enhance its product offerings, introducing new models with improved battery life, more accurate GPS tracking, and additional health monitoring features.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>2023-Present</h4>
+                        <p>Tractive has grown to serve over 1.3 million customers globally, continuing to innovate with advanced features like bark monitoring and vital sign tracking, cementing its position as the world market leader in pet tracking technology.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="brand-section">
+            <h3>Innovation & Technology</h3>
+            <p>Tractive's GPS trackers utilize cutting-edge technology to provide comprehensive pet monitoring solutions:</p>
+            <ul>
+                <li>LTE-M cellular networks, Bluetooth, and Wi-Fi integration for reliable tracking</li>
+                <li>Real-time location updates every 3 seconds</li>
+                <li>Virtual fence and escape alert capabilities</li>
+                <li>Activity and sleep monitoring</li>
+                <li>Behavior pattern analysis to detect potential health issues</li>
+                <li>100% waterproof design for all-weather use</li>
+                <li>Bark monitoring to provide insights into barking patterns</li>
+                <li>Advanced health monitoring including heart and respiratory rate tracking (in newer models)</li>
+            </ul>
+            <p>Unlike Bluetooth tracking devices like AirTag, Tractive's GPS trackers can locate pets worldwide as long as there's sufficient cellular coverage, thanks to integrated SIM cards that automatically connect to local cell networks.</p>
+        </div>
+
+        <div class="brand-section">
+            <h3>Global Impact</h3>
+            <p>Tractive has made a significant impact on pet care globally, helping to reunite countless lost pets with their owners and providing peace of mind to millions of pet parents. The company's technology has also contributed to better understanding of pet health and behavior through the vast amount of data collected.</p>
+            <p>As pet ownership continues to grow worldwide, Tractive remains at the forefront of pet technology innovation, constantly developing new features and improvements based on customer feedback and technological advancements.</p>
+            <p>The company's vision extends beyond just tracking, aiming to create a comprehensive ecosystem for pet health and wellbeing that integrates with other aspects of pet care, such as veterinary services and pet insurance.</p>
+        </div>
+    </div>
+</section>
+
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

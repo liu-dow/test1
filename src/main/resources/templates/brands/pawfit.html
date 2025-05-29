@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: common-header('Discover the history and development of Pawfit, a leading pet tracker brand that has revolutionized pet care technology since 2018.')">
+</head>
+<body>
+<header th:replace="fragments/header :: navbar"></header>
+<link th:href="@{/css/brands.css}" rel="stylesheet">
+<link th:href="@{/js/brands.js}" rel="stylesheet">
+
+<section class="brand-header" style="background-color: #FF6B6B;">
+    <div class="container">
+        <h2>Pawfit</h2>
+        <p>The waterproof GPS pet location and activity tracker trusted by thousands of pet parents around the world</p>
+    </div>
+</section>
+
+<section class="brand-content">
+    <div class="container">
+        <div class="brand-section">
+            <h3>Brand Overview</h3>
+            <p>Pawfit is a leading pet tracking brand that has quickly risen to prominence in the UK and Europe since its launch. Developed by Latsen Technology, Pawfit combines advanced GPS location tracking with comprehensive activity monitoring to provide pet owners with a complete solution for keeping their pets safe and healthy.</p>
+            <p>The brand's focus on customer needs and continuous innovation has made it one of the top-selling pet tracking brands, now sold across the world. Pawfit's development team is known for their responsiveness to customer feedback, often implementing features suggested by Pawfit users.</p>
+        </div>
+
+        <div class="brand-section">
+            <h3>The Pawfit Journey</h3>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>2018</h4>
+                        <p>Latsen Technology launched its flagship pet tracking brand Pawfit with the Pawfit 1 model - the first pet tracker in Europe to combine both location tracking and activity monitoring.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>2019-2020</h4>
+                        <p>Following the success of the initial model, Pawfit expanded its market presence across the UK and Europe, becoming one of the top-selling pet tracking brands in the region.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>2021-2022</h4>
+                        <p>Pawfit continued to enhance its product offerings based on customer feedback, adding new features to both the tracker hardware and companion app to improve user experience.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>2023</h4>
+                        <p>Pawfit unveiled the Pawfit 3, its latest innovation featuring advanced GPS and LTE (4G) technologies, offering unparalleled tracking and monitoring capabilities for pet owners.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>Present</h4>
+                        <p>Today, Pawfit is trusted by tens of thousands of pet owners around the world every day to keep their pets safer, healthier, and happier. The brand continues to expand globally while maintaining its commitment to innovation and customer satisfaction.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>2025</h4>
+                        <p>Pawfit expands its product line with the introduction of Pawfit Lite, a more affordable and streamlined version of their popular pet tracker, designed to make pet tracking technology accessible to a wider audience while maintaining core safety features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="brand-section">
+            <h3>Innovation & Technology</h3>
+            <p>Pawfit has consistently pushed the boundaries of pet tracking technology. The Pawfit 3, their latest model, represents a significant leap forward with features such as:</p>
+            <ul>
+                <li>Live tracking updates every five seconds</li>
+                <li>Customizable virtual fencing</li>
+                <li>Pawfit Voice, allowing pet owners to call their pets back with voice commands</li>
+                <li>Unexpected removal alerts</li>
+                <li>Weather-related safety alerts</li>
+                <li>Audio ID tag to aid in the quick return of lost pets</li>
+            </ul>
+            <p>Looking ahead to 2025, Pawfit plans to launch the Pawfit Lite, a more accessible version of their tracker that will maintain essential safety features while being offered at a more affordable price point, demonstrating the company's commitment to making pet safety technology available to more pet owners.</p>
+            <p>The development of Pawfit's technology has been driven by a personal mission. Fan Wu, CEO of Latsen Technology and the driving force behind Pawfit, has shared that pet safety is a real concern that inspired him to use his technology education and expertise to develop a product that would help prevent pets from getting lost.</p>
+        </div>
+
+        <div class="brand-section">
+            <h3>Customer-Focused Approach</h3>
+            <p>What sets Pawfit apart is its customer-focused business approach. The company is known for its ability to adapt to the needs of its customers, with many of the tracker and app features being ones recommended by Pawfit users themselves.</p>
+            <p>This responsive development process has created a loyal customer base who appreciate not just the technology, but the company's commitment to improving the lives of pets and their owners.</p>
+            <p>As Pawfit continues to grow and evolve, it remains dedicated to its core mission: providing pet owners with the tools they need to ensure their pets are safe, healthy, and happy, wherever they may go.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

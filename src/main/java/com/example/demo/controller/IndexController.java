@@ -11,8 +11,4 @@ public class IndexController {
         return "index";
     }
 
-    @GetMapping("/reviews")
-    public String reviews() {
-        return "reviews";
-    }
-} 
+}

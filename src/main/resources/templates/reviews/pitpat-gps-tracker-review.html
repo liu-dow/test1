@@ -2,6 +2,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: common-header('PitPat GPS Tracker Review - No Subscription Required')">
 </head>
+<link th:href="@{/css/tracker-reviews.css}" rel="stylesheet">
+
 <body>
     <header th:replace="fragments/header :: navbar"></header>
 
@@ -10,12 +12,8 @@
             <!-- Hero Section -->
             <div class="hero-section mb-5">
                 <h1 class="display-4 fw-bold mb-4">PitPat GPS Tracker Review: The No-Subscription GPS Solution</h1>
-                <p class="lead text-muted">Published: <time datetime="2023-12-05">December 5, 2023</time> | Last Updated: <time datetime="2024-03-15">March 15, 2024</time></p>
-                <div class="disclaimer mb-4">
-                    <small class="text-muted">PetGear Reviews is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission. <a href="/affiliate-disclosure">Learn more</a></small>
-                </div>
-                <div th:replace="fragments/social-share :: social-share(title='PitPat GPS Tracker Review: The No-Subscription GPS Solution', description='Discover if the subscription-free PitPat GPS tracker is right for your pet. Read our in-depth review covering performance, features, and value.', url=@{/blog/pitpat-gps-tracker-review})"></div>
-                <img src="https://images.unsplash.com/photo-1583511655826-05700442b31b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="Dog wearing PitPat GPS tracker" class="img-fluid rounded mb-4">
+                <p class="lead text-muted">Published: <time datetime="2023-12-05">December 5, 2023</time> | Last Updated: <time datetime="2024-03-15">Mayday 15, 2025</time></p>
+                <img src="/img/review/pitpat/Dog_rights_CU_gps_black_outdoors_stationary_sitting_in_field_english-pointer_with_human_Louis_James-Parker.webp" alt="Dog wearing PitPat GPS tracker" class="img-fluid rounded mb-4">
             </div>
 
             <!-- Introduction -->
@@ -53,10 +51,10 @@
                 <p>Based in Cambridge, UK, PitPat has established itself as the UK's leading pet wellness brand. Their product lineup has expanded over the years, but they first made their mark with the innovative PitPat Activity Monitor—essentially a Fitbit for dogs—which revolutionized how pet owners track their dogs' exercise, distance traveled, and rest periods.</p>
                 
                 <p>The PitPat GPS Tracker builds on this foundation, adding real-time location tracking while maintaining the activity monitoring capabilities that made their original product so popular. Most notably, it's the first cellular tracker on the market to include lifetime connectivity without requiring a monthly subscription.</p>
-                
+
                 <h3 class="h4 mt-4 mb-3">Design & Setup</h3>
-                <img src="https://images.unsplash.com/photo-1583512603806-077998240c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="PitPat GPS tracker with wireless charging pad" class="img-fluid rounded mb-3">
-                
+                <img src="/img/review/pitpat/Battery-lasts-weeks-not-days-with-shadow-icon-and-text-bakerie-2-937x1024.webp" alt="PitPat GPS tracker with wireless charging pad" class="img-fluid rounded mb-3">
+
                 <p>The PitPat GPS Tracker arrives in stylish packaging with everything you need to get started: the tracker itself, a wireless charging pad, a USB charging cable, and extra-strong velcro straps for attaching the device to your dog's collar or harness.</p>
                 
                 <p>Setting up the tracker is remarkably straightforward:</p>
@@ -296,109 +294,10 @@
                 <p>For dog owners who want peace of mind without committing to endless subscription payments, the PitPat GPS Tracker represents excellent value for money. The 42-day money-back guarantee allows you to test it risk-free in your local area, ensuring it meets your specific needs before making a long-term commitment.</p>
                 <p>Whether you have an escape-prone dog or simply want the security of knowing you can locate your pet if they ever go missing, the PitPat GPS Tracker is a reliable, cost-effective solution that deserves serious consideration.</p>
             </div>
-
-            <!-- Author Info -->
-            <div class="author-info d-flex align-items-center mt-5 p-4 bg-light rounded">
-                <img src="/images/team/author-avatar.jpg" alt="Author avatar" class="rounded-circle me-3" width="80" height="80">
-                <div>
-                    <h3 class="h5 mb-1">Written by James Wilson</h3>
-                    <p class="text-muted mb-2">Pet Tech Specialist</p>
-                    <p class="mb-0">James has been reviewing pet technology for over 6 years and shares his home with a Border Collie who has tested dozens of GPS trackers and activity monitors.</p>
-                </div>
-            </div>
-
-            <!-- Related Posts -->
-            <div class="related-posts mt-5">
-                <h3 class="h4 mb-4">You Might Also Like</h3>
-                <div class="row">
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="/images/blog/pawfit-3-on-collar.jpg" class="card-img-top" alt="Pawfit GPS tracker review">
-                            <div class="card-body">
-                                <h4 class="h5 card-title">Pawfit 3 GPS Tracker: The Ultimate Review</h4>
-                                <p class="card-text">Discover if this subscription-based GPS tracker with advanced features is worth the ongoing cost.</p>
-                                <a href="/review/pawfit-3-gps-tracker-review" class="btn btn-outline-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="/images/blog/gps-tracker-comparison.jpg" class="card-img-top" alt="GPS tracker comparison">
-                            <div class="card-body">
-                                <h4 class="h5 card-title">Best GPS Trackers for Dogs: 2024 Comparison</h4>
-                                <p class="card-text">We compare the top GPS trackers on the market to help you find the perfect option for your pet.</p>
-                                <a href="/review/best-gps-trackers" class="btn btn-outline-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="card h-100">
-                            <img src="/images/blog/activity-monitors.jpg" class="card-img-top" alt="Dog activity monitors">
-                            <div class="card-body">
-                                <h4 class="h5 card-title">Dog Activity Monitors: Are They Worth It?</h4>
-                                <p class="card-text">Explore the benefits of activity monitors and whether they can improve your dog's health and fitness.</p>
-                                <a href="/review/dog-activity-monitors" class="btn btn-outline-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </article>
     </main>
 
     <footer th:replace="fragments/footer :: footer"></footer>
 
-    <style>
-        /* Blog-specific styles */
-        .blog-post {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .blog-post h1 {
-            color: var(--primary);
-        }
-        
-        .blog-post h2, .blog-post h3, .blog-post h4 {
-            color: var(--primary-dark);
-        }
-        
-        .blog-post p, .blog-post li {
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-        
-        .blog-post img {
-            max-width: 100%;
-            height: auto;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        .quick-summary {
-            background-color: rgba(255, 126, 95, 0.1);
-            border-left: 4px solid var(--primary);
-        }
-        
-        .toc a {
-            color: var(--dark);
-            transition: var(--transition);
-        }
-        
-        .toc a:hover {
-            color: var(--primary);
-            text-decoration: underline !important;
-        }
-        
-        .author-info {
-            border-left: 4px solid var(--primary);
-        }
-        
-        @media (max-width: 767.98px) {
-            .blog-post p, .blog-post li {
-                font-size: 1rem;
-                line-height: 1.6;
-            }
-        }
-    </style>
 </body>
 </html>

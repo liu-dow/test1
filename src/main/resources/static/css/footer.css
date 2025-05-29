@@ -1,0 +1,315 @@
+/* Pet Tracker Reviews Footer Styles - Warm Green Theme */
+
+/* Main Content Placeholder (for demo only) */
+.content-placeholder {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.content-placeholder h1 {
+    margin-bottom: 20px;
+    color: #2e7d32; /* Dark green */
+}
+
+/* Footer Styles with unique class names */
+.ptr-footer {
+    background-color: #4caf50; /* Main green theme */
+    color: #f1f8e9; /* Light green text */
+    padding: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.ptr-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer Top Section with Columns */
+.ptr-footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 0 20px;
+    border-bottom: 1px solid #81c784; /* Medium green */
+}
+
+.ptr-footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 30px;
+    padding-right: 20px;
+}
+
+.ptr-footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #c8e6c9; /* Very light green */
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.ptr-footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #c8e6c9; /* Very light green */
+}
+
+.ptr-footer-column p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Footer Links */
+.ptr-footer-links {
+    list-style: none;
+}
+
+.ptr-footer-links li {
+    margin-bottom: 10px;
+}
+
+.ptr-footer-links a {
+    color: #f1f8e9; /* Light green text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.ptr-footer-links a:hover {
+    color: #c8e6c9; /* Very light green */
+    text-decoration: underline;
+}
+
+/* Subscribe Form */
+.ptr-subscribe-form {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.ptr-subscribe-form input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+}
+
+.ptr-subscribe-form button {
+    background-color: #2e7d32; /* Dark green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s ease;
+}
+
+.ptr-subscribe-form button:hover {
+    background-color: #1b5e20; /* Darker green */
+}
+
+/* Contact Info */
+.ptr-contact-info {
+    margin-top: 15px;
+}
+
+.ptr-contact-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.ptr-contact-info i {
+    margin-right: 10px;
+    color: #c8e6c9; /* Very light green */
+}
+
+.ptr-contact-info a {
+    color: #f1f8e9; /* Light green text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.ptr-contact-info a:hover {
+    color: #c8e6c9; /* Very light green */
+}
+
+/* Social Media Section */
+.ptr-social-media {
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #81c784; /* Medium green */
+}
+
+.ptr-social-media h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #c8e6c9; /* Very light green */
+}
+
+.ptr-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.ptr-social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #388e3c; /* Medium-dark green */
+    color: #f1f8e9; /* Light green text */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.ptr-social-icons a:hover {
+    background-color: #2e7d32; /* Dark green */
+    transform: translateY(-3px);
+}
+
+/* Trust Badges */
+.ptr-trust-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #81c784; /* Medium green */
+}
+
+.ptr-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ptr-badge img {
+    max-height: 40px;
+    width: auto;
+}
+
+/* Footer Bottom */
+.ptr-footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.ptr-copyright {
+    margin-bottom: 10px;
+}
+
+.ptr-legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.ptr-legal-links a {
+    color: #f1f8e9; /* Light green text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.ptr-legal-links a:hover {
+    color: #c8e6c9; /* Very light green */
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .ptr-footer-column {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .ptr-footer-top {
+        flex-direction: column;
+    }
+
+    .ptr-footer-column {
+        flex: 0 0 100%;
+        padding-right: 0;
+    }
+
+    .ptr-footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ptr-legal-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .ptr-social-icons {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .ptr-subscribe-form {
+        flex-direction: column;
+    }
+
+    .ptr-subscribe-form input {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+
+    .ptr-subscribe-form button {
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .ptr-trust-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Accessibility Enhancements */
+.ptr-footer a:focus,
+.ptr-footer button:focus,
+.ptr-footer input:focus {
+    outline: 2px solid #c8e6c9; /* Very light green */
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .ptr-footer {
+        background-color: #fff !important;
+        color: #000 !important;
+    }
+
+    .ptr-footer-links a,
+    .ptr-legal-links a,
+    .ptr-contact-info a {
+        color: #000 !important;
+    }
+
+    .ptr-social-media,
+    .ptr-subscribe-form {
+        display: none !important;
+    }
+}

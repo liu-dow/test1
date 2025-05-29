@@ -2,74 +2,34 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <!-- Include common header -->
 <head th:replace="fragments/header :: common-header('Home')">
-    <!-- Add homepage specific CSS -->
-    <link th:href="@{/css/homepage.css}" rel="stylesheet">
 </head>
 <body>
 <!-- Include navigation bar -->
 <div th:replace="fragments/header :: navbar"></div>
 
-<!-- Main page content -->
+
 <div class="container py-5">
     <section class="hero">
         <div class="hero-overlay"></div>
+        <div class="gps-signal"></div>
+        <div class="location-marker"></div>
         <div class="container hero-container">
             <h1 class="hero-title">Find the Perfect Tracker for Your Furry Friend</h1>
             <p class="hero-subtitle">Expert reviews, detailed comparisons, and comprehensive buying guides to keep your pets safe and happy</p>
 
             <div class="hero-badges">
-                <span class="hero-badge"><i class="fas fa-check-circle"></i> Trusted Reviews</span>
-                <span class="hero-badge"><i class="fas fa-shield-alt"></i> Unbiased Analysis</span>
+                <span class="hero-badge"><i class="fas fa-check-circle" aria-hidden="true"></i> Trusted Reviews</span>
+                <span class="hero-badge"><i class="fas fa-shield-alt" aria-hidden="true"></i> Unbiased Analysis</span>
             </div>
-            
+
             <div class="hero-cta mt-4">
-                <a href="/reviews" class="hero-button primary-btn">Browse Reviews <i class="fas fa-arrow-right"></i></a>
-                <a href="/accessories/trackers/dog" class="hero-button dog-btn"><i class="fas fa-dog"></i> Dog Trackers</a>
-                <a href="/accessories/trackers/cat" class="hero-button cat-btn"><i class="fas fa-cat"></i> Cat Trackers</a>
             </div>
         </div>
     </section>
 
-    <div class="trust-badges">
-        <div class="container">
-            <div class="badge-container">
-                <div class="trust-badge">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Independent Reviews</span>
-                </div>
-                <div class="trust-badge">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Unbiased Analysis</span>
-                </div>
-                <div class="trust-badge">
-                    <i class="fas fa-heart"></i>
-                    <span>Pet-Friendly Advice</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <main class="container">
-        <!-- Featured Reviews Section -->
         <section class="featured-reviews">
-            <div class="section-header">
-                <h2><i class="fas fa-star"></i> Latest Reviews</h2>
-                <p class="section-subtitle">Discover our most recent in-depth product evaluations</p>
-                <div class="section-decoration">
-                    <span class="decoration-dot"></span>
-                    <span class="decoration-line"></span>
-                    <span class="decoration-dot"></span>
-                </div>
-            </div>
-            
-            <!-- Category Filter Tabs -->
-            <div class="category-filter">
-                <div class="filter-tabs">
-                    <button class="filter-tab active" data-filter="all">All Trackers</button>
-                    <button class="filter-tab" data-filter="dog"><i class="fas fa-dog"></i> Dog Trackers</button>
-                    <button class="filter-tab" data-filter="cat"><i class="fas fa-cat"></i> Cat Trackers</button>
-                </div>
-            </div>
             <div class="reviews-grid">
                 <article class="review-card" data-category="dog">
                     <div class="card-image-container">
@@ -79,14 +39,14 @@
                         </div>
                     </div>
                     <div class="review-content">
-                        <span class="review-category"><i class="fas fa-dog"></i> Dog GPS Tracker</span>
+                        <span class="review-category"><i class="fas fa-dog" aria-hidden="true"></i> Dog GPS Tracker</span>
                         <h3 class="review-title">Pawfit 3 GPS Tracker: The Ultimate Review</h3>
                         <p class="review-excerpt">A comprehensive review of this feature-rich GPS tracker designed specifically for your four-legged friend.</p>
                         <div class="review-meta">
-                            <span class="rating">★★★★★</span>
-                            <span class="review-date"><i class="far fa-calendar-alt"></i> March 15, 2024</span>
+                            <span class="rating" aria-label="5 out of 5 stars">★★★★★</span>
+                            <span class="review-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> March 15, 2024</span>
                         </div>
-                        <a href="/reviews/pawfit-3-gps-tracker-review" class="read-more">Read Full Review <i class="fas fa-arrow-right"></i></a>
+                        <a href="/reviews/pawfit-3-gps-tracker-review" class="read-more">Read Full Review <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
 
@@ -98,14 +58,14 @@
                         </div>
                     </div>
                     <div class="review-content">
-                        <span class="review-category"><i class="fas fa-dog"></i> Dog GPS Tracker</span>
+                        <span class="review-category"><i class="fas fa-dog" aria-hidden="true"></i> Dog GPS Tracker</span>
                         <h3 class="review-title">Best Value: Tractive GPS</h3>
                         <p class="review-excerpt">A balanced GPS tracker offering competitive pricing, virtual fence features, and global coverage.</p>
                         <div class="review-meta">
-                            <span class="rating">★★★★★</span>
-                            <span class="review-date"><i class="far fa-calendar-alt"></i> March 20, 2024</span>
+                            <span class="rating" aria-label="5 out of 5 stars">★★★★★</span>
+                            <span class="review-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> March 20, 2024</span>
                         </div>
-                        <a href="/reviews/tractive-gps-review" class="read-more">Read Full Review <i class="fas fa-arrow-right"></i></a>
+                        <a href="/reviews/tractive-gps-review" class="read-more">Read Full Review <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
 
@@ -117,14 +77,14 @@
                         </div>
                     </div>
                     <div class="review-content">
-                        <span class="review-category"><i class="fas fa-dog"></i> Dog GPS Tracker</span>
+                        <span class="review-category"><i class="fas fa-dog" aria-hidden="true"></i> Dog GPS Tracker</span>
                         <h3 class="review-title">Best for Dogs: PitPat GPS</h3>
                         <p class="review-excerpt">A subscription-free GPS tracker with excellent battery life and built-in activity monitoring features.</p>
                         <div class="review-meta">
-                            <span class="rating">★★★★½</span>
-                            <span class="review-date"><i class="far fa-calendar-alt"></i> March 15, 2024</span>
+                            <span class="rating" aria-label="4.5 out of 5 stars">★★★★½</span>
+                            <span class="review-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> March 15, 2024</span>
                         </div>
-                        <a href="/reviews/pitpat-gps-tracker-review" class="read-more">Read Full Review <i class="fas fa-arrow-right"></i></a>
+                        <a href="/reviews/pitpat-gps-tracker-review" class="read-more">Read Full Review <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
 
@@ -136,136 +96,798 @@
                         </div>
                     </div>
                     <div class="review-content">
-                        <span class="review-category"><i class="fas fa-cat"></i> Cat GPS Tracker</span>
+                        <span class="review-category"><i class="fas fa-cat" aria-hidden="true"></i> Cat GPS Tracker</span>
                         <h3 class="review-title">Pawfit Lite: The Ultra-Lightweight Pet Tracker</h3>
                         <p class="review-excerpt">A compact and lightweight GPS tracker perfect for both cats and dogs, featuring reliable 4G connectivity and essential safety features.</p>
                         <div class="review-meta">
-                            <span class="rating">★★★★½</span>
-                            <span class="review-date"><i class="far fa-calendar-alt"></i> March 01, 2025</span>
+                            <span class="rating" aria-label="4.5 out of 5 stars">★★★★½</span>
+                            <span class="review-date"><i class="far fa-calendar-alt" aria-hidden="true"></i> March 01, 2025</span>
                         </div>
-                        <a href="/reviews/pawfit-lite-gps-tracker-review" class="read-more">Read Full Review <i class="fas fa-arrow-right"></i></a>
+                        <a href="/reviews/pawfit-lite-gps-tracker-review" class="read-more">Read Full Review <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
             </div>
-            <div class="view-all-link">
-                <a href="/reviews" class="view-all-button">View All Reviews <i class="fas fa-arrow-right"></i></a>
-            </div>
         </section>
-
-        <!-- Testing Methodology Section -->
-        <section class="testing-methodology">
-            <div class="section-header">
-                <h2><i class="fas fa-flask"></i> Our Testing Process</h2>
-                <p class="section-subtitle">How we ensure accurate, reliable, and thorough evaluations</p>
-                <div class="section-decoration">
-                    <span class="decoration-dot"></span>
-                    <span class="decoration-line"></span>
-                    <span class="decoration-dot"></span>
-                </div>
-            </div>
-            <div class="methodology-container">
-                <div class="methodology-card">
-                    <div class="methodology-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>Research</h3>
-                    <p>We start with extensive market research to identify the most relevant products worth testing.</p>
-                </div>
-                <div class="methodology-card">
-                    <div class="methodology-icon">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
-                    <h3>Testing</h3>
-                    <p>Our experts conduct rigorous hands-on testing using standardized methodologies for consistent
-                        results.</p>
-                </div>
-                <div class="methodology-card">
-                    <div class="methodology-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>Analysis</h3>
-                    <p>We analyze performance data and user experience to provide comprehensive evaluations.</p>
-                </div>
-                <div class="methodology-card">
-                    <div class="methodology-icon">
-                        <i class="fas fa-pen-fancy"></i>
-                    </div>
-                    <h3>Review</h3>
-                    <p>Our detailed reviews highlight strengths, weaknesses, and ideal use cases for each product.</p>
-                </div>
-            </div>
-            <div class="methodology-cta">
-                <a href="/about" class="btn btn-outline-primary">Learn More About Our Process</a>
-            </div>
-        </section>
-        
         <!-- Why Choose Us Section -->
         <section class="why-choose-us">
             <div class="section-header">
-                <h2><i class="fas fa-heart"></i> Why Pet Owners Trust Us</h2>
+                <h2><i class="fas fa-heart" aria-hidden="true"></i> Why Pet Owners Trust Us</h2>
                 <p class="section-subtitle">We're dedicated to helping you find the best products for your furry friends</p>
-                <div class="section-decoration">
-                    <span class="decoration-dot"></span>
-                    <span class="decoration-line"></span>
-                    <span class="decoration-dot"></span>
-                </div>
             </div>
-            
             <div class="trust-reasons">
                 <div class="trust-reason">
-                    <div class="reason-icon">
-                        <i class="fas fa-paw"></i>
-                    </div>
+
                     <h3>Pet Owners First</h3>
                     <p>Our recommendations are based on what's truly best for your pets, not what's best for our bottom line.</p>
                 </div>
-                
+
                 <div class="trust-reason">
-                    <div class="reason-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
+
                     <h3>Thorough Research</h3>
                     <p>We spend countless hours researching, testing, and comparing products so you don't have to.</p>
                 </div>
-                
+
                 <div class="trust-reason">
-                    <div class="reason-icon">
-                        <i class="fas fa-user-check"></i>
-                    </div>
                     <h3>Real Experience</h3>
                     <p>Our team consists of actual pet owners who use these products with their own pets.</p>
                 </div>
-                
+
                 <div class="trust-reason">
-                    <div class="reason-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
                     <h3>Community Feedback</h3>
                     <p>We incorporate feedback from our community of pet owners to continuously improve our recommendations.</p>
                 </div>
             </div>
-            
-            <div class="cta-container">
-                <a href="/about" class="cta-button">Learn More About Us <i class="fas fa-arrow-right"></i></a>
-            </div>
         </section>
-
     </main>
 </div>
+
+<!-- Simple JavaScript for performance optimization -->
+<script>
+    // Lazy load images
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add intersection observer for animations
+        if ('IntersectionObserver' in window) {
+            const cards = document.querySelectorAll('.review-card, .trust-reason');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        }
+    });
+</script>
+
+<style>
+    /*
+ * Pet Tracker Website - Optimized Styles
+ * Modern, responsive design with SEO and accessibility enhancements
+ */
+
+    /* CSS Variables for consistent theming */
+    :root {
+        /* Color Palette */
+        --primary: #4a6fa5;          /* Primary brand color */
+        --primary-dark: #3a5a8c;     /* Darker shade for hover states */
+        --secondary: #ff7e5f;        /* Accent color for CTAs */
+        --secondary-dark: #e86a4d;   /* Darker accent for hover states */
+        --neutral-dark: #333333;     /* Dark text */
+        --neutral-medium: #666666;   /* Medium text */
+        --neutral-light: #f8f9fa;    /* Light background */
+        --white: #ffffff;            /* White */
+
+        /* Spacing */
+        --space-xs: 0.25rem;  /* 4px */
+        --space-sm: 0.5rem;   /* 8px */
+        --space-lg: 2rem;     /* 32px */
+        --space-xl: 3rem;     /* 48px */
+
+        /* Typography */
+        --font-primary: 'Nunito', 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-size-sm: 0.875rem;   /* 14px */
+        --font-size-base: 1rem;     /* 16px */
+        --font-size-md: 1.125rem;   /* 18px */
+        --font-size-lg: 1.5rem;     /* 24px */
+        --font-size-xl: 2rem;       /* 32px */
+        --font-size-xxl: 2.5rem;    /* 40px */
+
+        /* Effects */
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+        --radius-sm: 4px;
+        --radius-md: 8px;
+        --radius-lg: 12px;
+        --radius-full: 9999px;
+
+        /* Transitions */
+        --transition-fast: 150ms ease;
+        --transition-normal: 300ms ease;
+        --transition-slow: 500ms ease;
+    }
+
+    /* Base Styles */
+    /** {*/
+    /*    box-sizing: border-box;*/
+    /*    margin: 0;*/
+    /*    padding: 0;*/
+    /*}*/
+
+    html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-primary);
+        color: var(--neutral-dark);
+        line-height: 1.6;
+        background-color: var(--neutral-light);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    a {
+        color: var(--primary);
+        text-decoration: none;
+        transition: color var(--transition-normal);
+    }
+
+    a:hover, a:focus {
+        color: var(--primary-dark);
+    }
+
+    /* Utility Classes */
+    .container {
+        width: 96%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--space-md);
+    }
+
+    .py-5 {
+        padding-top: var(--space-xl);
+        padding-bottom: var(--space-xl);
+    }
+
+    .mt-4 {
+        margin-top: var(--space-lg);
+    }
+
+    /* Hero Section */
+    .hero {
+        position: relative;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: var(--white);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        margin-bottom: var(--space-xl);
+    }
+
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10,8.5c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5S10.8,8.5,10,8.5z M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10s10-4.5,10-10S15.5,0,10,0z M10,18c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S14.4,18,10,18z" fill="white"/></svg>') repeat;
+        opacity: 0.1;
+        z-index: 1;
+    }
+
+    .gps-signal {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+    }
+
+    .gps-signal:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+    }
+
+    .location-marker {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        background: var(--secondary);
+        border-radius: 50%;
+        box-shadow: 0 0 0 rgba(255, 126, 95, 0.4);
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(255, 126, 95, 0.4);
+        }
+        70% {
+            box-shadow: 0 0 0 10px rgba(255, 126, 95, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(255, 126, 95, 0);
+        }
+    }
+
+    .hero-container {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: var(--space-xl) 0;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-xxl);
+        font-weight: 800;
+        margin-bottom: var(--space-md);
+        color: var(--white);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        line-height: 1.2;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-md);
+        max-width: 700px;
+        margin: 0 auto var(--space-lg);
+        opacity: 0.9;
+        font-weight: 400;
+    }
+
+    .hero-badges {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-md);
+        margin-bottom: var(--space-md);
+        flex-wrap: wrap;
+    }
+
+    .hero-badge {
+        background: rgba(255, 255, 255, 0.2);
+        padding: var(--space-sm) var(--space-md);
+        border-radius: var(--radius-full);
+        font-size: var(--font-size-sm);
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        backdrop-filter: blur(4px);
+        transition: transform var(--transition-normal), background var(--transition-normal);
+    }
+
+    .hero-badge:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .hero-cta {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-md);
+    }
+
+    /* Featured Reviews Section */
+    .featured-reviews {
+        padding: var(--space-lg) 0;
+    }
+
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: var(--space-lg);
+    }
+
+    .review-card {
+        background: var(--white);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .review-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .card-image-container {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 16/9;
+    }
+
+    .review-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-slow);
+    }
+
+    .review-card:hover .review-image {
+        transform: scale(1.05);
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity var(--transition-normal);
+    }
+
+    .review-card:hover .image-overlay {
+        opacity: 1;
+    }
+
+    .overlay-button {
+        background: var(--secondary);
+        color: var(--white);
+        padding: var(--space-sm) var(--space-md);
+        border-radius: var(--radius-full);
+        font-weight: 600;
+        transform: translateY(20px);
+        transition: all var(--transition-normal);
+    }
+
+    .review-card:hover .overlay-button {
+        transform: translateY(0);
+    }
+
+    .overlay-button:hover {
+        background: var(--secondary-dark);
+        color: var(--white);
+    }
+
+    .review-content {
+        padding: var(--space-md);
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .review-category {
+        color: var(--primary);
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--space-sm);
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-xs);
+        font-weight: 600;
+    }
+
+    .review-title {
+        margin-bottom: var(--space-sm);
+        font-size: var(--font-size-lg);
+        color: var(--neutral-dark);
+        line-height: 1.3;
+    }
+
+    .review-excerpt {
+        color: var(--neutral-medium);
+        margin-bottom: var(--space-md);
+        flex-grow: 1;
+        font-size: var(--font-size-base);
+    }
+
+    .review-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--space-sm);
+        font-size: var(--font-size-sm);
+    }
+
+    .rating {
+        color: #ffc107;
+        letter-spacing: 1px;
+    }
+
+    .review-date {
+        color: var(--neutral-medium);
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+    }
+
+    .read-more {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-xs);
+        font-weight: 600;
+        color: var(--primary);
+        margin-top: auto;
+        padding-top: var(--space-sm);
+        border-top: 1px solid #eee;
+        transition: color var(--transition-normal);
+    }
+
+    .read-more:hover {
+        color: var(--secondary);
+    }
+
+    .read-more i {
+        transition: transform var(--transition-normal);
+    }
+
+    .read-more:hover i {
+        transform: translateX(3px);
+    }
+
+    /* Why Choose Us Section */
+    .why-choose-us {
+        padding: var(--space-xl) 0;
+        background-color: #f0f4f8;
+        border-radius: var(--radius-md);
+        margin: var(--space-xl) 0;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: var(--space-lg);
+    }
+
+    .section-header h2 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--space-sm);
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-sm);
+        color: var(--primary);
+    }
+
+    .section-subtitle {
+        color: var(--neutral-medium);
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: var(--font-size-md);
+    }
+
+    .section-decoration {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: var(--space-md) 0;
+    }
+
+    .decoration-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--secondary);
+        border-radius: 50%;
+    }
+
+    .decoration-line {
+        height: 2px;
+        width: 60px;
+        background-color: var(--secondary);
+        margin: 0 var(--space-sm);
+    }
+
+    .trust-reasons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--space-lg);
+    }
+
+    .trust-reason {
+        text-align: center;
+        padding: var(--space-md);
+        background: var(--white);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+        transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    }
+
+    .trust-reason:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .reason-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--primary);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto var(--space-md);
+        font-size: 1.5rem;
+        transition: transform var(--transition-normal);
+    }
+
+    .trust-reason:hover .reason-icon {
+        transform: scale(1.1);
+    }
+
+    .trust-reason h3 {
+        margin-bottom: var(--space-sm);
+        color: var(--primary);
+        font-size: var(--font-size-md);
+    }
+
+    .trust-reason p {
+        color: var(--neutral-medium);
+        font-size: var(--font-size-base);
+    }
+
+    /* Accessibility Improvements */
+    :focus {
+        outline: 3px solid var(--secondary);
+        outline-offset: 3px;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+    /* Animation for page load */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .review-card {
+        animation: fadeIn 0.5s ease forwards;
+        opacity: 0;
+    }
+
+    .review-card:nth-child(1) { animation-delay: 0.1s; }
+    .review-card:nth-child(2) { animation-delay: 0.2s; }
+    .review-card:nth-child(3) { animation-delay: 0.3s; }
+    .review-card:nth-child(4) { animation-delay: 0.4s; }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+        :root {
+            --font-size-xxl: 2.25rem;
+            --font-size-xl: 1.75rem;
+        }
+
+        .reviews-grid {
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        }
+    }
+
+    @media (max-width: 768px) {
+        :root {
+            --font-size-xxl: 2rem;
+            --font-size-xl: 1.5rem;
+            --font-size-lg: 1.25rem;
+        }
+
+        .hero-title {
+            font-size: var(--font-size-xl);
+        }
+
+        .hero-subtitle {
+            font-size: var(--font-size-base);
+        }
+
+        .reviews-grid {
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .trust-reasons {
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .hero-title {
+            font-size: var(--font-size-lg);
+        }
+
+        .hero-badges {
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .reviews-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .trust-reasons {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Print Styles */
+    @media print {
+        .hero {
+            background: white !important;
+            color: black !important;
+            padding: 1rem 0 !important;
+            box-shadow: none !important;
+        }
+
+        .hero-overlay, .gps-signal, .location-marker {
+            display: none !important;
+        }
+
+        .hero-title, .hero-subtitle {
+            color: black !important;
+            text-shadow: none !important;
+        }
+
+        .review-card {
+            break-inside: avoid;
+            page-break-inside: avoid;
+            box-shadow: none !important;
+            border: 1px solid #ddd;
+        }
+
+        .image-overlay, .overlay-button {
+            display: none !important;
+        }
+    }
+
+    /* Performance Optimizations */
+    @media (prefers-reduced-motion: reduce) {
+        *, ::before, ::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+
+    /* SEO Optimizations - Structured Content */
+    .review-card {
+        position: relative;
+    }
+
+    .review-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 40px 40px 0;
+        border-color: transparent var(--primary) transparent transparent;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity var(--transition-normal);
+    }
+
+    .review-card[data-category="dog"]::before {
+        border-color: transparent #4a6fa5 transparent transparent;
+        opacity: 1;
+    }
+
+    .review-card[data-category="cat"]::before {
+        border-color: transparent #6a5acd transparent transparent;
+        opacity: 1;
+    }
+</style>
 
 <div th:replace="fragments/footer :: footer"></div>
 
 <!-- Custom CSS for the redesigned homepage -->
 <style>
-    /* Hero Section Styling - Simplified */
     .hero {
         position: relative;
-        background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3)), url('/img/about/dog-and-cat.png') no-repeat center center;
-        background-size: cover;
-        border-radius: 8px;
+        background: linear-gradient(135deg, #4a90e2, #2ecc71);
+        border-radius: 12px;
         overflow: hidden;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    /* CSS Pet Tracker Related Elements */
+    .hero::before,
+    .hero::after,
+    .hero .gps-signal,
+    .hero .location-marker {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+    }
+    
+    /* Dog Paw Print Pattern */
+    .hero::before {
+        width: 180px;
+        height: 180px;
+        bottom: 10px;
+        right: 10px;
+        background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 14%, transparent 15%),
+                    radial-gradient(circle at 35% 30%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 10%, transparent 11%),
+                    radial-gradient(circle at 65% 30%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 10%, transparent 11%),
+                    radial-gradient(circle at 35% 70%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 10%, transparent 11%),
+                    radial-gradient(circle at 65% 70%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 10%, transparent 11%);
+        opacity: 0.7;
+        transform: rotate(30deg);
+    }
+    
+    /* Cat Paw Print Pattern */
+    .hero::after {
+        width: 150px;
+        height: 150px;
+        top: 20px;
+        left: 20px;
+        background: radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 15%, transparent 16%),
+                    radial-gradient(ellipse at 30% 30%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 8%, transparent 9%),
+                    radial-gradient(ellipse at 70% 30%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 8%, transparent 9%),
+                    radial-gradient(ellipse at 30% 65%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 8%, transparent 9%),
+                    radial-gradient(ellipse at 70% 65%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 8%, transparent 9%);
+        opacity: 0.7;
+        transform: rotate(-20deg);
+    }
+    
+    /* GPS Signal Pattern */
+    .hero .gps-signal {
+        width: 120px;
+        height: 120px;
+        bottom: 30px;
+        left: 30px;
+        background: 
+            radial-gradient(circle at center, transparent 0%, transparent 20%, rgba(255,255,255,0.05) 20%, rgba(255,255,255,0.05) 22%, transparent 22%),
+            radial-gradient(circle at center, transparent 0%, transparent 30%, rgba(255,255,255,0.05) 30%, rgba(255,255,255,0.05) 32%, transparent 32%),
+            radial-gradient(circle at center, transparent 0%, transparent 40%, rgba(255,255,255,0.05) 40%, rgba(255,255,255,0.05) 42%, transparent 42%),
+            radial-gradient(circle at center, transparent 0%, transparent 50%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.05) 52%, transparent 52%);
+    }
+    
+    /* Location Marker Pattern */
+    .hero .location-marker {
+        width: 100px;
+        height: 100px;
+        top: 40px;
+        right: 40px;
+        background: 
+            radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 10%, transparent 10%),
+            linear-gradient(to bottom, transparent 45%, rgba(255,255,255,0.1) 45%, rgba(255,255,255,0.1) 55%, transparent 55%),
+            linear-gradient(to right, transparent 45%, rgba(255,255,255,0.1) 45%, rgba(255,255,255,0.1) 55%, transparent 55%);
     }
 
     .hero-overlay {
@@ -274,8 +896,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(74, 144, 226, 0.4), rgba(46, 204, 113, 0.4));
-        opacity: 0.6;
+        background: repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 4px);
     }
 
     .hero-container {
@@ -288,9 +909,10 @@
 
     .hero-title {
         font-size: 2.2rem;
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 0.8rem;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        letter-spacing: 0.5px;
     }
 
     .hero-subtitle {
@@ -299,125 +921,114 @@
         max-width: 650px;
         margin-left: auto;
         margin-right: auto;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-        opacity: 0.9;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        opacity: 1;
+        font-weight: 500;
     }
     
     .hero-cta {
         display: flex;
         justify-content: center;
-        gap: 0.6rem;
+        gap: 1.2rem;
         flex-wrap: wrap;
-        margin-top: 1.2rem;
+        margin-top: 1.8rem;
     }
     
-    .hero-button {
-        padding: 0.6rem 1.2rem;
-        border-radius: 24px;
-        font-weight: 500;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        transition: all 0.2s ease;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        font-size: 0.95rem;
-    }
+
     
-    .hero-button.primary-btn {
-        background-color: var(--primary);
-        color: white;
-    }
-    
-    .hero-button.dog-btn {
-        background-color: #4CAF50;
-        color: white;
-    }
-    
-    .hero-button.cat-btn {
-        background-color: #FF9800;
-        color: white;
-    }
-    
-    .hero-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    }
-    
-    /* Category Filter Styles */
-    .category-filter {
-        margin: 2rem 0;
-        text-align: center;
-    }
-    
-    .filter-tabs {
-        display: inline-flex;
-        background-color: #f8f9fa;
-        border-radius: 50px;
-        padding: 0.5rem;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        margin-bottom: 2rem;
-    }
-    
-    .filter-tab {
-        border: none;
-        background: none;
-        padding: 0.8rem 1.5rem;
-        border-radius: 30px;
-        font-weight: 600;
-        color: var(--dark);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+    /* Mobile Filter Tags Optimization - Enhanced Version */
+    @media (max-width: 768px) {
+
+        
+        .filter-tab i {
+            font-size: 1.1rem;
+            margin-right: 0.5rem;
+        }
+        
+
     }
     
     .filter-tab i {
         font-size: 1.1rem;
     }
     
-    .filter-tab.active {
-        background-color: white;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    .filter-tab[data-filter="dog"].active {
-        background-color: #4CAF50;
-        color: white;
-    }
-    
-    .filter-tab[data-filter="cat"].active {
-        background-color: #FF9800;
-        color: white;
-    }
-    
-    /* 移动设备响应式样式 */
+
+    /* Mobile Device Responsive Styles - Optimized Version */
     @media (max-width: 768px) {
+        .hero {
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero::before {
+            width: 120px;
+            height: 120px;
+            bottom: 5px;
+            right: 5px;
+            opacity: 0.5;
+        }
+        
+        .hero::after {
+            width: 100px;
+            height: 100px;
+            top: 10px;
+            left: 10px;
+            opacity: 0.5;
+        }
+        
+        .hero .gps-signal {
+            width: 80px;
+            height: 80px;
+            bottom: 20px;
+            left: 20px;
+        }
+        
+        .hero .location-marker {
+            width: 70px;
+            height: 70px;
+            top: 25px;
+            right: 25px;
+        }
+        
         .hero-container {
-            padding: 3rem 1rem;
+            padding: 2.5rem 1rem;
         }
         
         .hero-title {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
+            line-height: 1.3;
+            margin-bottom: 1rem;
         }
         
         .hero-subtitle {
             font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 1.2rem;
+            padding: 0 0.5rem;
         }
         
-        .hero-button {
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
+        .hero-cta {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            max-width: 320px;
+            margin: 1.5rem auto 0;
+            gap: 0.8rem;
         }
         
         .hero-badges {
             gap: 0.6rem;
+            margin-top: 1rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         
         .hero-badge {
-            padding: 0.3rem 0.8rem;
-            font-size: 0.8rem;
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.18);
         }
     }
 
@@ -430,7 +1041,7 @@
     }
 
     .hero-badge {
-        background-color: rgba(255, 255, 255, 0.12);
+        background-color: rgba(0, 0, 0, 0.25);
         padding: 0.4rem 1rem;
         border-radius: 16px;
         font-size: 0.85rem;
@@ -438,6 +1049,7 @@
         align-items: center;
         gap: 0.4rem;
         transition: all 0.2s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     .hero-badge:hover {
@@ -450,51 +1062,14 @@
         opacity: 0.9;
     }
 
-    /* Trust Badges Section - Simplified */
-    .trust-badges {
-        background-color: white;
-        padding: 1.5rem 0;
-        margin: 1.5rem 0 3rem;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .trust-badges::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background: linear-gradient(to right, var(--primary-light), var(--primary), var(--primary-light));
+
+    /* Mobile Trust Badge Optimization */
+    @media (max-width: 768px) {
+        .trust-badge i {
+            font-size: 1.6rem;
+        }
     }
 
-    .badge-container {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        padding: 0 1rem;
-    }
-
-    .trust-badge {
-        display: flex;
-        align-items: center;
-        gap: 0.7rem;
-        font-weight: 500;
-        color: var(--dark);
-        padding: 0.7rem;
-        border-radius: 10px;
-        transition: all 0.2s ease;
-        background-color: rgba(255, 194, 209, 0.03);
-    }
-    
-    .trust-badge:hover {
-        background-color: rgba(255, 194, 209, 0.1);
-        transform: translateY(-2px);
-    }
 
     .trust-badge i {
         font-size: 1.5rem;
@@ -565,6 +1140,59 @@
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 2.5rem;
         margin-bottom: 3.5rem;
+    }
+    
+    /* Mobile Card Layout Optimization */
+    @media (max-width: 768px) {
+        .reviews-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            padding: 0 0.3rem;
+        }
+        
+        .review-card {
+            max-width: 100%;
+            margin: 0 auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .card-image-container {
+            height: 180px;
+        }
+        
+        .review-content {
+            padding: 1.2rem;
+        }
+        
+        .review-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+        
+        .review-excerpt {
+            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .review-meta {
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .read-more {
+            font-size: 0.9rem;
+            padding: 0.4rem 0;
+        }
+        
+        /* Touch Feedback Effect */
+        .review-card:active {
+            transform: scale(0.98);
+            transition: transform 0.2s ease;
+        }
+        
     }
 
     .review-card {
@@ -722,67 +1350,126 @@
         position: relative;
     }
 
-    .view-all-link {
-        text-align: center;
-        margin-top: 2rem;
-    }
 
-    .view-all-button {
-        background-color: #4361ee;
-        color: white;
-        padding: 0.8rem 2rem;
-        border-radius: 30px;
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.8rem;
-        transition: all 0.3s ease;
-    }
 
-    .view-all-button:hover {
-        background-color: #3a56d4;
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
-    }
 
-    /* Testing Methodology Section */
-    .testing-methodology {
-        padding: 4rem 0;
-        background-color: #f8f9fa;
-        border-radius: 15px;
-        margin: 3rem 0;
-    }
+    
+    /* Mobile Testing Methodology Section Optimization */
+    @media (max-width: 768px) {
 
-    .methodology-container {
+        .methodology-icon i {
+            font-size: 1.4rem;
+        }
+        
+        .methodology-card h3 {
+            margin-bottom: 0.2rem;
+            font-size: 1.1rem;
+        }
+        
+        .methodology-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+        
+
+        .section-header {
+            margin-bottom: 2.5rem;
+        }
+        
+        .section-header h2 {
+            font-size: 1.6rem;
+        }
+        
+        .section-subtitle {
+            font-size: 0.95rem;
+        }
+        
+        .section-decoration {
+            margin-top: 1.2rem;
+        }
+        
+        .decoration-line {
+            width: 60px;
+        }
+
+    }
+    
+    .trust-reasons {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2.5rem;
         margin-bottom: 3rem;
     }
-
-    .methodology-card {
-        text-align: center;
-        padding: 2rem 1.5rem;
-        background-color: white;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
+    
+    /* Mobile Why Choose Us Section Optimization */
+    @media (max-width: 768px) {
+        .why-choose-us {
+            padding: 2rem 0.8rem;
+        }
+        
+        .trust-reasons {
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+            margin-bottom: 1.8rem;
+        }
+        
+        .trust-reason {
+            padding: 1.2rem;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            gap: 0.8rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        }
+        
+        .reason-icon {
+            margin-bottom: 0;
+            min-width: 45px;
+            width: 45px;
+            height: 45px;
+        }
+        
+        .reason-icon i {
+            font-size: 1.4rem;
+        }
+        
+        .trust-reason h3 {
+            margin-bottom: 0.2rem;
+            font-size: 1.1rem;
+        }
+        
+        .trust-reason p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+        
+        .trust-reason:active {
+            transform: scale(0.98);
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        
     }
+    
+    /* Global Touch Feedback Effect */
+    @media (max-width: 768px) {
+        a, button {
+            -webkit-tap-highlight-color: transparent;
+        }
+        
 
-    .methodology-card:hover {
-        transform: translateY(-5px);
-    }
-
-    .methodology-icon {
-        width: 70px;
-        height: 70px;
-        background-color: rgba(67, 97, 238, 0.1);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 1.5rem;
+        
+        /* Improve Touch Experience */
+        .overlay-button, .read-more, .filter-tab {
+            padding: 0.8rem 0.5rem;
+            min-height: 44px; /* Ensure touch targets are large enough */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     .methodology-icon i {
@@ -801,60 +1488,12 @@
         color: #6c757d;
     }
 
-    .methodology-cta {
+    /* Optimized Responsive Adjustments */
+    .trust-reason {
         text-align: center;
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-        .hero-container {
-            padding: 3rem 1.5rem;
-        }
-
-        .hero-title {
-            font-size: 2rem;
-        }
-
-        .reviews-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .methodology-container {
-            grid-template-columns: 1fr;
-        }
+        padding: 1.5rem 1rem;
     }
 </style>
 
-<!-- JavaScript for category filtering -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Get all filter tabs and review cards
-        const filterTabs = document.querySelectorAll('.filter-tab');
-        const reviewCards = document.querySelectorAll('.review-card');
-        
-        // Add click event to each filter tab
-        filterTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                // Remove active class from all tabs
-                filterTabs.forEach(t => t.classList.remove('active'));
-                
-                // Add active class to clicked tab
-                this.classList.add('active');
-                
-                // Get filter value
-                const filterValue = this.getAttribute('data-filter');
-                
-                // Show/hide cards based on filter
-                reviewCards.forEach(card => {
-                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    });
-</script>
 </body>
 </html>

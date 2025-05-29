@@ -22,8 +22,7 @@ public class ReviewController {
         }
         // For other articles, more conditions can be added
         // Or implement a generic blog article page template
-
-        return "review";
+        return "index";
     }
 
 

@@ -13,7 +13,6 @@ import java.util.HashMap;
 @RestController
 @RequestMapping("/api")
 public class EmailController {
-    
     private static final Logger logger = LoggerFactory.getLogger(EmailController.class);
     
     @PostMapping("/subscribe")

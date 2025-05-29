@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: common-header('PitPat Brand History | UK is Leading Pet Wellness Technology')">
+</head>
+<body>
+<header th:replace="fragments/header :: navbar"></header>
+<link th:href="@{/css/brands.css}" rel="stylesheet">
+<link th:href="@{/js/brands.js}" rel="stylesheet">
+
+<section class="brand-header" style="background-color: #FFD166;">
+    <div class="container">
+        <h2>PitPat</h2>
+        <p>The UK's leading pet wellness brand changing the way people do pet care</p>
+    </div>
+</section>
+<section class="brand-content">
+    <div class="container">
+        <div class="brand-section">
+            <h3>Brand Overview</h3>
+            <p>PitPat is a rapidly growing pet wellness company based in Cambridge, UK, that has been revolutionizing the pet care industry since its founding. The company's mission is to change traditional pet care, which they believe is leading to unhealthy pets and unhappy pet parents.</p>
+            <p>What sets PitPat apart in the market is their innovative approach to pet tracking technology, particularly their commitment to providing high-quality products without requiring ongoing subscriptions. This customer-friendly approach has helped establish PitPat as the UK's leading pet wellness brand.</p>
+        </div>
+
+        <div class="brand-section">
+            <h3>The PitPat Journey</h3>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>September 2, 2014</h4>
+                        <p>PitPatPet Ltd was incorporated in Cambridge, England, marking the official beginning of the PitPat brand journey.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>2015-2016</h4>
+                        <p>PitPat developed and launched its first dog activity monitor, focusing on tracking exercise, rest, and play without requiring battery recharging or subscriptions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>2017-2019</h4>
+                        <p>The company expanded its product line and market presence, establishing itself as a key player in the UK pet technology sector with a focus on pet wellness rather than just tracking.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4>2020-2022</h4>
+                        <p>PitPat continued to innovate and grow, developing a comprehensive dog health platform that includes personalized feeding recommendations, weight tracking, and pet insurance services.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h4>2023-Present</h4>
+                        <p>PitPat launched its GPS Tracker with no subscription required, a significant innovation in the market. The company also expanded its charitable initiatives, raising over £7,200 for various UK-based dog charities including Dogs Trust, StreetVet, and St Mungo's.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="brand-section">
+            <h3>Innovation & Technology</h3>
+            <p>PitPat has distinguished itself through several key technological innovations:</p>
+            <ul>
+                <li>Subscription-free GPS tracking technology</li>
+                <li>Market-leading battery life with wireless recharging</li>
+                <li>Super-strong parachute-grade genuine VELCRO® Brand strap attachment system</li>
+                <li>Compatibility with virtually any collar or harness</li>
+                <li>100% waterproof design for all-weather use</li>
+                <li>Comprehensive dog health platform integrating activity monitoring, weight management, and nutrition</li>
+            </ul>
+            <p>Unlike many competitors in the market, PitPat's GPS Tracker requires no ongoing subscription fees to use its core functionality, making it a cost-effective solution for pet owners concerned about long-term expenses.</p>
+        </div>
+
+        <div class="brand-section">
+            <h3>Community Impact</h3>
+            <p>PitPat is deeply committed to promoting responsible pet ownership and ensuring pets receive the love and care they deserve. The company works closely with pet charities like Woodgreen to make a real difference to pets' health, happiness, and safety.</p>
+            <p>In 2023 alone, PitPat raised over £7,200 for charity, providing essential equipment and resources to dogs in need through various UK-based charities. This commitment to giving back to the pet community reflects the company's core values and mission.</p>
+            <p>As a proudly British company, PitPat designs and manufactures its products in the UK, contributing to the local economy while maintaining high standards of quality and innovation. The company continues to grow and evolve, always with the wellbeing of pets at the heart of everything they do.</p>
+        </div>
+    </div>
+</section>
+<div th:replace="fragments/footer :: footer"></div>
+</body>
+</html>

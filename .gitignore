@@ -1,6 +1,5 @@
-# 忽略所有 .class 文件
+# Ignore all .class files
 *.class
 
-# 忽略 Maven 的 target/ 目录
+# Ignore Maven target/ directory
 target/
-

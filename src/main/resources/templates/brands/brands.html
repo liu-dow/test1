@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: common-header('Discover the history and development of leading pet tracker brands: Pawfit, Tractive, and PitPat. Learn about their journey in revolutionizing pet care technology.')">
+</head>
+<body>
+<header th:replace="fragments/header :: navbar"></header>
+<link th:href="@{/css/brands.css}" rel="stylesheet">
+<link th:href="@{/js/brands.js}" rel="stylesheet">
+
+<section class="hero">
+    <div class="container">
+        <h2>Discover the Evolution of Pet Tracking Technology</h2>
+        <p>Explore the history and development of three leading pet tracker brands that have revolutionized how we care
+            for our pets</p>
+    </div>
+</section>
+
+<section class="brands-overview">
+    <div class="container">
+        <h2>Leading Pet Tracker Brands</h2>
+        <div class="brand-cards">
+            <div class="brand-card">
+                <div class="brand-image pawfit"></div>
+                <h3>Pawfit</h3>
+                <p>Launched in 2018 by Latsen Technology, Pawfit has quickly become one of the top-selling pet tracking
+                    brands in the UK and Europe, combining location tracking with activity monitoring.</p>
+                <a href="/brands/pawfit" class="btn">Learn More</a>
+            </div>
+
+            <div class="brand-card">
+                <div class="brand-image tractive"></div>
+                <h3>Tractive</h3>
+                <p>Founded in 2012 in Austria, Tractive has grown to become a global leader in pet GPS and health
+                    tracking technology, now monitoring around 1 million pets in over 175 countries worldwide.</p>
+                <a href="/brands/tractive" class="btn">Learn More</a>
+            </div>
+
+            <div class="brand-card">
+                <div class="brand-image pitpat"></div>
+                <h3>PitPat</h3>
+                <p>Established in 2014 in Cambridge, UK, PitPat has become the UK's leading pet wellness brand, focusing
+                    on innovative tracking solutions without subscription requirements.</p>
+                <a href="/brands/pitpat" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="innovation">
+    <div class="container">
+        <h2>Innovation in Pet Care Technology</h2>
+        <p>The pet tracking industry has seen remarkable growth and technological advancement over the past decade. What
+            started as simple GPS devices has evolved into comprehensive health and wellness monitoring systems that
+            help pet owners ensure their companions are safe, healthy, and happy.</p>
+        <p>These three pioneering brands have each contributed uniquely to the development of pet tracking technology,
+            focusing on different aspects of pet care while continuously improving their offerings based on customer
+            feedback and technological advancements.</p>
+    </div>
+</section>
+
+<section class="comparison">
+    <div class="container">
+        <h2>Brand Comparison</h2>
+        <div class="comparison-table">
+            <table>
+                <thead>
+                <tr>
+                    <th>Brand</th>
+                    <th>Founded</th>
+                    <th>Origin</th>
+                    <th>Key Focus</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Pawfit</td>
+                    <td>2018</td>
+                    <td>Latsen Technology</td>
+                    <td>Combined location tracking and activity monitoring</td>
+                </tr>
+                <tr>
+                    <td>Tractive</td>
+                    <td>2012</td>
+                    <td>Austria</td>
+                    <td>Global GPS coverage and health monitoring</td>
+                </tr>
+                <tr>
+                    <td>PitPat</td>
+                    <td>2014</td>
+                    <td>Cambridge, UK</td>
+                    <td>Subscription-free tracking and pet wellness</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

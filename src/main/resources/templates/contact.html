@@ -10,175 +10,16 @@
 <!-- Main page content -->
 <div class="container py-5">
     <style>
-        /* Enhanced form styling */
-        .contact-form-container {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            transition: all 0.3s ease;
+        :root {
+            --primary-color: #4CAF50;
+            --primary-dark: #3e8e41;
+            --secondary-color: #2575fc;
+            --text-color: #333;
+            --light-gray: #f8f9fa;
+            --border-color: #ddd;
         }
 
-        .contact-form-container:hover {
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        .form-title {
-            color: #3a3a3a;
-            margin-bottom: 25px;
-            font-weight: 600;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .form-title:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 3px;
-            width: 50px;
-            background-color: #4CAF50;
-        }
-
-        /* Form field styling */
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: #333;
-        }
-
-        .form-control {
-            height: 50px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            padding: 10px 15px;
-            font-size: 16px;
-            transition: all 0.3s;
-            width: 100%;
-        }
-
-        .form-control:focus {
-            border-color: #4CAF50;
-            box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
-        }
-
-        textarea.form-control {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .checkbox-group {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .checkbox-group input {
-            margin-right: 10px;
-            margin-top: 5px;
-        }
-
-        .checkbox-group label {
-            font-size: 14px;
-            color: #666;
-        }
-
-        .submit-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 500;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        .submit-button:hover {
-            background-color: #3e8e41;
-            transform: translateY(-2px);
-        }
-
-        .submit-button i {
-            margin-left: 8px;
-        }
-
-        .invalid-feedback {
-            display: none;
-            color: #dc3545;
-            font-size: 12px;
-            margin-top: 5px;
-        }
-
-        .is-invalid {
-            border-color: #dc3545;
-        }
-
-        .is-valid {
-            border-color: #28a745;
-        }
-
-        .invalid-feedback.show {
-            display: block;
-        }
-
-        /* Success message */
-        .success-message {
-            display: none;
-            text-align: center;
-            padding: 30px;
-        }
-
-        .success-message.show {
-            display: block;
-            animation: fadeIn 0.5s;
-        }
-
-        .success-icon {
-            font-size: 60px;
-            color: #4CAF50;
-            margin-bottom: 20px;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .contact-form-container {
-                padding: 20px;
-            }
-
-            .form-control {
-                height: 45px;
-            }
-
-            .submit-button {
-                padding: 10px 20px;
-            }
-        }
-
-        /* New CSS Banner Design */
+        /* Banner Styles */
         .banner-container {
             position: relative;
             margin-bottom: 50px;
@@ -189,7 +30,7 @@
 
         .banner-background {
             background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            height: 300px;
+            height: 250px;
             position: relative;
             overflow: hidden;
         }
@@ -201,7 +42,7 @@
             left: -50px;
             right: -50px;
             bottom: -50px;
-            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.343 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.343 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
             animation: backgroundMove 30s linear infinite;
         }
 
@@ -241,7 +82,7 @@
 
         .banner-title {
             color: #fff;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
             margin-bottom: 15px;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -250,7 +91,7 @@
 
         .banner-subtitle {
             color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 25px;
             max-width: 800px;
             text-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
@@ -302,9 +143,225 @@
             }
         }
 
+        /* Form Styles */
+        .contact-form-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: all 0.3s ease;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .contact-form-container:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .form-title {
+            color: #3a3a3a;
+            margin-bottom: 25px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-title:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            height: 3px;
+            width: 50px;
+            background-color: var(--primary-color);
+            transform: translateX(-50%);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-control {
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            padding: 10px 15px;
+            font-size: 16px;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .checkbox-group input {
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        .checkbox-group label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .submit-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        .submit-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .submit-button i {
+            margin-left: 8px;
+        }
+
+        .invalid-feedback {
+            display: none;
+            color: #dc3545;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .is-invalid {
+            border-color: #dc3545;
+        }
+
+        .is-valid {
+            border-color: #28a745;
+        }
+
+        .invalid-feedback.show {
+            display: block;
+        }
+
+        /* Success message */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        .success-icon {
+            font-size: 60px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .section-title i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .faq-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .faq-item p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .banner-background {
-                height: 250px;
+                height: 220px;
             }
 
             .banner-title {
@@ -323,9 +380,38 @@
                 font-size: 0.8rem;
                 padding: 6px 12px;
             }
+
+            .contact-form-container {
+                padding: 20px;
+            }
+
+            .form-control {
+                height: 45px;
+            }
+
+            .submit-button {
+                padding: 10px 20px;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .banner-background {
+                height: 200px;
+            }
+
+            .banner-title {
+                font-size: 1.5rem;
+            }
+
+            .banner-subtitle {
+                font-size: 0.9rem;
+            }
         }
     </style>
-
     <!-- Banner Section -->
     <div class="banner-container">
         <div class="banner-background">
@@ -344,28 +430,6 @@
     </div>
 
     <section class="contact-intro">
-        <div class="contact-content">
-            <h2>Get in Touch</h2>
-            <p class="lead">We'd love to hear from you! Whether you have questions, feedback, or suggestions, our team
-                is here to help.</p>
-            <p>At PetGear Reviews, we value your input and are committed to providing the best possible information
-                about pet products. Use the form below to reach out, and we'll get back to you as soon as possible.</p>
-
-            <div class="contact-methods">
-                <div class="contact-method">
-                    <div class="method-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="method-details">
-                        <h3>Email Us</h3>
-                        <p>For general inquiries: <a href="mailto:info@petgearreviews.com">info@petgearreviews.com</a>
-                        </p>
-                        <p>For review requests: <a
-                                href="mailto:reviews@petgearreviews.com">reviews@petgearreviews.com</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="contact-form-container">
             <form class="contact-form" action="/submit-contact" method="POST" id="contactForm">
                 <h3 class="form-title text-center mb-4">Send Us a Message</h3>

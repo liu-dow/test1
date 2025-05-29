@@ -8,213 +8,382 @@
 <div th:replace="fragments/header :: navbar"></div>
 
 <!-- Main page content -->
-<div class="container py-5">
-    <div class="page-header">
-        <div class="container">
-            <h1>About PetGear Reviews</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li><a href="/">Home</a></li>
-                    <li aria-current="page">About Us</li>
-                </ol>
-            </nav>
-        </div>
+<section class="hero">
+    <div class="container">
+        <h1>About Pet tracker Reviews</h1>
+        <p>Your trusted source for honest, thorough, and unbiased pet product reviews since 2020.</p>
     </div>
+</section>
 
-    <main class="container about-page">
-        <section class="about-intro">
-            <div class="about-content">
-                <h2>Our Mission</h2>
-                <p class="lead">At PetGear Reviews, we're dedicated to helping pet owners make informed decisions through honest, thorough, and unbiased product reviews.</p>
-                <p>Founded in 2020 by a team of passionate pet owners and industry experts, PetGear Reviews has quickly become the trusted source for pet product information. We understand that pets are family members, and they deserve the best products for their health, happiness, and wellbeing.</p>
-                <p>Our comprehensive testing process ensures that every product we recommend has been thoroughly evaluated for quality, durability, value, and most importantly, how well it serves the needs of pets and their owners.</p>
+<main class="container">
+    <!-- Mission Section -->
+    <section>
+        <div class="mission-section">
+            <div class="mission-content">
+                <h2 class="section-title"><i class="fas fa-bullseye"></i> Our Mission</h2>
+                <p class="lead">At Pet Tracker Reviews, we're dedicated to helping pet owners make informed decisions through honest, thorough, and unbiased product reviews.</p>
+                <p>Founded in 2020 by a team of passionate pet owners and industry experts, we've quickly become a trusted source for pet product information. We understand that pets are family members, and they deserve the best products for their health, happiness, and wellbeing.</p>
             </div>
-            <div class="about-image">
-                <img src="/img/about/dog-and-cat.png" alt="Dog and cat with pet supplies" class="rounded-image">
+            <div class="mission-image">
+                <img src="/img/about/dog-and-cat.png" alt="Dog and cat with pet supplies" loading="lazy">
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="our-values">
-            <h2 class="section-title"><i class="fas fa-star"></i> Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3>Integrity</h3>
-                    <p>We maintain complete editorial independence and never accept payment for positive reviews. Our opinions are always honest and unbiased.</p>
+    <!-- Values Section -->
+    <section>
+        <h2 class="section-title"><i class="fas fa-star"></i> Our Core Values</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-balance-scale"></i>
                 </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-microscope"></i>
-                    </div>
-                    <h3>Thoroughness</h3>
-                    <p>We test every product rigorously in real-world conditions, evaluating all aspects from unboxing to long-term durability.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Expertise</h3>
-                    <p>Our team combines professional experience with genuine passion for pets, ensuring knowledgeable and relevant reviews.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Community</h3>
-                    <p>We value the input of our readers and the broader pet owner community, incorporating real user experiences into our evaluations.</p>
-                </div>
+                <h3>Integrity</h3>
+                <p>We maintain complete editorial independence and never accept payment for positive reviews.</p>
             </div>
-        </section>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-microscope"></i>
+                </div>
+                <h3>Thoroughness</h3>
+                <p>We test every product rigorously in real-world conditions, evaluating all aspects from unboxing to durability.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>Expertise</h3>
+                <p>Our team combines professional experience with genuine passion for pets, ensuring knowledgeable reviews.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Community</h3>
+                <p>We value the input of our readers and the broader pet owner community in our evaluations.</p>
+            </div>
+        </div>
+    </section>
 
-        <section class="our-process">
-            <h2 class="section-title"><i class="fas fa-tasks"></i> Our Review Process</h2>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Research</h3>
-                        <p>We begin by researching market trends, identifying popular products, and understanding what pet owners are looking for.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Testing</h3>
-                        <p>Our team conducts hands-on testing with real pets, evaluating performance, durability, ease of use, and other key factors.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Analysis</h3>
-                        <p>We analyze test results, compare with competitor products, and consider value for money to form our conclusions.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Review</h3>
-                        <p>We create comprehensive, easy-to-understand reviews that highlight both strengths and weaknesses of each product.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <div class="step-content">
-                        <h3>Update</h3>
-                        <p>We regularly revisit and update our reviews to reflect product changes, long-term performance, and new market offerings.</p>
-                    </div>
+    <!-- Process Section -->
+    <section>
+        <h2 class="section-title"><i class="fas fa-tasks"></i> Our Review Process</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Research</h3>
+                    <p>We research market trends, identify popular products, and understand what pet owners need.</p>
                 </div>
             </div>
-        </section>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Testing</h3>
+                    <p>Our team conducts hands-on testing with real pets, evaluating performance and durability.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Analysis</h3>
+                    <p>We analyze results, compare with competitor products, and consider value for money.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Review</h3>
+                    <p>We create comprehensive, easy-to-understand reviews highlighting strengths and weaknesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section class="team-section">
-            <h2 class="section-title"><i class="fas fa-users"></i> Meet Our Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="/images/team-emily.jpg" alt="Emily Johnson - Founder & Lead Reviewer" class="rounded-image">
-                    </div>
-                    <div class="member-info">
-                        <h3>Emily Johnson</h3>
-                        <p class="member-title">Founder & Lead Reviewer</p>
-                        <p class="member-bio">A certified veterinary technician with over 10 years of experience, Emily founded PetGear Reviews to help pet owners navigate the overwhelming world of pet products. She has two rescue dogs and a senior cat.</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="/images/team-michael.jpg" alt="Michael Chen - Dog Product Specialist" class="rounded-image">
-                    </div>
-                    <div class="member-info">
-                        <h3>Michael Chen</h3>
-                        <p class="member-title">Dog Product Specialist</p>
-                        <p class="member-bio">With a background in product design and as an avid dog trainer, Michael brings a unique perspective to evaluating dog products for functionality, durability, and training effectiveness.</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="/images/team-sarah.jpg" alt="Sarah Rodriguez - Cat Product Specialist" class="rounded-image">
-                    </div>
-                    <div class="member-info">
-                        <h3>Sarah Rodriguez</h3>
-                        <p class="member-title">Cat Product Specialist</p>
-                        <p class="member-bio">A feline behavior consultant and long-time cat foster parent, Sarah has helped hundreds of cats find their forever homes and knows exactly what products best serve our feline friends.</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="/images/team-james.jpg" alt="James Wilson - Tech & Gadget Expert" class="rounded-image">
-                    </div>
-                    <div class="member-info">
-                        <h3>James Wilson</h3>
-                        <p class="member-title">Tech & Gadget Expert</p>
-                        <p class="member-bio">With a background in consumer electronics and a passion for innovative pet care, James specializes in reviewing pet tech products from GPS trackers to automated feeders.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Team Section -->
 
-        <section class="testimonials">
-            <h2 class="section-title"><i class="fas fa-quote-left"></i> What Our Readers Say</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"PetGear Reviews helped me find the perfect GPS tracker for my escape-artist husky. Their detailed comparison saved me from wasting money on products that wouldn't have worked for my needs."</p>
-                        <div class="testimonial-author">
-                            <img src="/images/testimonial-1.jpg" alt="Jessica T." class="author-image">
-                            <div class="author-info">
-                                <h4>Jessica T.</h4>
-                                <p>Dog Owner, Colorado</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"I appreciate how thorough the reviews are. They cover aspects I wouldn't have thought to consider, and I've never been disappointed with a purchase based on their recommendations."</p>
-                        <div class="testimonial-author">
-                            <img src="/images/testimonial-2.jpg" alt="Marcus L." class="author-image">
-                            <div class="author-info">
-                                <h4>Marcus L.</h4>
-                                <p>Cat Owner, New York</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"As a first-time pet owner, I was overwhelmed by all the product choices. PetGear Reviews has become my go-to resource for making informed decisions about my puppy's needs."</p>
-                        <div class="testimonial-author">
-                            <img src="/images/testimonial-3.jpg" alt="Aisha K." class="author-image">
-                            <div class="author-info">
-                                <h4>Aisha K.</h4>
-                                <p>Puppy Owner, Texas</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Have Questions or Suggestions?</h2>
+        <p>We'd love to hear from you! Whether you have a product you'd like us to review, feedback on our content, or questions about our process.</p>
+        <a href="/contact" class="button">Contact Us <i class="fas fa-arrow-right"></i></a>
+    </section>
+</main>
+<style>
 
-        <section class="contact-cta">
-            <div class="cta-content">
-                <h2>Have Questions or Suggestions?</h2>
-                <p>We'd love to hear from you! Whether you have a product you'd like us to review, feedback on our content, or questions about our process, our team is here to help.</p>
-                <a href="/contact" class="button primary-button">Contact Us <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </section>
-    </main>
-</div>
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+
+    /* Hero Section */
+    .hero {
+        background-color: var(--light-bg);
+        padding: 3rem 0;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Section Styles */
+    section {
+        margin-bottom: 3rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    /* Mission Section */
+    .mission-section {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .mission-content {
+        flex: 1;
+    }
+
+    .mission-image {
+        flex: 1;
+        text-align: center;
+    }
+
+    .mission-image img {
+        max-width: 100%;
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Values Section */
+    .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .value-card {
+        background-color: var(--light-bg);
+        padding: 1.5rem;
+        border-radius: var(--border-radius);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .value-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .value-icon {
+        font-size: 2rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+    }
+
+    .value-card h3 {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Process Section */
+    .process-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .process-step {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .step-number {
+        background-color: var(--primary-color);
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        flex-shrink: 0;
+    }
+
+    /* Team Section */
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .team-member {
+        text-align: center;
+    }
+
+    .member-image img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 3px solid var(--primary-color);
+    }
+
+    .member-title {
+        color: var(--secondary-color);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        background-color: var(--primary-color);
+        color: var(--light-text);
+        padding: 2.5rem;
+        border-radius: var(--border-radius);
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .cta-section h2 {
+        margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+        margin-bottom: 1.5rem;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background-color: var(--accent-color);
+        color: white;
+        text-decoration: none;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        transition: background-color 0.3s;
+    }
+
+
+    .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .social-links a {
+        color: #ccc;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+        color: var(--accent-color);
+    }
+
+    .copyright {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .mobile-menu-btn {
+            display: block;
+        }
+
+        nav ul {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background-color: var(--primary-color);
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem 0;
+            transform: translateY(-150%);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul.active {
+            transform: translateY(0);
+        }
+
+        nav ul li {
+            margin: 0.5rem 0;
+        }
+
+        .mission-section {
+            flex-direction: column;
+        }
+
+        .mission-image {
+            order: -1;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+        }
+
+        .process-step {
+            align-items: flex-start;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .values-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .team-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .hero h1 {
+            font-size: 1.8rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+        }
+    }
+</style>
+
 
 <!-- Include common footer -->
 <div th:replace="fragments/footer :: footer"></div>
 
-<script>
-    // Mobile menu toggle
-    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-        document.querySelector('.nav-links').classList.toggle('active');
-    });
-</script>
 </body>
 </html>
