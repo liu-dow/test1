@@ -34,12 +34,6 @@
     <priority>0.5</priority>
   </url>
   
-  <!-- Review Pages -->
-  <url>
-    <loc>https://pettrackerreview.com/reviews</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
   <url>
     <loc>https://pettrackerreview.com/reviews/pawfit-3-gps-tracker-review</loc>
     <changefreq>monthly</changefreq>
@@ -60,105 +54,5 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- Blog Pages -->
-  <url>
-    <loc>https://pettrackerreview.com/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Tracker Pages -->
-  <url>
-    <loc>https://pettrackerreview.com/accessories/trackers</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/accessories/trackers/comparison</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/accessories/trackers/pawfit-3</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/accessories/trackers/tractive</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/accessories/trackers/pitpat</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Dog Breeds Pages -->
-  <url>
-    <loc>https://pettrackerreview.com/dog-breeds</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/dog-breeds/golden-retriever-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/dog-breeds/labrador-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/dog-breeds/german-shepherd-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/dog-breeds/husky-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/dog-breeds/poodle-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/dog-breeds/bulldog-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/dog-breeds/chihuahua-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/dog-breeds/corgi-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/dog-breeds/beagle-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/dog-breeds/samoyed-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/dog-breeds/shiba-inu-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pettrackerreview.com/dog-breeds/border-collie-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+ 
 </urlset>
