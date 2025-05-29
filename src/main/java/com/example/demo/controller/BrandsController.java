@@ -6,21 +6,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/brands")
 public class BrandsController {
-
-    @GetMapping("")
+    @GetMapping("/brands")
     public String showBrandsPage() {
         return "brands/brands";
     }
-
-    @GetMapping("/{brand}")
+    @GetMapping("/brands/{brand}")
     public String showBrandsPage(@PathVariable String brand) {
         // Map all available blog posts to their templates
-        return "/brands/" + brand;
+        return "brands/" + brand;
 
     }
-
-
-
 }
