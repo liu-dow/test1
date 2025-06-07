@@ -12,7 +12,7 @@ body{
     box-shadow: 0 2px 10px rgba(116, 185, 155, 0.3);
     z-index: 1000;
     border-bottom: 3px solid #7fd8be;
-    height: 80px;
+    /*height: 80px;*/
 
 }
 
@@ -213,7 +213,7 @@ body{
 
 
     .site-logo-image {
-        max-height: 40px;
+        max-height: 60px;
     }
 
     .site-main-content {

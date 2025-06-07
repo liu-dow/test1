@@ -16,6 +16,15 @@
     --transition: all 0.3s ease;
 }
 
+.fw-bold{
+    font-weight: 900!important;
+    /*color: #F7941D!important;*/
+}
+.discount-code{
+    font-weight: 900!important;
+    color: #F7941D!important;
+}
+
 body {
     font-family: 'Nunito', 'Segoe UI', Roboto, sans-serif;
     color: var(--text-color);
@@ -235,7 +244,6 @@ section h2 i {
 
 .pros-cons-card .list-group-item {
     border-color: var(--border-color);
-    padding: 0.75rem 1.25rem;
 }
 
 /* Buttons */
@@ -248,7 +256,7 @@ section h2 i {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background-color: var(--primary-dark);
     color: white;
     border: 2px solid var(--primary-color);
 }
@@ -264,13 +272,19 @@ section h2 i {
     padding: 0.75rem 2rem;
     font-size: 1.1rem;
 }
+.display-4{
+    font-weight: 900;
+}
 
 /* Images */
 .img-fluid {
     border-radius: var(--border-radius);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
-    width: 40%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .img-fluid:hover {
@@ -278,30 +292,10 @@ section h2 i {
     box-shadow: var(--box-shadow);
 }
 
-/* Lists */
-/*ul:not(.list-unstyled):not(.list-group) {*/
-/*    padding-left: 1.5rem;*/
-/*    margin-bottom: 1.5rem;*/
-/*}*/
-
-/*ul:not(.list-unstyled):not(.list-group) li {*/
-/*    margin-bottom: 0.5rem;*/
-/*    position: relative;*/
-/*}*/
-
-/*ul:not(.list-unstyled):not(.list-group) li::before {*/
-/*    content: '•';*/
-/*    color: var(--primary-color);*/
-/*    font-weight: bold;*/
-/*    display: inline-block;*/
-/*    width: 1em;*/
-/*    margin-left: -1em;*/
-/*}*/
 
 /* List Group */
 .list-group-item {
     border-color: var(--border-color);
-    padding: 1rem 1.25rem;
 }
 
 .list-group-item i {
@@ -416,9 +410,7 @@ section h2 i {
         font-size: 1.8rem;
     }
 
-    .quick-summary, .toc, .card {
-        padding: 1rem;
-    }
+
 
     .row {
         margin-left: -10px;
@@ -433,6 +425,9 @@ section h2 i {
     .btn-lg {
         padding: 0.6rem 1.5rem;
         font-size: 1rem;
+    }
+    .img-fluid {
+        width: 80%;
     }
 }
 
