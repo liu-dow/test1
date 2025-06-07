@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /img/favicon.ico
 
 # Disallowed Directories
 Disallow: /api/
