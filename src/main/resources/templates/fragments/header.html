@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="common-header(title)">
+<head th:fragment="common-header(title,description,keywords)">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title th:text="${title} + ' | Pet Tracker Review'">Pet Tracker Review</title>
+    <title th:text="${title}">Pet Tracker Review</title>
     <meta name="description"
-          content="Find the best pet GPS trackers with detailed reviews and comparisons at Pet Tracker Review.">
-    <meta name="keywords" content="pet tracker, GPS pet tracker, dog tracker, cat tracker, pet GPS, pet location tracker, pet activity monitor">
+          th:content="${description}">
+    <meta name="keywords"
+          th:content="${keywords}">
     <meta name="author" content="Pet Tracker Review">
     <meta name="msapplication-TileImage" content="https://www.pettrackerreview.com/img/pet-tracker-review-logo.png">
     <link th:href="@{/css/navbar.css}" rel="stylesheet">
