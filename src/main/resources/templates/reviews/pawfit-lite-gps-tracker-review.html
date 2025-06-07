@@ -6,12 +6,28 @@
     <!--    <meta property="og:title" content="Pawfit Lite GPS Tracker Review - Tiny Size, Complete Features">-->
     <!--    <meta property="og:description" content="The ultra-compact Pawfit Lite delivers complete GPS tracking features in a tiny 20g package. Perfect for pets of all sizes. Use code 'XANUVJ' for an exclusive discount!">-->
     <!--    <meta property="og:type" content="article">-->
+
 </head>
 <link th:href="@{/css/tracker-reviews.css}" rel="stylesheet">
 
 <body>
 <header th:replace="fragments/header :: navbar"></header>
-
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DiscountCode",
+        "name": "Pawfit Exclusive 10% Discount",
+        "description": "Special unlimited-time 10% discount on all PawFit products",
+        "discountCode": "XANUVJ",
+        "url": "https://www.pawfit.com",
+        "discount": 10,
+        "discountCurrency": "(all currencies)",
+        "brand": {
+            "@type": "Brand",
+            "name": "PawFit"
+        }
+    }
+</script>
 <main class="container py-5">
     <article class="blog-post col-lg-10 mx-auto pawfit-review-scoped">
         <!-- Header section -->
